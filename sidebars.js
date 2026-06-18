@@ -24,6 +24,7 @@ const sidebars = {
         'reference/radxa-style',
         'reference/ssh-remote',
         'reference/site-maintenance',
+        'reference/123',
       ],
     },
   ],
