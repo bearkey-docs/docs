@@ -1,0 +1,357 @@
+---
+sidebar_position: 3
+title: 网站维护指南
+description: 如何维护文档网站代码、在 GitHub 网页新增文档页面，以及更换自定义域名。
+---
+
+# 网站维护指南
+
+这份指南说明当前仓库里的文档网站是如何设计的，以及后续如何新增页面、修改样式、发布更新和更换域名。
+
+## 网站是怎么工作的
+
+当前网站使用 Docusaurus 构建：
+
+```text
+GitHub 仓库中的 Markdown / MDX
+        │
+        ▼
+GitHub Actions 自动构建
+        │
+        ▼
+GitHub Pages 发布静态网页
+        │
+        ▼
+用户访问自定义域名
+```
+
+也就是说，网页不是实时读取 GitHub 文件，而是每次提交后由 GitHub Actions 重新生成并发布。
+
+## 主要代码文件
+
+| 文件 | 作用 |
+| --- | --- |
+| `docs/` | 文档页面内容，主要写 Markdown / MDX |
+| `sidebars.js` | 左侧文档目录配置 |
+| `docusaurus.config.js` | 网站标题、域名、导航栏、部署路径配置 |
+| `src/css/custom.css` | 全站文档样式，例如颜色、代码块、提示框、侧边栏 |
+| `src/pages/index.js` | 首页结构 |
+| `src/pages/index.module.css` | 首页样式 |
+| `.github/workflows/deploy.yml` | GitHub Actions 自动构建和部署流程 |
+| `static/CNAME` | GitHub Pages 自定义域名配置 |
+
+## 修改网页样式
+
+常用样式修改位置：
+
+```text
+src/css/custom.css
+```
+
+例如可以修改：
+
+- 主色调
+- 字体
+- 顶部导航栏
+- 左侧目录
+- 右侧本页目录
+- 代码块样式
+- 提示框样式
+- 表格样式
+
+首页样式在：
+
+```text
+src/pages/index.module.css
+```
+
+首页结构在：
+
+```text
+src/pages/index.js
+```
+
+## 在 GitHub 网页新增文档页面
+
+以新增 SSH 文档页面为例：
+
+1. 打开仓库：
+
+```text
+https://github.com/CacheBiomancerClash/document-web-design
+```
+
+2. 进入目标目录，例如：
+
+```text
+docs/reference/
+```
+
+3. 点击 `Add file` → `Create new file`。
+
+4. 文件名建议使用小写英文和短横线：
+
+```text
+ssh-remote.mdx
+```
+
+不要用 `_ssh_remote.mdx` 作为独立页面名。下划线开头更适合作为被其他页面引用的片段，不适合作为直接访问的页面。
+
+5. 文件开头建议添加 front matter：
+
+```mdx
+---
+sidebar_position: 2
+title: SSH 远程连接
+description: SSH 远程连接文档
+---
+```
+
+字段说明：
+
+| 字段 | 作用 |
+| --- | --- |
+| `sidebar_position` | 控制目录排序 |
+| `title` | 控制网页标题和目录显示名 |
+| `description` | 控制页面摘要和 SEO 描述 |
+
+6. 粘贴正文内容。
+
+7. 点击页面底部的 `Commit changes`，提交到默认分支：
+
+```text
+devin/initial-readme
+```
+
+## 让新页面出现在左侧目录
+
+新增页面后，还需要修改：
+
+```text
+sidebars.js
+```
+
+例如要把 `docs/reference/ssh-remote.mdx` 放到“设计参考”目录里：
+
+```js
+{
+  type: 'category',
+  label: '设计参考',
+  collapsed: false,
+  items: ['reference/radxa-style', 'reference/ssh-remote'],
+},
+```
+
+其中：
+
+```text
+reference/ssh-remote
+```
+
+对应文件：
+
+```text
+docs/reference/ssh-remote.mdx
+```
+
+提交后，页面地址会是：
+
+```text
+https://docs.fengxinglong.top/docs/reference/ssh-remote
+```
+
+## 从 Radxa 文档复制 MDX 时的注意事项
+
+Radxa 文档里可能会使用它们模板自带的组件，例如：
+
+```mdx
+<NewCodeBlock>
+```
+
+如果当前项目没有这个组件，GitHub Actions 构建会失败。
+
+更稳妥的做法是改成标准 Markdown 代码块：
+
+````md
+```bash
+sudo systemctl start ssh
+```
+````
+
+如果文档里使用了 Tabs，需要在 MDX 文件顶部导入：
+
+```mdx
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+```
+
+如果文档引用图片，例如：
+
+```mdx
+<img src="/img/example.png" />
+```
+
+对应图片需要放到：
+
+```text
+static/img/example.png
+```
+
+## 发布更新
+
+提交到默认分支后，GitHub Actions 会自动运行：
+
+```text
+.github/workflows/deploy.yml
+```
+
+流程是：
+
+```text
+npm ci
+npm run build
+deploy to GitHub Pages
+```
+
+可以在这里查看部署状态：
+
+```text
+https://github.com/CacheBiomancerClash/document-web-design/actions
+```
+
+如果构建成功，线上网页会自动更新。
+
+## 本地预览
+
+在本机运行：
+
+```bash
+npm install
+npm run start
+```
+
+默认本地地址：
+
+```text
+http://localhost:3000/
+```
+
+本地开发服务器只会监听本机文件变化，不会自动从 GitHub 拉取更新。若 GitHub 上有新提交，本地需要执行：
+
+```bash
+git pull
+```
+
+## 更换自定义域名
+
+当前自定义域名是：
+
+```text
+docs.fengxinglong.top
+```
+
+### 1. 修改 Docusaurus 配置
+
+修改：
+
+```text
+docusaurus.config.js
+```
+
+示例：
+
+```js
+url: 'https://docs.fengxinglong.top',
+baseUrl: '/',
+```
+
+如果使用 GitHub 默认地址，则通常是：
+
+```js
+url: 'https://cachebiomancerclash.github.io',
+baseUrl: '/document-web-design/',
+```
+
+### 2. 修改 CNAME
+
+修改：
+
+```text
+static/CNAME
+```
+
+内容写自定义域名：
+
+```text
+docs.fengxinglong.top
+```
+
+### 3. 配置 Cloudflare DNS
+
+如果使用子域名 `docs.fengxinglong.top`：
+
+```text
+Type: CNAME
+Name: docs
+Target: cachebiomancerclash.github.io
+Proxy status: DNS only
+TTL: Auto
+```
+
+建议先保持 `DNS only`，也就是灰色云。
+
+### 4. 配置 GitHub Pages
+
+打开：
+
+```text
+https://github.com/CacheBiomancerClash/document-web-design/settings/pages
+```
+
+在 `Custom domain` 填：
+
+```text
+docs.fengxinglong.top
+```
+
+保存后等待 DNS 检查和 TLS 证书签发。
+
+### 5. 启用 HTTPS
+
+当 GitHub Pages 显示证书可用后，勾选：
+
+```text
+Enforce HTTPS
+```
+
+如果该选项是灰色，说明证书还在签发，通常等待 15 分钟到 1 小时即可。
+
+## 常见问题
+
+### 新页面访问 404
+
+常见原因：
+
+- 文件没有提交到默认分支
+- GitHub Actions 还没部署完成
+- GitHub Actions 构建失败
+- 文件路径和访问 URL 不一致
+- 使用了不兼容的 MDX 组件
+
+### 页面能直接打开，但左侧目录看不到
+
+通常是没有把页面加入：
+
+```text
+sidebars.js
+```
+
+### 提交后线上页面没变
+
+检查：
+
+1. GitHub Actions 是否成功
+2. 是否提交到了默认分支
+3. 浏览器是否缓存旧页面
+
+可以用 `Ctrl + F5` 强制刷新。
