@@ -7,8 +7,8 @@ const darkCodeTheme = require('prism-react-renderer').themes.dracula;
 const config = {
   title: '文档网页设计',
   tagline: '用 Markdown 驱动的产品文档网站',
-  url: 'https://cachebiomancerclash.github.io',
-  baseUrl: '/document-web-design/',
+  url: 'https://docs.fengxinglong.top',
+  baseUrl: '/',
   organizationName: 'CacheBiomancerClash',
   projectName: 'document-web-design',
   trailingSlash: false,
