@@ -3,8 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "ensure-categories": "node scripts/ensure-doc-categories.js",
+    "prestart": "npm run ensure-categories",
     "start": "docusaurus start --host 0.0.0.0",
+    "prebuild": "npm run ensure-categories",
     "build": "docusaurus build",
+    "preserve": "npm run ensure-categories",
     "serve": "docusaurus serve --host 0.0.0.0",
     "clear": "docusaurus clear"
   },
