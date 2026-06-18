@@ -20,7 +20,7 @@ const sidebars = {
       type: 'category',
       label: '设计参考',
       collapsed: false,
-      items: ['reference/radxa-style'],
+      items: ['reference/radxa-style', 'reference/ssh-remote'],
     },
   ],
 };
