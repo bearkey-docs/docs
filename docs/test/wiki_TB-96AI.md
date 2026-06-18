@@ -593,7 +593,7 @@ shell@rk3399:/ # getevent
 
 如果需要去掉eDP屏，需要在arch/arm64/boot/dts/rockchip/rk3399pro-toybrick.dtsi中删除include "lcd-edp-for-toybrick.dtsi"
 
-电源控制：enable-gpios = <&gpio4 rk_pd6="" gpio_active_high="">;
+电源控制：`enable-gpios = <&gpio4 rk_pd6="" gpio_active_high="">;`
 
 timing时序
 ```
@@ -647,7 +647,7 @@ eDP信号从vopb输出
 
 配置文件："arch/arm64/boot/dts/rockchip/lcd-mipi-for-toybrick.dtsi"
 
-电源控制：enable-gpios = <&gpio4 30="" gpio_active_high="">;
+电源控制：`enable-gpios = <&gpio4 30="" gpio_active_high="">;`
 
 MIPI屏初始化：
 ```
