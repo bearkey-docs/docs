@@ -1,0 +1,126 @@
+:root {
+  --ifm-color-primary: #2563eb;
+  --ifm-color-primary-dark: #1d4ed8;
+  --ifm-color-primary-darker: #1e40af;
+  --ifm-color-primary-darkest: #1e3a8a;
+  --ifm-color-primary-light: #3b82f6;
+  --ifm-color-primary-lighter: #60a5fa;
+  --ifm-color-primary-lightest: #bfdbfe;
+  --ifm-background-color: #ffffff;
+  --ifm-font-family-base:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  --ifm-code-font-size: 92%;
+  --ifm-navbar-height: 4rem;
+  --ifm-toc-border-color: #e2e8f0;
+  --ifm-menu-color-background-active: #eff6ff;
+  --ifm-menu-color-active: #1d4ed8;
+}
+
+[data-theme='dark'] {
+  --ifm-background-color: #0f172a;
+  --ifm-navbar-background-color: #111827;
+  --ifm-footer-background-color: #111827;
+  --ifm-menu-color-background-active: rgba(37, 99, 235, 0.22);
+}
+
+.navbar {
+  border-bottom: 1px solid #e2e8f0;
+  box-shadow: none;
+}
+
+[data-theme='dark'] .navbar {
+  border-bottom-color: #243244;
+}
+
+.navbar__title {
+  font-weight: 800;
+}
+
+.theme-doc-sidebar-container {
+  border-right: 1px solid #e2e8f0;
+}
+
+.menu {
+  padding: 1rem 0.75rem;
+  font-size: 0.94rem;
+}
+
+.menu__link {
+  border-radius: 0.65rem;
+}
+
+.menu__link--active {
+  font-weight: 700;
+}
+
+.theme-doc-markdown {
+  color: #1e293b;
+  font-size: 1rem;
+  line-height: 1.85;
+}
+
+.theme-doc-markdown h1 {
+  letter-spacing: -0.035em;
+}
+
+.theme-doc-markdown h2 {
+  margin-top: 2.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid #eef2f7;
+}
+
+.theme-doc-markdown table {
+  display: table;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 0.85rem;
+  box-shadow: 0 0 0 1px #e2e8f0;
+}
+
+.theme-doc-markdown thead {
+  background: #f8fafc;
+}
+
+.theme-doc-markdown code {
+  border: 1px solid #dbeafe;
+  border-radius: 0.35rem;
+  background: #eff6ff;
+  color: #1d4ed8;
+}
+
+.theme-code-block {
+  border: 1px solid #dbeafe;
+  border-radius: 0.9rem;
+  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.08);
+}
+
+.theme-admonition {
+  border-radius: 0.9rem;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+}
+
+.table-of-contents {
+  font-size: 0.9rem;
+}
+
+.table-of-contents__link--active {
+  color: #1d4ed8;
+  font-weight: 700;
+}
+
+.footer {
+  border-top: 1px solid #e2e8f0;
+}
+
+[data-theme='dark'] .theme-doc-markdown {
+  color: #dbeafe;
+}
+
+[data-theme='dark'] .theme-doc-markdown h2 {
+  border-top-color: #243244;
+}
+
+[data-theme='dark'] .theme-doc-markdown thead {
+  background: #1e293b;
+}

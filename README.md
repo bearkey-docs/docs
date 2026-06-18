@@ -1,33 +1,44 @@
 # 文档网页设计
 
-这是一个用于规划和开发“文档网页设计”项目的初始仓库。
+参考 Radxa Docs 风格搭建的 Markdown 文档网站。
 
-## 项目目标
+## 技术栈
 
-- 设计清晰、易读的文档网页结构
-- 支持首页、文档目录、文章详情等基础页面
-- 建立统一的视觉风格，包括排版、颜色、间距和组件规范
-- 后续可扩展为静态文档站点或完整前端项目
+- [Docusaurus](https://docusaurus.io/)
+- React
+- Markdown / MDX
+- GitHub Actions
+- GitHub Pages
 
-## 初步页面规划
+## 本地运行
 
-1. 首页
-   - 项目介绍
-   - 快速入口
-   - 重点功能展示
-2. 文档目录页
-   - 左侧导航
-   - 分类与搜索
-   - 文档列表
-3. 文档详情页
-   - 标题与摘要
-   - 正文内容
-   - 上一篇 / 下一篇导航
+安装依赖：
 
-## 后续开发方向
+```bash
+npm install
+```
 
-- 确定技术栈
-- 绘制页面原型
-- 创建基础页面结构
-- 添加响应式布局
-- 优化阅读体验
+启动开发服务器：
+
+```bash
+npm run start
+```
+
+构建静态网站：
+
+```bash
+npm run build
+```
+
+## 文档同步方式
+
+文档内容放在 `docs/` 目录。更新 Markdown / MDX 后提交到 GitHub，GitHub Actions 会自动构建静态网页并部署到 GitHub Pages。
+
+## 主要目录
+
+| 路径 | 说明 |
+| --- | --- |
+| `docs/` | 文档内容 |
+| `src/pages/` | 自定义网页 |
+| `src/css/custom.css` | 主题样式 |
+| `.github/workflows/deploy.yml` | 自动部署配置 |
