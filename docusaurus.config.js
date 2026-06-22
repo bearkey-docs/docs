@@ -3,6 +3,106 @@
 const lightCodeTheme = require('prism-react-renderer').themes.github;
 const darkCodeTheme = require('prism-react-renderer').themes.dracula;
 
+const productNavGroups = [
+  {
+    label: '核心板',
+    items: [
+      'RK3588 核心板',
+      'RK3568 工业级核心板',
+      'RK3399 Pro 核心板',
+      'TB-96AIoT-1808CO',
+    ],
+  },
+  {
+    label: '主板',
+    items: [
+      'RK3568 主板',
+      'RK3568 工业控制主板',
+      'RK3576 工业控制主板',
+      'RK3588 工业主板',
+      'RK3576 商业显示主板',
+      'RK3588 主板',
+      'Robo3588机器人主板',
+      'RK3506 工业主板',
+      'Carrier Board',
+    ],
+  },
+  {
+    label: '终端',
+    items: [
+      'AI边缘工作站',
+      'RK3576 数据采集网关',
+      '8英寸平板',
+      '10.6英寸平板',
+      '11英寸平板',
+      'RK3568 数据采集网关',
+      'RK3568工控屏',
+      'RK3588 边缘控制网关',
+      '工控屏',
+      '拼接屏处理器',
+      '视频优化盒子',
+      'RK3588边缘计算工业网关',
+      'RK3568-15.6英寸屏',
+      'RK3506 工控屏',
+    ],
+  },
+  {
+    label: 'AIOT解决方案',
+    items: [
+      'AI边缘工作站',
+      'RK3576 数据采集网关',
+      '8英寸平板',
+      '10.6英寸平板',
+      '11英寸平板',
+      'RK3568 数据采集网关',
+      '工控屏',
+      '拼接屏处理器',
+    ],
+  },
+  {
+    label: 'OpenHarmony',
+    items: [
+      'RK3568 主板',
+      'RK3576 数据采集网关',
+      'RK3568 工业控制主板',
+      'RK3576 工业控制主板',
+      '8英寸平板',
+      '10.6英寸平板',
+      '11英寸平板',
+      'RK3568 数据采集网关',
+      'RK3588工业主板',
+      'RK3576 商业显示主板',
+      '工控屏',
+      'RK3588 主板',
+      '拼接屏处理器',
+    ],
+  },
+  {
+    label: 'MineHarmony',
+    items: [
+      'RK3568 主板',
+      'RK3568 工业控制主板',
+      'RK3576 工业控制主板',
+      '8英寸平板',
+      '11英寸平板',
+      'RK3568 数据采集网关',
+      'RK3588工业主板',
+      '工控屏',
+    ],
+  },
+];
+
+const productNavbarItems = productNavGroups.map((group) => ({
+  type: 'dropdown',
+  label: group.label,
+  position: 'left',
+  className: 'product-nav-dropdown',
+  items: group.items.map((label) => ({
+    label,
+    href: '#',
+  })),
+}));
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: '文档网页设计',
@@ -64,8 +164,9 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'docsSidebar',
             position: 'left',
-            label: '文档',
+            label: '所有文档',
           },
+          ...productNavbarItems,
           {
             href: 'https://github.com/CacheBiomancerClash/document-web-design',
             label: 'GitHub',
