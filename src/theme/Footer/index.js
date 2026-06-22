@@ -91,6 +91,10 @@ function getAddressItems(content) {
   return {tel, business, firstAddress, addressLines};
 }
 
+function getAddressLabel(currentLocale) {
+  return currentLocale === 'en' ? 'Address :' : '地址：';
+}
+
 function FooterLink({href, children}) {
   return (
     <a href={href} target="_blank" rel="noreferrer">
@@ -107,6 +111,10 @@ export default function Footer() {
   const year = new Date().getFullYear();
   const content = footerContent[currentLocale] ?? footerContent['zh-Hans'];
   const address = getAddressItems(content);
+  const addressLabel = getAddressLabel(currentLocale);
+  const firstAddress = address.firstAddress
+    .replace(/^Address\s*:\s*/, '')
+    .replace(/^地址：/, '');
 
   return (
     <footer
@@ -147,20 +155,21 @@ export default function Footer() {
                 <ul className="link-list" id="contact_info_container">
                   <li>{address.tel}</li>
                   <li>{address.business}</li>
-                  <li className="address-line">
-                    <span className="address-prefix">
-                      {currentLocale === 'en' ? 'Address : ' : '地址：'}
-                    </span>
-                    <span className="address-content">
-                      {address.firstAddress.replace(/^Address\s*:\s*/, '').replace(/^地址：/, '')}
-                    </span>
-                  </li>
-                  {address.addressLines.map((line) => (
-                    <li className="address-line address-line--continuation" key={line}>
-                      <span className="address-content">{line}</span>
-                    </li>
-                  ))}
                 </ul>
+                <div id="office_address_container" className="office-address">
+                  <div className="address-line">
+                    <span className="address-prefix">{addressLabel}</span>
+                    <span className="address-content">{firstAddress}</span>
+                  </div>
+                  {address.addressLines.map((line) => (
+                    <div className="address-line" key={line}>
+                      <span className="address-prefix address-prefix--hidden">
+                        {addressLabel}
+                      </span>
+                      <span className="address-content">{line}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
               <div id="follow_us_container">
                 {content.qrcodes.map(([label, src]) => (
@@ -176,11 +185,11 @@ export default function Footer() {
       </div>
       <div className="footer-divider" />
       <div className="footer-copyright">
-        <span>
-          Copyright © 2015-{year} {content.company} All Rights Reserved.
-        </span>
-        <span>|</span>
-        <FooterLink href="http://beian.miit.gov.cn">{content.icp}</FooterLink>
+        <p>
+          Copyright © 2015-{year}
+          {content.company} All Rights Reserved.|
+          <FooterLink href="http://beian.miit.gov.cn"> {content.icp}</FooterLink>
+        </p>
       </div>
     </footer>
   );
