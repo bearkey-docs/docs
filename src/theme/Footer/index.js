@@ -86,6 +86,11 @@ function getProductHref(localeContent, filter) {
   return `${officialBaseUrl}/${localeContent.productPage}?filter=${encodeURIComponent(filter)}`;
 }
 
+function getAddressItems(content) {
+  const [tel, business, firstAddress, ...addressLines] = content.contact;
+  return {tel, business, firstAddress, addressLines};
+}
+
 function FooterLink({href, children}) {
   return (
     <a href={href} target="_blank" rel="noreferrer">
@@ -101,50 +106,76 @@ export default function Footer() {
   const qrBaseUrl = useBaseUrl('/img/bearkey-footer/');
   const year = new Date().getFullYear();
   const content = footerContent[currentLocale] ?? footerContent['zh-Hans'];
+  const address = getAddressItems(content);
 
   return (
-    <footer className="bearkey-footer">
-      <div className="bearkey-footer__inner">
-        <section className="bearkey-footer__column">
-          <h2>{content.productsTitle}</h2>
-          <ul>
-            {content.products.map(([label, filter]) => (
-              <li key={label}>
-                <FooterLink href={getProductHref(content, filter)}>{label}</FooterLink>
-              </li>
-            ))}
-          </ul>
-        </section>
-
-        <section className="bearkey-footer__column">
-          <h2>{content.supportTitle}</h2>
-          <ul>
-            {content.support.map(([label, href]) => (
-              <li key={label}>
-                <FooterLink href={href}>{label}</FooterLink>
-              </li>
-            ))}
-          </ul>
-        </section>
-
-        <section className="bearkey-footer__contact">
-          <h2>{content.contactTitle}</h2>
-          <ul className="bearkey-footer__contact-list">
-            {content.contact.map((line) => (
-              <li key={line}>{line}</li>
-            ))}
-          </ul>
-          <div className="bearkey-footer__qrcodes">
-            {content.qrcodes.map(([label, src]) => (
-              <figure key={label}>
-                <img src={`${qrBaseUrl}${src}`} alt={label} loading="lazy" />
-                <figcaption>{label}</figcaption>
-              </figure>
-            ))}
+    <footer
+      className={`bearkey-footer ${currentLocale === 'en' ? 'index_en' : ''}`}
+      data-lang={currentLocale === 'en' ? 'en' : 'zh'}>
+      <div className="bearkey-footer__container">
+        <div className="bearkey-footer__row">
+          <div className="bearkey-footer__col">
+            <div className="widget">
+              <h5 className="widgetheading">{content.productsTitle}</h5>
+              <ul className="link-list" id="product_solution_container">
+                {content.products.map(([label, filter]) => (
+                  <li key={label}>
+                    <FooterLink href={getProductHref(content, filter)}>{label}</FooterLink>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
-        </section>
+
+          <div className="bearkey-footer__col">
+            <div className="widget">
+              <h5 className="widgetheading">{content.supportTitle}</h5>
+              <ul className="link-list" id="service_support_container">
+                {content.support.map(([label, href]) => (
+                  <li key={label}>
+                    <FooterLink href={href}>{label}</FooterLink>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          <div className="bearkey-footer__col bearkey-footer__col--contact">
+            <div className="widget">
+              <h5 className="widgetheading">{content.contactTitle}</h5>
+              <div className="contact-section">
+                <ul className="link-list" id="contact_info_container">
+                  <li>{address.tel}</li>
+                  <li>{address.business}</li>
+                  <li className="address-line">
+                    <span className="address-prefix">
+                      {currentLocale === 'en' ? 'Address : ' : '地址：'}
+                    </span>
+                    <span className="address-content">
+                      {address.firstAddress.replace(/^Address\s*:\s*/, '').replace(/^地址：/, '')}
+                    </span>
+                  </li>
+                  {address.addressLines.map((line) => (
+                    <li className="address-line address-line--continuation" key={line}>
+                      <span className="address-content">{line}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div id="follow_us_container">
+                {content.qrcodes.map(([label, src]) => (
+                  <div className="qrcode-item" key={label}>
+                    <img src={`${qrBaseUrl}${src}`} alt={label} loading="lazy" />
+                    <span className="qrcode-title">{label}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div className="bearkey-footer__copyright">
+      <div className="footer-divider" />
+      <div className="footer-copyright">
         <span>
           Copyright © 2015-{year} {content.company} All Rights Reserved.
         </span>
