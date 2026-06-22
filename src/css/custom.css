@@ -181,3 +181,60 @@
   background: rgba(37, 99, 235, 0.18);
   color: #60a5fa;
 }
+
+.navbar__items--right {
+  gap: 0.2rem;
+}
+
+.navbar-locale-dropdown > .navbar__link,
+.navbar__item.navbar-locale-dropdown {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  color: #111827;
+  font-weight: 500;
+}
+
+.navbar-locale-dropdown > .navbar__link::before,
+.navbar__item.navbar-locale-dropdown::before {
+  content: "文A";
+  color: #111827;
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: -0.12em;
+}
+
+.navbar__search {
+  padding-left: 0.35rem;
+}
+
+.navbar__search-input {
+  width: 8.5rem;
+  border: 0;
+  border-radius: 999px;
+  background-color: transparent;
+  color: #111827;
+  font-size: 0.95rem;
+}
+
+.navbar__search-input:focus {
+  background-color: #f8fafc;
+  box-shadow: 0 0 0 2px #bfdbfe;
+}
+
+.navbar__search-input::placeholder {
+  color: #64748b;
+}
+
+[data-theme='dark'] .navbar-locale-dropdown > .navbar__link,
+[data-theme='dark'] .navbar__item.navbar-locale-dropdown,
+[data-theme='dark'] .navbar-locale-dropdown > .navbar__link::before,
+[data-theme='dark'] .navbar__item.navbar-locale-dropdown::before,
+[data-theme='dark'] .navbar__search-input {
+  color: #e5e7eb;
+}
+
+[data-theme='dark'] .navbar__search-input:focus {
+  background-color: #1e293b;
+  box-shadow: 0 0 0 2px #1d4ed8;
+}

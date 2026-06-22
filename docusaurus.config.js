@@ -122,8 +122,30 @@ const config = {
 
   i18n: {
     defaultLocale: 'zh-Hans',
-    locales: ['zh-Hans'],
+    locales: ['zh-Hans', 'en'],
+    localeConfigs: {
+      'zh-Hans': {
+        label: '中文',
+        direction: 'ltr',
+      },
+      en: {
+        label: 'English',
+        direction: 'ltr',
+      },
+    },
   },
+
+  themes: [
+    [
+      require.resolve('@easyops-cn/docusaurus-search-local'),
+      /** @type {import('@easyops-cn/docusaurus-search-local').PluginOptions} */
+      ({
+        hashed: true,
+        language: ['en', 'zh'],
+        highlightSearchTermsOnTargetPage: true,
+      }),
+    ],
+  ],
 
   presets: [
     [
@@ -168,8 +190,12 @@ const config = {
           },
           ...productNavbarItems,
           {
-            href: 'https://github.com/CacheBiomancerClash/document-web-design',
-            label: 'GitHub',
+            type: 'localeDropdown',
+            position: 'right',
+            className: 'navbar-locale-dropdown',
+          },
+          {
+            type: 'search',
             position: 'right',
           },
         ],
