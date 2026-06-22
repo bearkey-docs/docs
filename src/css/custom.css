@@ -247,8 +247,7 @@
   --footer-font-family: "Source Han Sans CN", "Microsoft YaHei", sans-serif;
   position: relative;
   width: 100%;
-  height: 32.4vw;
-  min-height: 30rem;
+  height: 28.125vw;
   padding: 3.75vw 18.75vw 4.167vw;
   box-sizing: border-box;
   background: var(--footer-bg-color);
@@ -258,34 +257,61 @@
 }
 
 .bearkey-footer__container {
-  width: 100%;
-  height: 100%;
+  width: 62.5vw;
+  height: 24.479vw;
   margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+  background: none;
+  padding: 0;
 }
 
 .bearkey-footer__row {
   display: flex;
-  align-items: flex-start;
+  flex-direction: row;
+  gap: 0;
   width: 100%;
+  height: 100%;
 }
 
 .bearkey-footer__col {
   position: relative;
-  flex: 0 1 auto;
+  flex: 0 0 auto;
   min-width: 0;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  text-align: left;
 }
 
-.bearkey-footer__col:nth-child(2),
+.bearkey-footer__col:nth-child(1) {
+  width: 7.969vw;
+}
+
+.bearkey-footer__col:nth-child(2) {
+  width: 7.292vw;
+  margin-left: 9.323vw;
+}
+
 .bearkey-footer__col:nth-child(3) {
-  margin-left: auto;
+  width: 26.458vw;
+  margin-left: 11.458vw;
+}
+
+.bearkey-footer.index_en .bearkey-footer__col:nth-child(1) {
+  width: 11.042vw;
 }
 
 .bearkey-footer.index_en .bearkey-footer__col:nth-child(2) {
-  flex: 0 0 8.3vw;
+  width: 13.021vw;
+  margin-left: 5.833vw;
 }
 
 .bearkey-footer.index_en .bearkey-footer__col:nth-child(3) {
-  flex: 0 0 32.26vw;
+  width: 26.458vw;
+  margin-left: 5.729vw;
 }
 
 .bearkey-footer a {
@@ -498,6 +524,30 @@
   text-decoration: underline;
 }
 
+@media (max-width: 1700px) and (min-width: 1059px) {
+  .bearkey-footer.index_en {
+    height: auto;
+    min-height: 28.125vw;
+  }
+
+  .bearkey-footer.index_en .bearkey-footer__container {
+    height: auto;
+    min-height: 24.479vw;
+  }
+}
+
+@media (max-width: 1246px) and (min-width: 1059px) {
+  .bearkey-footer {
+    height: auto;
+    min-height: 28.125vw;
+  }
+
+  .bearkey-footer .bearkey-footer__container {
+    height: auto;
+    min-height: 24.479vw;
+  }
+}
+
 @media (max-width: 1058px) {
   .bearkey-footer {
     height: auto;
@@ -516,8 +566,14 @@
     margin-left: 0;
   }
 
+  .bearkey-footer__col:nth-child(1),
+  .bearkey-footer__col:nth-child(2),
+  .bearkey-footer__col:nth-child(3),
+  .bearkey-footer.index_en .bearkey-footer__col:nth-child(1),
   .bearkey-footer.index_en .bearkey-footer__col:nth-child(2),
   .bearkey-footer.index_en .bearkey-footer__col:nth-child(3) {
+    width: auto;
+    margin-left: 0;
     flex: 0 1 auto;
   }
 
