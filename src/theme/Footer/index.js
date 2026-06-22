@@ -64,8 +64,12 @@ const footerContent = {
     contact: [
       'Tel: +86-592-5232963',
       'Business : (+86)18606919996',
-      'Address : Unit 101, East Wing, Building 1, Xingwang Ruijie Haixi Science and Technology Park, No. 9, Gaoxin Avenue, Shangjie Town, Minhou County, Fuzhou City',
-      'Unit 209, Xiamen University National Science and Technology Park, No. 39, Wanghai Road, Software Park Phase II, Siming District, Xiamen City',
+      'Address : Unit 101, East Wing, Building 1, Xingwang Ruijie Haixi',
+      'Science and Technology Park, No. 9, Gaoxin Avenue, Shangjie',
+      'Town, Minhou County, Fuzhou City',
+      'Unit 209, Xiamen University National Science and Technology',
+      'Park, No. 39, Wanghai Road, Software Park Phase II, Siming',
+      'District, Xiamen City',
     ],
     qrcodes: [
       ['Business', 'business-contact-en.webp'],
