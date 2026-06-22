@@ -136,7 +136,7 @@
 .navbar__link:hover,
 .dropdown:hover > .navbar__link,
 .navbar__link--active {
-  color: #58b82b;
+  color: #2563eb;
 }
 
 .navbar__link.product-nav-dropdown,
@@ -162,8 +162,8 @@
 
 .dropdown__link:hover,
 .dropdown__link--active {
-  background: #f3faee;
-  color: #58b82b;
+  background: #eff6ff;
+  color: #2563eb;
 }
 
 [data-theme='dark'] .dropdown__menu {
@@ -178,6 +178,6 @@
 
 [data-theme='dark'] .dropdown__link:hover,
 [data-theme='dark'] .dropdown__link--active {
-  background: rgba(88, 184, 43, 0.16);
-  color: #7ddc4a;
+  background: rgba(37, 99, 235, 0.18);
+  color: #60a5fa;
 }
