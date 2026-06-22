@@ -124,3 +124,60 @@
 [data-theme='dark'] .theme-doc-markdown thead {
   background: #1e293b;
 }
+
+.navbar {
+  --ifm-navbar-item-padding-horizontal: 0.65rem;
+}
+
+.navbar__item {
+  font-size: 0.95rem;
+}
+
+.navbar__link:hover,
+.dropdown:hover > .navbar__link,
+.navbar__link--active {
+  color: #58b82b;
+}
+
+.navbar__link.product-nav-dropdown,
+.product-nav-dropdown > .navbar__link {
+  font-weight: 600;
+}
+
+.dropdown__menu {
+  min-width: 10.75rem;
+  padding: 0.75rem 0.65rem;
+  border: 1px solid #edf0ed;
+  border-radius: 0.35rem;
+  box-shadow: 0 14px 34px rgba(15, 23, 42, 0.12);
+}
+
+.dropdown__link {
+  padding: 0.52rem 0.7rem;
+  border-radius: 0.35rem;
+  color: #4b5563;
+  font-size: 0.9rem;
+  line-height: 1.3;
+}
+
+.dropdown__link:hover,
+.dropdown__link--active {
+  background: #f3faee;
+  color: #58b82b;
+}
+
+[data-theme='dark'] .dropdown__menu {
+  border-color: #243244;
+  background: #111827;
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.35);
+}
+
+[data-theme='dark'] .dropdown__link {
+  color: #d1d5db;
+}
+
+[data-theme='dark'] .dropdown__link:hover,
+[data-theme='dark'] .dropdown__link--active {
+  background: rgba(88, 184, 43, 0.16);
+  color: #7ddc4a;
+}
