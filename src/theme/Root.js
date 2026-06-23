@@ -18,7 +18,7 @@ const SHARED_SECTIONS = new Set([
 ]);
 
 function getValidSection(section) {
-  return DOCS_SECTIONS.has(section) ? section : undefined;
+  return section === 'all' || DOCS_SECTIONS.has(section) ? section : undefined;
 }
 
 function getDocsSection(pathname, search) {
