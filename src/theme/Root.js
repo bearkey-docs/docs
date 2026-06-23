@@ -64,6 +64,24 @@ function isTopLevelSectionLink(element, sectionItem) {
   );
 }
 
+
+function clearSectionQueryForCurrentPage(link) {
+  const currentUrl = new URL(window.location.href);
+  const linkUrl = new URL(link.href);
+
+  if (
+    currentUrl.pathname === linkUrl.pathname &&
+    currentUrl.searchParams.has('section')
+  ) {
+    currentUrl.searchParams.delete('section');
+    window.history.replaceState(
+      window.history.state,
+      '',
+      `${currentUrl.pathname}${currentUrl.search}${currentUrl.hash}`,
+    );
+  }
+}
+
 function getSectionFromSidebarItem(element) {
   const sectionItem = element.closest('.sidebar-section-top');
   const sectionClass = Array.from(sectionItem?.classList ?? []).find((className) =>
@@ -93,7 +111,8 @@ export default function Root({children}) {
       const sectionItem = getTopLevelSectionItem(event.target);
       const section = getValidSection(getSectionFromSidebarItem(event.target));
 
-      if (section && isTopLevelSectionLink(event.target, sectionItem)) {
+      if (link && section && isTopLevelSectionLink(event.target, sectionItem)) {
+        clearSectionQueryForCurrentPage(link);
         document.documentElement.dataset.docsSection = section;
       }
 
