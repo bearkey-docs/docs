@@ -47,6 +47,23 @@ function getDocsSection(pathname, search) {
   return getValidSection(section) ?? 'all';
 }
 
+
+function getTopLevelSectionItem(element) {
+  return element.closest('.sidebar-section-top');
+}
+
+function isTopLevelSectionLink(element, sectionItem) {
+  const link = element.closest('a');
+  const collapsible = link?.closest('.menu__list-item-collapsible');
+
+  return Boolean(
+    link &&
+      sectionItem &&
+      collapsible &&
+      collapsible.parentElement === sectionItem,
+  );
+}
+
 function getSectionFromSidebarItem(element) {
   const sectionItem = element.closest('.sidebar-section-top');
   const sectionClass = Array.from(sectionItem?.classList ?? []).find((className) =>
@@ -73,7 +90,12 @@ export default function Root({children}) {
       }
 
       const link = event.target.closest('a[href*="/docs/"]');
+      const sectionItem = getTopLevelSectionItem(event.target);
       const section = getValidSection(getSectionFromSidebarItem(event.target));
+
+      if (section && isTopLevelSectionLink(event.target, sectionItem)) {
+        document.documentElement.dataset.docsSection = section;
+      }
 
       if (link && section && SHARED_SECTIONS.has(section)) {
         window.sessionStorage.setItem('docsSectionOverride', section);

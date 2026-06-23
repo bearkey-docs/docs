@@ -16,7 +16,7 @@ const topCategory = ({ label, section, items }) => ({
   type: 'category',
   label,
   className: `sidebar-section-top sidebar-section-${section}`,
-  collapsed: false,
+  collapsed: true,
   items,
 });
 
