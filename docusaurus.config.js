@@ -124,34 +124,37 @@ const productDocLinks = {
 };
 
 
-const productGroupLinks = {
-  '核心板': '/docs/core-board',
-  '主板': '/docs/main-board',
-  '终端': '/docs/terminal',
-  'AIOT解决方案': '/docs/aiot-solutions',
-  OpenHarmony: '/docs/openharmony',
-  MineHarmony: '/docs/mineharmony',
+const contextualProductGroups = {
+  'AIOT解决方案': 'aiot-solutions',
+  OpenHarmony: 'openharmony',
+  MineHarmony: 'mineharmony',
 };
 
-const getProductNavbarItem = (label) =>
+const withSidebarContext = (to, section) =>
+  section ? `${to}?section=${section}` : to;
+
+const getProductNavbarItem = (label, section) =>
   productDocLinks[label]
     ? {
         label,
-        to: productDocLinks[label],
+        to: withSidebarContext(productDocLinks[label], section),
       }
     : {
         label,
         href: '#',
       };
 
-const productNavbarItems = productNavGroups.map((group) => ({
-  type: 'dropdown',
-  label: group.label,
-  to: productGroupLinks[group.label],
-  position: 'left',
-  className: 'product-nav-dropdown',
-  items: group.items.map(getProductNavbarItem),
-}));
+const productNavbarItems = productNavGroups.map((group) => {
+  const section = contextualProductGroups[group.label];
+
+  return {
+    type: 'dropdown',
+    label: group.label,
+    position: 'left',
+    className: 'product-nav-dropdown',
+    items: group.items.map((label) => getProductNavbarItem(label, section)),
+  };
+});
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
