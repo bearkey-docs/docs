@@ -1,7 +1,32 @@
 const fs = require('fs');
 const path = require('path');
 
-const docsDir = path.join(__dirname, '..', 'docs');
+const siteDir = path.join(__dirname, '..');
+const docsRoots = [
+  path.join(siteDir, 'docs'),
+  ...getLocalizedDocsRoots(),
+];
+
+function getLocalizedDocsRoots() {
+  const i18nDir = path.join(siteDir, 'i18n');
+
+  if (!fs.existsSync(i18nDir)) {
+    return [];
+  }
+
+  return fs
+    .readdirSync(i18nDir, { withFileTypes: true })
+    .filter((entry) => entry.isDirectory() && !entry.name.startsWith('.'))
+    .map((entry) =>
+      path.join(
+        i18nDir,
+        entry.name,
+        'docusaurus-plugin-content-docs',
+        'current',
+      ),
+    )
+    .filter((docsRoot) => fs.existsSync(docsRoot));
+}
 
 function titleFromDirName(dirName) {
   return dirName
@@ -56,8 +81,10 @@ function walk(dirPath) {
   }
 }
 
-if (!fs.existsSync(docsDir)) {
-  throw new Error(`Docs directory not found: ${docsDir}`);
-}
+for (const docsRoot of docsRoots) {
+  if (!fs.existsSync(docsRoot)) {
+    throw new Error(`Docs directory not found: ${docsRoot}`);
+  }
 
-walk(docsDir);
+  walk(docsRoot);
+}

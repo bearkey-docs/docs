@@ -39,10 +39,11 @@ jobs:
       - name: Commit generated doc categories
         if: github.event_name == 'push'
         run: |
-          if [ -n "$(git status --porcelain -- 'docs/**/_category_.json')" ]; then
+          if [ -n "$(git status --porcelain -- 'docs/**/_category_.json' 'i18n/**/docusaurus-plugin-content-docs/current/**/_category_.json')" ]; then
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
             git add 'docs/**/_category_.json'
+            git add 'i18n/**/docusaurus-plugin-content-docs/current/**/_category_.json'
             git commit -m "Generate missing doc category metadata"
             git push
           fi

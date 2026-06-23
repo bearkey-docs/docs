@@ -1,0 +1,113 @@
+{
+  "title": {
+    "message": "Documentation Web Design"
+  },
+  "logo.alt": {
+    "message": "Docs logo"
+  },
+  "item.label.所有文档": {
+    "message": "All Docs"
+  },
+  "item.label.核心板": {
+    "message": "Core Board"
+  },
+  "item.label.主板": {
+    "message": "Motherboard"
+  },
+  "item.label.终端": {
+    "message": "Terminal"
+  },
+  "item.label.AIOT解决方案": {
+    "message": "AIOT Solutions"
+  },
+  "item.label.OpenHarmony": {
+    "message": "OpenHarmony"
+  },
+  "item.label.MineHarmony": {
+    "message": "MineHarmony"
+  },
+  "item.label.RK3588 核心板": {
+    "message": "RK3588 Core Board"
+  },
+  "item.label.RK3568 工业级核心板": {
+    "message": "RK3568 Industrial Core Board"
+  },
+  "item.label.RK3399 Pro 核心板": {
+    "message": "RK3399 Pro Core Board"
+  },
+  "item.label.TB-96AIoT-1808CO": {
+    "message": "TB-96AIoT-1808CO"
+  },
+  "item.label.RK3568 主板": {
+    "message": "RK3568 Motherboard"
+  },
+  "item.label.RK3568 工业控制主板": {
+    "message": "RK3568 Industrial Control Board"
+  },
+  "item.label.RK3576 工业控制主板": {
+    "message": "RK3576 Industrial Control Board"
+  },
+  "item.label.RK3588 工业主板": {
+    "message": "RK3588 Industrial Motherboard"
+  },
+  "item.label.RK3576 商业显示主板": {
+    "message": "RK3576 Commercial Display Motherboard"
+  },
+  "item.label.RK3588 主板": {
+    "message": "RK3588 Motherboard"
+  },
+  "item.label.Robo3588机器人主板": {
+    "message": "Robo3588 Robot Motherboard"
+  },
+  "item.label.RK3506 工业主板": {
+    "message": "RK3506 Industrial Motherboard"
+  },
+  "item.label.Carrier Board": {
+    "message": "Carrier Board"
+  },
+  "item.label.AI边缘工作站": {
+    "message": "AI Edge Workstation"
+  },
+  "item.label.RK3576 数据采集网关": {
+    "message": "RK3576 Data Acquisition Gateway"
+  },
+  "item.label.8英寸平板": {
+    "message": "8-inch Tablet"
+  },
+  "item.label.10.6英寸平板": {
+    "message": "10.6-inch Tablet"
+  },
+  "item.label.11英寸平板": {
+    "message": "11-inch Tablet"
+  },
+  "item.label.RK3568 数据采集网关": {
+    "message": "RK3568 Data Acquisition Gateway"
+  },
+  "item.label.RK3568工控屏": {
+    "message": "RK3568 Industrial Panel"
+  },
+  "item.label.RK3588 边缘控制网关": {
+    "message": "RK3588 Edge Control Gateway"
+  },
+  "item.label.工控屏": {
+    "message": "Industrial Panel"
+  },
+  "item.label.拼接屏处理器": {
+    "message": "Video Wall Processor"
+  },
+  "item.label.视频优化盒子": {
+    "message": "Video Optimization Box"
+  },
+  "item.label.RK3588边缘计算工业网关": {
+    "message": "RK3588 Edge Computing Industrial Gateway"
+  },
+  "item.label.RK3568-15.6英寸屏": {
+    "message": "RK3568 15.6-inch Panel"
+  },
+  "item.label.RK3506 工控屏": {
+    "message": "RK3506 Industrial Panel"
+  },
+  "item.label.RK3588工业主板": {
+    "message": "RK3588 Industrial Motherboard"
+  }
+}
