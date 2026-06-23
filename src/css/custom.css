@@ -548,6 +548,7 @@
   .bearkey-footer.index_en #follow_us_container {
     padding-left: 0 !important;
     margin-left: 0 !important;
+    margin-bottom: 3vw !important;
     justify-content: flex-start !important;
   }
 }
