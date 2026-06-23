@@ -109,14 +109,5 @@
   },
   "item.label.RK3588工业主板": {
     "message": "RK3588 Industrial Motherboard"
-  },
-  "item.label.AIOT解决方案产品列表": {
-    "message": "AIOT Solutions Product List"
-  },
-  "item.label.OpenHarmony产品列表": {
-    "message": "OpenHarmony Product List"
-  },
-  "item.label.MineHarmony产品列表": {
-    "message": "MineHarmony Product List"
   }
 }
