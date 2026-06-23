@@ -1,4 +1,5 @@
 ---
+displayed_sidebar: docsSidebar
 sidebar_position: 1
 title: Project Overview
 description: Overview of the documentation website structure and workflow.

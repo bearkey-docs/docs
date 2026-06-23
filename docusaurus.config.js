@@ -123,6 +123,16 @@ const productDocLinks = {
   'Carrier Board': '/docs/main-board/carrier-board/product-specification',
 };
 
+
+const productGroupLinks = {
+  '核心板': '/docs/core-board',
+  '主板': '/docs/main-board',
+  '终端': '/docs/terminal',
+  'AIOT解决方案': '/docs/aiot-solutions',
+  OpenHarmony: '/docs/openharmony',
+  MineHarmony: '/docs/mineharmony',
+};
+
 const getProductNavbarItem = (label) =>
   productDocLinks[label]
     ? {
@@ -137,6 +147,7 @@ const getProductNavbarItem = (label) =>
 const productNavbarItems = productNavGroups.map((group) => ({
   type: 'dropdown',
   label: group.label,
+  to: productGroupLinks[group.label],
   position: 'left',
   className: 'product-nav-dropdown',
   items: group.items.map(getProductNavbarItem),
@@ -223,8 +234,7 @@ const config = {
         },
         items: [
           {
-            type: 'docSidebar',
-            sidebarId: 'docsSidebar',
+            to: '/docs/intro',
             position: 'left',
             label: '所有文档',
           },

@@ -1,4 +1,5 @@
 ---
+displayed_sidebar: docsSidebar
 sidebar_position: 1
 title: 项目概览
 description: 文档网页设计项目的目标、结构和工作方式。

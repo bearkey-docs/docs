@@ -639,3 +639,18 @@
     width: calc(100% - 40px);
   }
 }
+
+
+html[data-docs-section]:not([data-docs-section='all']) .theme-doc-sidebar-menu .sidebar-section-top {
+  display: none;
+}
+
+html[data-docs-section='core-board'] .theme-doc-sidebar-menu .sidebar-section-core-board,
+html[data-docs-section='main-board'] .theme-doc-sidebar-menu .sidebar-section-main-board,
+html[data-docs-section='terminal'] .theme-doc-sidebar-menu .sidebar-section-terminal,
+html[data-docs-section='aiot-solutions'] .theme-doc-sidebar-menu .sidebar-section-aiot-solutions,
+html[data-docs-section='openharmony'] .theme-doc-sidebar-menu .sidebar-section-openharmony,
+html[data-docs-section='mineharmony'] .theme-doc-sidebar-menu .sidebar-section-mineharmony,
+html[data-docs-section='reference'] .theme-doc-sidebar-menu .sidebar-section-reference {
+  display: list-item;
+}
