@@ -223,10 +223,6 @@ const config = {
                 label: '开始阅读',
                 to: '/docs/intro',
               },
-              {
-                label: '编写 Markdown',
-                to: '/docs/getting-started/write-docs',
-              },
             ],
           },
           {

@@ -171,13 +171,13 @@ https://docs.fengxinglong.top/docs/reference/ssh-remote
 如果新增的是文件夹，例如：
 
 ```text
-docs/test/wiki_TB-96AI.md
+docs/core-board/rk3588-core-board/product-specification.md
 ```
 
 GitHub Actions 会自动补一个分类配置文件：
 
 ```text
-docs/test/_category_.json
+docs/core-board/rk3588-core-board/_category_.json
 ```
 
 这个文件会提交回仓库，之后可以在 GitHub 网页里编辑它来修改左侧文件夹显示名：
@@ -185,7 +185,7 @@ docs/test/_category_.json
 ```json
 {
   "label": "测试",
-  "position": 100,
+  "position": 1,
   "collapsed": false
 }
 ```
