@@ -65,6 +65,47 @@ function isTopLevelSectionLink(element, sectionItem) {
 }
 
 
+
+function syncCategoryExpandedState(category, expanded) {
+  category.classList.toggle('menu__list-item--collapsed', !expanded);
+
+  const directList = category.querySelector(':scope > .menu__list');
+  if (directList) {
+    directList.style.display = expanded ? '' : 'none';
+  }
+
+  const directToggle = category.querySelector(
+    ':scope > .menu__list-item-collapsible [aria-expanded]',
+  );
+  directToggle?.setAttribute('aria-expanded', String(expanded));
+}
+
+function resetAllDocsSidebarState() {
+  const categories = document.querySelectorAll(
+    '.theme-doc-sidebar-menu .theme-doc-sidebar-item-category',
+  );
+
+  categories.forEach((category) => {
+    syncCategoryExpandedState(
+      category,
+      Boolean(category.querySelector('.menu__link--active')),
+    );
+  });
+}
+
+
+function clearAllDocsSidebarResetState() {
+  const lists = document.querySelectorAll(
+    '.theme-doc-sidebar-menu .theme-doc-sidebar-item-category > .menu__list',
+  );
+
+  lists.forEach((list) => list.style.removeProperty('display'));
+}
+
+function scheduleAllDocsSidebarReset() {
+  window.setTimeout(resetAllDocsSidebarState, 0);
+}
+
 function clearSectionQueryForCurrentPage(link) {
   const currentUrl = new URL(window.location.href);
   const linkUrl = new URL(link.href);
@@ -95,10 +136,14 @@ export default function Root({children}) {
   const location = useLocation();
 
   useEffect(() => {
-    document.documentElement.dataset.docsSection = getDocsSection(
-      location.pathname,
-      location.search,
-    );
+    const docsSection = getDocsSection(location.pathname, location.search);
+    document.documentElement.dataset.docsSection = docsSection;
+
+    if (docsSection === 'all') {
+      scheduleAllDocsSidebarReset();
+    } else {
+      clearAllDocsSidebarResetState();
+    }
   }, [location.pathname, location.search]);
 
   useEffect(() => {
@@ -110,9 +155,17 @@ export default function Root({children}) {
       const link = event.target.closest('a[href*="/docs/"]');
       const sectionItem = getTopLevelSectionItem(event.target);
       const section = getValidSection(getSectionFromSidebarItem(event.target));
+      const linkSection = link
+        ? new URL(link.href).searchParams.get('section')
+        : undefined;
+
+      if (linkSection === 'all') {
+        scheduleAllDocsSidebarReset();
+      }
 
       if (link && section && isTopLevelSectionLink(event.target, sectionItem)) {
         clearSectionQueryForCurrentPage(link);
+        clearAllDocsSidebarResetState();
         document.documentElement.dataset.docsSection = section;
       }
 
