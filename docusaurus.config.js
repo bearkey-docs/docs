@@ -94,12 +94,33 @@ const productNavGroups = [
 
 const productDocLinks = {
   'RK3588 核心板': '/docs/core-board/rk3588-core-board/product-specification',
-  'RK3568 工业级核心板':
-    '/docs/core-board/rk3568-industrial-core-board/product-specification',
-  'RK3399 Pro 核心板':
-    '/docs/core-board/rk3399-pro-core-board/product-specification',
-  'TB-96AIoT-1808CO':
-    '/docs/core-board/tb-96aiot-1808co/product-specification',
+  'RK3568 工业级核心板': '/docs/core-board/rk3568-industrial-core-board/product-specification',
+  'RK3399 Pro 核心板': '/docs/core-board/rk3399-pro-core-board/product-specification',
+  'TB-96AIoT-1808CO': '/docs/core-board/tb-96aiot-1808co/product-specification',
+  'RK3568 主板': '/docs/main-board/rk3568-main-board/product-specification',
+  'RK3568 工业控制主板': '/docs/main-board/rk3568-industrial-control-main-board/product-specification',
+  'RK3576 工业控制主板': '/docs/main-board/rk3576-industrial-control-main-board/product-specification',
+  'RK3588 工业主板': '/docs/main-board/rk3588-industrial-main-board/product-specification',
+  'RK3588工业主板': '/docs/main-board/rk3588-industrial-main-board/product-specification',
+  'RK3576 商业显示主板': '/docs/main-board/rk3576-commercial-display-main-board/product-specification',
+  'RK3588 主板': '/docs/main-board/rk3588-main-board/product-specification',
+  'Robo3588机器人主板': '/docs/main-board/robo3588-robot-main-board/product-specification',
+  'RK3506 工业主板': '/docs/main-board/rk3506-industrial-main-board/product-specification',
+  'AI边缘工作站': '/docs/terminal/ai-edge-workstation/product-specification',
+  'RK3576 数据采集网关': '/docs/terminal/rk3576-data-acquisition-gateway/product-specification',
+  '8英寸平板': '/docs/terminal/eight-inch-tablet/product-specification',
+  '10.6英寸平板': '/docs/terminal/ten-six-inch-tablet/product-specification',
+  '11英寸平板': '/docs/terminal/eleven-inch-tablet/product-specification',
+  'RK3568 数据采集网关': '/docs/terminal/rk3568-data-acquisition-gateway/product-specification',
+  'RK3568工控屏': '/docs/terminal/rk3568-industrial-panel/product-specification',
+  'RK3588 边缘控制网关': '/docs/terminal/rk3588-edge-control-gateway/product-specification',
+  '工控屏': '/docs/terminal/industrial-panel/product-specification',
+  '拼接屏处理器': '/docs/terminal/video-wall-processor/product-specification',
+  '视频优化盒子': '/docs/terminal/video-optimization-box/product-specification',
+  'RK3588边缘计算工业网关': '/docs/terminal/rk3588-edge-computing-industrial-gateway/product-specification',
+  'RK3568-15.6英寸屏': '/docs/terminal/rk3568-15-6-inch-panel/product-specification',
+  'RK3506 工控屏': '/docs/terminal/rk3506-industrial-panel/product-specification',
+  'Carrier Board': '/docs/main-board/carrier-board/product-specification',
 };
 
 const getProductNavbarItem = (label) =>
