@@ -10,5 +10,188 @@
   },
   "sidebar.docsSidebar.category.设计参考": {
     "message": "Design Reference"
+  },
+  "sidebar.docsSidebar.category.主板": {
+    "message": "Motherboard"
+  },
+  "sidebar.docsSidebar.category.终端": {
+    "message": "Terminal"
+  },
+  "sidebar.docsSidebar.category.AIOT解决方案": {
+    "message": "AIOT Solutions"
+  },
+  "sidebar.docsSidebar.category.OpenHarmony": {
+    "message": "OpenHarmony"
+  },
+  "sidebar.docsSidebar.category.MineHarmony": {
+    "message": "MineHarmony"
+  },
+  "sidebar.docsSidebar.category.AI边缘工作站": {
+    "message": "AI Edge Workstation"
+  },
+  "sidebar.docsSidebar.category.RK3576 数据采集网关": {
+    "message": "RK3576 Data Acquisition Gateway"
+  },
+  "sidebar.docsSidebar.category.8英寸平板": {
+    "message": "8-inch Tablet"
+  },
+  "sidebar.docsSidebar.category.10.6英寸平板": {
+    "message": "10.6-inch Tablet"
+  },
+  "sidebar.docsSidebar.category.11英寸平板": {
+    "message": "11-inch Tablet"
+  },
+  "sidebar.docsSidebar.category.RK3568 数据采集网关": {
+    "message": "RK3568 Data Acquisition Gateway"
+  },
+  "sidebar.docsSidebar.category.工控屏": {
+    "message": "Industrial Panel"
+  },
+  "sidebar.docsSidebar.category.拼接屏处理器": {
+    "message": "Video Wall Processor"
+  },
+  "sidebar.docsSidebar.category.RK3568 主板": {
+    "message": "RK3568 Motherboard"
+  },
+  "sidebar.docsSidebar.category.RK3568 工业控制主板": {
+    "message": "RK3568 Industrial Control Board"
+  },
+  "sidebar.docsSidebar.category.RK3576 工业控制主板": {
+    "message": "RK3576 Industrial Control Board"
+  },
+  "sidebar.docsSidebar.category.RK3588 工业主板": {
+    "message": "RK3588 Industrial Motherboard"
+  },
+  "sidebar.docsSidebar.category.RK3576 商业显示主板": {
+    "message": "RK3576 Commercial Display Motherboard"
+  },
+  "sidebar.docsSidebar.category.RK3588 主板": {
+    "message": "RK3588 Motherboard"
+  },
+  "sidebar.docsSidebar.category.AI边缘工作站​": {
+    "message": "AI Edge Workstation"
+  },
+  "sidebar.docsSidebar.category.RK3576 数据采集网关​": {
+    "message": "RK3576 Data Acquisition Gateway"
+  },
+  "sidebar.docsSidebar.category.8英寸平板​": {
+    "message": "8-inch Tablet"
+  },
+  "sidebar.docsSidebar.category.10.6英寸平板​": {
+    "message": "10.6-inch Tablet"
+  },
+  "sidebar.docsSidebar.category.11英寸平板​": {
+    "message": "11-inch Tablet"
+  },
+  "sidebar.docsSidebar.category.RK3568 数据采集网关​": {
+    "message": "RK3568 Data Acquisition Gateway"
+  },
+  "sidebar.docsSidebar.category.工控屏​": {
+    "message": "Industrial Panel"
+  },
+  "sidebar.docsSidebar.category.拼接屏处理器​": {
+    "message": "Video Wall Processor"
+  },
+  "sidebar.docsSidebar.category.RK3568 主板​": {
+    "message": "RK3568 Motherboard"
+  },
+  "sidebar.docsSidebar.category.RK3568 工业控制主板​": {
+    "message": "RK3568 Industrial Control Board"
+  },
+  "sidebar.docsSidebar.category.RK3576 工业控制主板​": {
+    "message": "RK3576 Industrial Control Board"
+  },
+  "sidebar.docsSidebar.category.RK3588 工业主板​": {
+    "message": "RK3588 Industrial Motherboard"
+  },
+  "sidebar.docsSidebar.category.RK3576 商业显示主板​": {
+    "message": "RK3576 Commercial Display Motherboard"
+  },
+  "sidebar.docsSidebar.category.RK3588 主板​": {
+    "message": "RK3588 Motherboard"
+  },
+  "sidebar.docsSidebar.category.AI边缘工作站‌": {
+    "message": "AI Edge Workstation"
+  },
+  "sidebar.docsSidebar.category.RK3576 数据采集网关‌": {
+    "message": "RK3576 Data Acquisition Gateway"
+  },
+  "sidebar.docsSidebar.category.8英寸平板‌": {
+    "message": "8-inch Tablet"
+  },
+  "sidebar.docsSidebar.category.10.6英寸平板‌": {
+    "message": "10.6-inch Tablet"
+  },
+  "sidebar.docsSidebar.category.11英寸平板‌": {
+    "message": "11-inch Tablet"
+  },
+  "sidebar.docsSidebar.category.RK3568 数据采集网关‌": {
+    "message": "RK3568 Data Acquisition Gateway"
+  },
+  "sidebar.docsSidebar.category.工控屏‌": {
+    "message": "Industrial Panel"
+  },
+  "sidebar.docsSidebar.category.拼接屏处理器‌": {
+    "message": "Video Wall Processor"
+  },
+  "sidebar.docsSidebar.category.RK3568 主板‌": {
+    "message": "RK3568 Motherboard"
+  },
+  "sidebar.docsSidebar.category.RK3568 工业控制主板‌": {
+    "message": "RK3568 Industrial Control Board"
+  },
+  "sidebar.docsSidebar.category.RK3576 工业控制主板‌": {
+    "message": "RK3576 Industrial Control Board"
+  },
+  "sidebar.docsSidebar.category.RK3588 工业主板‌": {
+    "message": "RK3588 Industrial Motherboard"
+  },
+  "sidebar.docsSidebar.category.RK3576 商业显示主板‌": {
+    "message": "RK3576 Commercial Display Motherboard"
+  },
+  "sidebar.docsSidebar.category.RK3588 主板‌": {
+    "message": "RK3588 Motherboard"
+  },
+  "sidebar.docsSidebar.category.AI边缘工作站‍": {
+    "message": "AI Edge Workstation"
+  },
+  "sidebar.docsSidebar.category.RK3576 数据采集网关‍": {
+    "message": "RK3576 Data Acquisition Gateway"
+  },
+  "sidebar.docsSidebar.category.8英寸平板‍": {
+    "message": "8-inch Tablet"
+  },
+  "sidebar.docsSidebar.category.10.6英寸平板‍": {
+    "message": "10.6-inch Tablet"
+  },
+  "sidebar.docsSidebar.category.11英寸平板‍": {
+    "message": "11-inch Tablet"
+  },
+  "sidebar.docsSidebar.category.RK3568 数据采集网关‍": {
+    "message": "RK3568 Data Acquisition Gateway"
+  },
+  "sidebar.docsSidebar.category.工控屏‍": {
+    "message": "Industrial Panel"
+  },
+  "sidebar.docsSidebar.category.拼接屏处理器‍": {
+    "message": "Video Wall Processor"
+  },
+  "sidebar.docsSidebar.category.RK3568 主板‍": {
+    "message": "RK3568 Motherboard"
+  },
+  "sidebar.docsSidebar.category.RK3568 工业控制主板‍": {
+    "message": "RK3568 Industrial Control Board"
+  },
+  "sidebar.docsSidebar.category.RK3576 工业控制主板‍": {
+    "message": "RK3576 Industrial Control Board"
+  },
+  "sidebar.docsSidebar.category.RK3588 工业主板‍": {
+    "message": "RK3588 Industrial Motherboard"
+  },
+  "sidebar.docsSidebar.category.RK3576 商业显示主板‍": {
+    "message": "RK3576 Commercial Display Motherboard"
+  },
+  "sidebar.docsSidebar.category.RK3588 主板‍": {
+    "message": "RK3588 Motherboard"
   }
 }
