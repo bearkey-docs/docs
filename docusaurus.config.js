@@ -233,11 +233,11 @@ const config = {
         logo: {
           alt: 'Docs logo',
           src: 'img/logo.svg',
-          href: '/docs/intro',
+          href: '/docs/core-board/rk3588-core-board/product-specification?section=all',
         },
         items: [
           {
-            to: '/docs/intro',
+            to: '/docs/core-board/rk3588-core-board/product-specification?section=all',
             position: 'left',
             label: '所有文档',
           },
@@ -261,7 +261,7 @@ const config = {
             items: [
               {
                 label: '开始阅读',
-                to: '/docs/intro',
+                to: '/docs/core-board/rk3588-core-board/product-specification?section=all',
               },
             ],
           },
