@@ -63,7 +63,7 @@ const footerContent = {
     ],
     contact: [
       'Tel: +86-592-5232963',
-      'Business : (+86)18606919996',
+      'Business  : (+86)18606919996',
       'Address : Unit 101, East Wing, Building 1, Xingwang Ruijie Haixi',
       'Science and Technology Park, No. 9, Gaoxin Avenue, Shangjie',
       'Town, Minhou County, Fuzhou City',
@@ -98,18 +98,15 @@ function getAddressLabel(currentLocale) {
 function getRenderedAddressLines(currentLocale, address, addressLabel) {
   if (currentLocale === 'en') {
     return [
+      {prefix: addressLabel},
       {
         content:
-          'Unit 101, East Wing, Building 1, Xingwang Ruijie Haixi Science and Technology Park, No. 9, Gaoxin Avenue,',
-        prefix: addressLabel,
+          'Unit 101, East Wing, Building 1, Xingwang Ruijie Haixi Science and Technology Park, No. 9, Gaoxin Avenue, Shangjie Town, Minhou County, Fuzhou City',
       },
-      {content: 'Minhou County, Fuzhou', prefix: addressLabel, hiddenPrefix: true},
       {
         content:
-          'Unit 209, Xiamen University National Science and Technology Park, No. 39, Wanghai Road, Software Park Phase II,',
-        prefix: addressLabel,
+          'Unit 209, Xiamen University National Science and Technology Park, No. 39, Wanghai Road, Software Park Phase II, Siming District, Xiamen City',
       },
-      {content: 'Siming District, Xiamen', prefix: addressLabel, hiddenPrefix: true},
     ];
   }
 
@@ -154,9 +151,9 @@ export default function Footer() {
     <footer
       className={`bearkey-footer ${currentLocale === 'en' ? 'index_en' : ''}`}
       data-lang={currentLocale === 'en' ? 'en' : 'zh'}>
-      <div className="bearkey-footer__container">
-        <div className="bearkey-footer__row">
-          <div className="bearkey-footer__col">
+      <div className="container bearkey-footer__container">
+        <div className="row bearkey-footer__row">
+          <div className="col-md-4 bearkey-footer__col">
             <div className="widget">
               <h5 className="widgetheading">{content.productsTitle}</h5>
               <ul className="link-list" id="product_solution_container">
@@ -169,7 +166,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="bearkey-footer__col">
+          <div className="col-md-4 bearkey-footer__col">
             <div className="widget">
               <h5 className="widgetheading">{content.supportTitle}</h5>
               <ul className="link-list" id="service_support_container">
@@ -182,7 +179,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="bearkey-footer__col bearkey-footer__col--contact">
+          <div className="col-md-4 bearkey-footer__col bearkey-footer__col--contact">
             <div className="widget">
               <h5 className="widgetheading">{content.contactTitle}</h5>
               <div className="contact-section">
@@ -191,17 +188,25 @@ export default function Footer() {
                   <li>{address.business}</li>
                 </ul>
                 <div id="office_address_container" className="office-address">
-                  {renderedAddressLines.map(({content: line, prefix, hiddenPrefix}) => (
-                    <div className="address-line" key={line}>
-                      <span
-                        className={`address-prefix${
-                          hiddenPrefix ? ' address-prefix--hidden' : ''
-                        }`}>
-                        {prefix}
-                      </span>
-                      <span className="address-content">{line}</span>
-                    </div>
-                  ))}
+                  {renderedAddressLines.map(
+                    ({content: line, prefix, hiddenPrefix}, index) => (
+                      <div
+                        className="address-line"
+                        key={`${prefix ?? ''}-${line ?? index}`}>
+                        {prefix ? (
+                          <span
+                            className={`address-prefix${
+                              hiddenPrefix ? ' address-prefix--hidden' : ''
+                            }`}>
+                            {prefix}
+                          </span>
+                        ) : null}
+                        {line ? (
+                          <span className="address-content">{line}</span>
+                        ) : null}
+                      </div>
+                    ),
+                  )}
                 </div>
               </div>
               <div id="follow_us_container">
