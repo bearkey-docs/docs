@@ -193,5 +193,497 @@
   },
   "sidebar.docsSidebar.category.RK3588 主板‍": {
     "message": "RK3588 Motherboard"
+  },
+  "sidebar.docsSidebar.category.核心板​": {
+    "message": "Core Board"
+  },
+  "sidebar.docsSidebar.category.核心板‌": {
+    "message": "Core Board"
+  },
+  "sidebar.docsSidebar.category.核心板‍": {
+    "message": "Core Board"
+  },
+  "sidebar.docsSidebar.category.主板​": {
+    "message": "Motherboard"
+  },
+  "sidebar.docsSidebar.category.主板‌": {
+    "message": "Motherboard"
+  },
+  "sidebar.docsSidebar.category.主板‍": {
+    "message": "Motherboard"
+  },
+  "sidebar.docsSidebar.category.终端​": {
+    "message": "Terminal"
+  },
+  "sidebar.docsSidebar.category.终端‌": {
+    "message": "Terminal"
+  },
+  "sidebar.docsSidebar.category.终端‍": {
+    "message": "Terminal"
+  },
+  "sidebar.docsSidebar.category.AIOT解决方案​": {
+    "message": "AIOT Solutions"
+  },
+  "sidebar.docsSidebar.category.AIOT解决方案‌": {
+    "message": "AIOT Solutions"
+  },
+  "sidebar.docsSidebar.category.AIOT解决方案‍": {
+    "message": "AIOT Solutions"
+  },
+  "sidebar.docsSidebar.category.OpenHarmony​": {
+    "message": "OpenHarmony"
+  },
+  "sidebar.docsSidebar.category.OpenHarmony‌": {
+    "message": "OpenHarmony"
+  },
+  "sidebar.docsSidebar.category.OpenHarmony‍": {
+    "message": "OpenHarmony"
+  },
+  "sidebar.docsSidebar.category.MineHarmony​": {
+    "message": "MineHarmony"
+  },
+  "sidebar.docsSidebar.category.MineHarmony‌": {
+    "message": "MineHarmony"
+  },
+  "sidebar.docsSidebar.category.MineHarmony‍": {
+    "message": "MineHarmony"
+  },
+  "sidebar.docsSidebar.category.设计参考​": {
+    "message": "Design Reference"
+  },
+  "sidebar.docsSidebar.category.设计参考‌": {
+    "message": "Design Reference"
+  },
+  "sidebar.docsSidebar.category.设计参考‍": {
+    "message": "Design Reference"
+  },
+  "sidebar.docsSidebar.category.RK3588 核心板​": {
+    "message": "RK3588 Core Board"
+  },
+  "sidebar.docsSidebar.category.RK3588 核心板‌": {
+    "message": "RK3588 Core Board"
+  },
+  "sidebar.docsSidebar.category.RK3588 核心板‍": {
+    "message": "RK3588 Core Board"
+  },
+  "sidebar.docsSidebar.category.RK3568 工业级核心板": {
+    "message": "RK3568 Industrial Core Board"
+  },
+  "sidebar.docsSidebar.category.RK3568 工业级核心板​": {
+    "message": "RK3568 Industrial Core Board"
+  },
+  "sidebar.docsSidebar.category.RK3568 工业级核心板‌": {
+    "message": "RK3568 Industrial Core Board"
+  },
+  "sidebar.docsSidebar.category.RK3568 工业级核心板‍": {
+    "message": "RK3568 Industrial Core Board"
+  },
+  "sidebar.docsSidebar.category.RK3399 Pro 核心板": {
+    "message": "RK3399 Pro Core Board"
+  },
+  "sidebar.docsSidebar.category.RK3399 Pro 核心板​": {
+    "message": "RK3399 Pro Core Board"
+  },
+  "sidebar.docsSidebar.category.RK3399 Pro 核心板‌": {
+    "message": "RK3399 Pro Core Board"
+  },
+  "sidebar.docsSidebar.category.RK3399 Pro 核心板‍": {
+    "message": "RK3399 Pro Core Board"
+  },
+  "sidebar.docsSidebar.category.TB-96AIoT-1808CO": {
+    "message": "TB-96AIoT-1808CO"
+  },
+  "sidebar.docsSidebar.category.TB-96AIoT-1808CO​": {
+    "message": "TB-96AIoT-1808CO"
+  },
+  "sidebar.docsSidebar.category.TB-96AIoT-1808CO‌": {
+    "message": "TB-96AIoT-1808CO"
+  },
+  "sidebar.docsSidebar.category.TB-96AIoT-1808CO‍": {
+    "message": "TB-96AIoT-1808CO"
+  },
+  "sidebar.docsSidebar.category.Robo3588机器人主板": {
+    "message": "Robo3588 Robot Motherboard"
+  },
+  "sidebar.docsSidebar.category.Robo3588机器人主板​": {
+    "message": "Robo3588 Robot Motherboard"
+  },
+  "sidebar.docsSidebar.category.Robo3588机器人主板‌": {
+    "message": "Robo3588 Robot Motherboard"
+  },
+  "sidebar.docsSidebar.category.Robo3588机器人主板‍": {
+    "message": "Robo3588 Robot Motherboard"
+  },
+  "sidebar.docsSidebar.category.RK3506 工业主板": {
+    "message": "RK3506 Industrial Motherboard"
+  },
+  "sidebar.docsSidebar.category.RK3506 工业主板​": {
+    "message": "RK3506 Industrial Motherboard"
+  },
+  "sidebar.docsSidebar.category.RK3506 工业主板‌": {
+    "message": "RK3506 Industrial Motherboard"
+  },
+  "sidebar.docsSidebar.category.RK3506 工业主板‍": {
+    "message": "RK3506 Industrial Motherboard"
+  },
+  "sidebar.docsSidebar.category.Carrier Board": {
+    "message": "Carrier Board"
+  },
+  "sidebar.docsSidebar.category.Carrier Board​": {
+    "message": "Carrier Board"
+  },
+  "sidebar.docsSidebar.category.Carrier Board‌": {
+    "message": "Carrier Board"
+  },
+  "sidebar.docsSidebar.category.Carrier Board‍": {
+    "message": "Carrier Board"
+  },
+  "sidebar.docsSidebar.category.RK3568工控屏": {
+    "message": "RK3568 Industrial Panel"
+  },
+  "sidebar.docsSidebar.category.RK3568工控屏​": {
+    "message": "RK3568 Industrial Panel"
+  },
+  "sidebar.docsSidebar.category.RK3568工控屏‌": {
+    "message": "RK3568 Industrial Panel"
+  },
+  "sidebar.docsSidebar.category.RK3568工控屏‍": {
+    "message": "RK3568 Industrial Panel"
+  },
+  "sidebar.docsSidebar.category.RK3588 边缘控制网关": {
+    "message": "RK3588 Edge Control Gateway"
+  },
+  "sidebar.docsSidebar.category.RK3588 边缘控制网关​": {
+    "message": "RK3588 Edge Control Gateway"
+  },
+  "sidebar.docsSidebar.category.RK3588 边缘控制网关‌": {
+    "message": "RK3588 Edge Control Gateway"
+  },
+  "sidebar.docsSidebar.category.RK3588 边缘控制网关‍": {
+    "message": "RK3588 Edge Control Gateway"
+  },
+  "sidebar.docsSidebar.category.视频优化盒子": {
+    "message": "Video Optimization Box"
+  },
+  "sidebar.docsSidebar.category.视频优化盒子​": {
+    "message": "Video Optimization Box"
+  },
+  "sidebar.docsSidebar.category.视频优化盒子‌": {
+    "message": "Video Optimization Box"
+  },
+  "sidebar.docsSidebar.category.视频优化盒子‍": {
+    "message": "Video Optimization Box"
+  },
+  "sidebar.docsSidebar.category.RK3588边缘计算工业网关": {
+    "message": "RK3588 Edge Computing Industrial Gateway"
+  },
+  "sidebar.docsSidebar.category.RK3588边缘计算工业网关​": {
+    "message": "RK3588 Edge Computing Industrial Gateway"
+  },
+  "sidebar.docsSidebar.category.RK3588边缘计算工业网关‌": {
+    "message": "RK3588 Edge Computing Industrial Gateway"
+  },
+  "sidebar.docsSidebar.category.RK3588边缘计算工业网关‍": {
+    "message": "RK3588 Edge Computing Industrial Gateway"
+  },
+  "sidebar.docsSidebar.category.RK3568-15.6英寸屏": {
+    "message": "RK3568 15.6-inch Panel"
+  },
+  "sidebar.docsSidebar.category.RK3568-15.6英寸屏​": {
+    "message": "RK3568 15.6-inch Panel"
+  },
+  "sidebar.docsSidebar.category.RK3568-15.6英寸屏‌": {
+    "message": "RK3568 15.6-inch Panel"
+  },
+  "sidebar.docsSidebar.category.RK3568-15.6英寸屏‍": {
+    "message": "RK3568 15.6-inch Panel"
+  },
+  "sidebar.docsSidebar.category.RK3506 工控屏": {
+    "message": "RK3506 Industrial Panel"
+  },
+  "sidebar.docsSidebar.category.RK3506 工控屏​": {
+    "message": "RK3506 Industrial Panel"
+  },
+  "sidebar.docsSidebar.category.RK3506 工控屏‌": {
+    "message": "RK3506 Industrial Panel"
+  },
+  "sidebar.docsSidebar.category.RK3506 工控屏‍": {
+    "message": "RK3506 Industrial Panel"
+  },
+  "sidebar.docsSidebar.category.产品规格书": {
+    "message": "Product Specification"
+  },
+  "sidebar.docsSidebar.category.产品规格书​": {
+    "message": "Product Specification"
+  },
+  "sidebar.docsSidebar.category.产品规格书‌": {
+    "message": "Product Specification"
+  },
+  "sidebar.docsSidebar.category.产品规格书‍": {
+    "message": "Product Specification"
+  },
+  "sidebar.docsSidebar.category.RK3568 主": {
+    "message": "RK3568 Motherboard"
+  },
+  "sidebar.docsSidebar.category.RK3568 主​": {
+    "message": "RK3568 Motherboard"
+  },
+  "sidebar.docsSidebar.category.RK3568 主‌": {
+    "message": "RK3568 Motherboard"
+  },
+  "sidebar.docsSidebar.category.RK3568 主‍": {
+    "message": "RK3568 Motherboard"
+  },
+  "sidebar.docsSidebar.category.RK3568 工控主": {
+    "message": "RK3568 Industrial Control Board"
+  },
+  "sidebar.docsSidebar.category.RK3568 工控主​": {
+    "message": "RK3568 Industrial Control Board"
+  },
+  "sidebar.docsSidebar.category.RK3568 工控主‌": {
+    "message": "RK3568 Industrial Control Board"
+  },
+  "sidebar.docsSidebar.category.RK3568 工控主‍": {
+    "message": "RK3568 Industrial Control Board"
+  },
+  "sidebar.docsSidebar.category.RK3576 工控主": {
+    "message": "RK3576 Industrial Control Board"
+  },
+  "sidebar.docsSidebar.category.RK3576 工控主​": {
+    "message": "RK3576 Industrial Control Board"
+  },
+  "sidebar.docsSidebar.category.RK3576 工控主‌": {
+    "message": "RK3576 Industrial Control Board"
+  },
+  "sidebar.docsSidebar.category.RK3576 工控主‍": {
+    "message": "RK3576 Industrial Control Board"
+  },
+  "sidebar.docsSidebar.category.RK3588 工主": {
+    "message": "RK3588 Industrial Motherboard"
+  },
+  "sidebar.docsSidebar.category.RK3588 工主​": {
+    "message": "RK3588 Industrial Motherboard"
+  },
+  "sidebar.docsSidebar.category.RK3588 工主‌": {
+    "message": "RK3588 Industrial Motherboard"
+  },
+  "sidebar.docsSidebar.category.RK3588 工主‍": {
+    "message": "RK3588 Industrial Motherboard"
+  },
+  "sidebar.docsSidebar.category.RK3588工主": {
+    "message": "RK3588 Industrial Motherboard"
+  },
+  "sidebar.docsSidebar.category.RK3588工主​": {
+    "message": "RK3588 Industrial Motherboard"
+  },
+  "sidebar.docsSidebar.category.RK3588工主‌": {
+    "message": "RK3588 Industrial Motherboard"
+  },
+  "sidebar.docsSidebar.category.RK3588工主‍": {
+    "message": "RK3588 Industrial Motherboard"
+  },
+  "sidebar.docsSidebar.category.RK3576 商显主": {
+    "message": "RK3576 Commercial Display Motherboard"
+  },
+  "sidebar.docsSidebar.category.RK3576 商显主​": {
+    "message": "RK3576 Commercial Display Motherboard"
+  },
+  "sidebar.docsSidebar.category.RK3576 商显主‌": {
+    "message": "RK3576 Commercial Display Motherboard"
+  },
+  "sidebar.docsSidebar.category.RK3576 商显主‍": {
+    "message": "RK3576 Commercial Display Motherboard"
+  },
+  "sidebar.docsSidebar.category.RK3588 主": {
+    "message": "RK3588 Motherboard"
+  },
+  "sidebar.docsSidebar.category.RK3588 主​": {
+    "message": "RK3588 Motherboard"
+  },
+  "sidebar.docsSidebar.category.RK3588 主‌": {
+    "message": "RK3588 Motherboard"
+  },
+  "sidebar.docsSidebar.category.RK3588 主‍": {
+    "message": "RK3588 Motherboard"
+  },
+  "sidebar.docsSidebar.category.RK3506 工主": {
+    "message": "RK3506 Industrial Motherboard"
+  },
+  "sidebar.docsSidebar.category.RK3506 工主​": {
+    "message": "RK3506 Industrial Motherboard"
+  },
+  "sidebar.docsSidebar.category.RK3506 工主‌": {
+    "message": "RK3506 Industrial Motherboard"
+  },
+  "sidebar.docsSidebar.category.RK3506 工主‍": {
+    "message": "RK3506 Industrial Motherboard"
+  },
+  "sidebar.docsSidebar.category.AI边工站": {
+    "message": "AI Edge Workstation"
+  },
+  "sidebar.docsSidebar.category.AI边工站​": {
+    "message": "AI Edge Workstation"
+  },
+  "sidebar.docsSidebar.category.AI边工站‌": {
+    "message": "AI Edge Workstation"
+  },
+  "sidebar.docsSidebar.category.AI边工站‍": {
+    "message": "AI Edge Workstation"
+  },
+  "sidebar.docsSidebar.category.RK3576 数采网": {
+    "message": "RK3576 Data Acquisition Gateway"
+  },
+  "sidebar.docsSidebar.category.RK3576 数采网​": {
+    "message": "RK3576 Data Acquisition Gateway"
+  },
+  "sidebar.docsSidebar.category.RK3576 数采网‌": {
+    "message": "RK3576 Data Acquisition Gateway"
+  },
+  "sidebar.docsSidebar.category.RK3576 数采网‍": {
+    "message": "RK3576 Data Acquisition Gateway"
+  },
+  "sidebar.docsSidebar.category.8英平": {
+    "message": "8-inch Tablet"
+  },
+  "sidebar.docsSidebar.category.8英平​": {
+    "message": "8-inch Tablet"
+  },
+  "sidebar.docsSidebar.category.8英平‌": {
+    "message": "8-inch Tablet"
+  },
+  "sidebar.docsSidebar.category.8英平‍": {
+    "message": "8-inch Tablet"
+  },
+  "sidebar.docsSidebar.category.10.6英平": {
+    "message": "10.6-inch Tablet"
+  },
+  "sidebar.docsSidebar.category.10.6英平​": {
+    "message": "10.6-inch Tablet"
+  },
+  "sidebar.docsSidebar.category.10.6英平‌": {
+    "message": "10.6-inch Tablet"
+  },
+  "sidebar.docsSidebar.category.10.6英平‍": {
+    "message": "10.6-inch Tablet"
+  },
+  "sidebar.docsSidebar.category.11英平": {
+    "message": "11-inch Tablet"
+  },
+  "sidebar.docsSidebar.category.11英平​": {
+    "message": "11-inch Tablet"
+  },
+  "sidebar.docsSidebar.category.11英平‌": {
+    "message": "11-inch Tablet"
+  },
+  "sidebar.docsSidebar.category.11英平‍": {
+    "message": "11-inch Tablet"
+  },
+  "sidebar.docsSidebar.category.RK3568 数采网": {
+    "message": "RK3568 Data Acquisition Gateway"
+  },
+  "sidebar.docsSidebar.category.RK3568 数采网​": {
+    "message": "RK3568 Data Acquisition Gateway"
+  },
+  "sidebar.docsSidebar.category.RK3568 数采网‌": {
+    "message": "RK3568 Data Acquisition Gateway"
+  },
+  "sidebar.docsSidebar.category.RK3568 数采网‍": {
+    "message": "RK3568 Data Acquisition Gateway"
+  },
+  "sidebar.docsSidebar.category.RK3568工屏": {
+    "message": "RK3568 Industrial Panel"
+  },
+  "sidebar.docsSidebar.category.RK3568工屏​": {
+    "message": "RK3568 Industrial Panel"
+  },
+  "sidebar.docsSidebar.category.RK3568工屏‌": {
+    "message": "RK3568 Industrial Panel"
+  },
+  "sidebar.docsSidebar.category.RK3568工屏‍": {
+    "message": "RK3568 Industrial Panel"
+  },
+  "sidebar.docsSidebar.category.RK3588 边控网": {
+    "message": "RK3588 Edge Control Gateway"
+  },
+  "sidebar.docsSidebar.category.RK3588 边控网​": {
+    "message": "RK3588 Edge Control Gateway"
+  },
+  "sidebar.docsSidebar.category.RK3588 边控网‌": {
+    "message": "RK3588 Edge Control Gateway"
+  },
+  "sidebar.docsSidebar.category.RK3588 边控网‍": {
+    "message": "RK3588 Edge Control Gateway"
+  },
+  "sidebar.docsSidebar.category.工屏": {
+    "message": "Industrial Panel"
+  },
+  "sidebar.docsSidebar.category.工屏​": {
+    "message": "Industrial Panel"
+  },
+  "sidebar.docsSidebar.category.工屏‌": {
+    "message": "Industrial Panel"
+  },
+  "sidebar.docsSidebar.category.工屏‍": {
+    "message": "Industrial Panel"
+  },
+  "sidebar.docsSidebar.category.拼屏理": {
+    "message": "Video Wall Processor"
+  },
+  "sidebar.docsSidebar.category.拼屏理​": {
+    "message": "Video Wall Processor"
+  },
+  "sidebar.docsSidebar.category.拼屏理‌": {
+    "message": "Video Wall Processor"
+  },
+  "sidebar.docsSidebar.category.拼屏理‍": {
+    "message": "Video Wall Processor"
+  },
+  "sidebar.docsSidebar.category.视优盒": {
+    "message": "Video Optimization Box"
+  },
+  "sidebar.docsSidebar.category.视优盒​": {
+    "message": "Video Optimization Box"
+  },
+  "sidebar.docsSidebar.category.视优盒‌": {
+    "message": "Video Optimization Box"
+  },
+  "sidebar.docsSidebar.category.视优盒‍": {
+    "message": "Video Optimization Box"
+  },
+  "sidebar.docsSidebar.category.RK3588边计工网": {
+    "message": "RK3588 Edge Computing Industrial Gateway"
+  },
+  "sidebar.docsSidebar.category.RK3588边计工网​": {
+    "message": "RK3588 Edge Computing Industrial Gateway"
+  },
+  "sidebar.docsSidebar.category.RK3588边计工网‌": {
+    "message": "RK3588 Edge Computing Industrial Gateway"
+  },
+  "sidebar.docsSidebar.category.RK3588边计工网‍": {
+    "message": "RK3588 Edge Computing Industrial Gateway"
+  },
+  "sidebar.docsSidebar.category.RK3568-15.6英屏": {
+    "message": "RK3568 15.6-inch Panel"
+  },
+  "sidebar.docsSidebar.category.RK3568-15.6英屏​": {
+    "message": "RK3568 15.6-inch Panel"
+  },
+  "sidebar.docsSidebar.category.RK3568-15.6英屏‌": {
+    "message": "RK3568 15.6-inch Panel"
+  },
+  "sidebar.docsSidebar.category.RK3568-15.6英屏‍": {
+    "message": "RK3568 15.6-inch Panel"
+  },
+  "sidebar.docsSidebar.category.RK3506 工屏": {
+    "message": "RK3506 Industrial Panel"
+  },
+  "sidebar.docsSidebar.category.RK3506 工屏​": {
+    "message": "RK3506 Industrial Panel"
+  },
+  "sidebar.docsSidebar.category.RK3506 工屏‌": {
+    "message": "RK3506 Industrial Panel"
+  },
+  "sidebar.docsSidebar.category.RK3506 工屏‍": {
+    "message": "RK3506 Industrial Panel"
   }
 }
