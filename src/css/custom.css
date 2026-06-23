@@ -406,34 +406,29 @@
 }
 
 .bearkey-footer .address-line {
-  display: block;
-  position: relative;
-  width: auto;
-  max-width: none;
-  min-width: 100%;
-  padding-left: 5.1vw !important;
-  white-space: nowrap;
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 100%;
+  white-space: normal;
   overflow: visible;
 }
 
 .bearkey-footer .address-prefix {
-  position: absolute;
-  left: 0;
-  display: inline-block;
-  width: 5.1vw;
+  flex: 0 0 auto;
   color: var(--footer-text-color);
   white-space: nowrap;
 }
 
-.bearkey-footer .address-prefix--hidden {
-  visibility: hidden;
+.bearkey-footer .address-content {
+  flex: 1 1 auto;
+  min-width: 0;
+  margin-left: 0.26vw;
+  white-space: normal;
 }
 
-.bearkey-footer .address-content {
-  position: relative;
-  left: 0;
-  display: inline-block;
-  white-space: nowrap;
+.bearkey-footer .address-paragraph {
+  display: block;
 }
 
 .bearkey-footer #follow_us_container {
@@ -537,45 +532,6 @@
     min-height: 24.479vw !important;
   }
 
-  .bearkey-footer.index_en .address-line {
-    display: flex !important;
-    flex-direction: column !important;
-    margin-bottom: 5px !important;
-    padding-left: 0 !important;
-    white-space: normal;
-    line-height: 1.5;
-  }
-
-  .bearkey-footer.index_en .address-line:nth-child(n + 2) {
-    width: calc(100% - 5.104vw);
-    min-width: 0;
-    margin-left: 5.104vw;
-  }
-
-  .bearkey-footer.index_en .address-prefix {
-    display: block !important;
-    float: none !important;
-    width: 100% !important;
-    margin-bottom: 5px !important;
-    position: static !important;
-    letter-spacing: normal !important;
-  }
-
-  .bearkey-footer.index_en .address-content {
-    display: block !important;
-    white-space: normal !important;
-    overflow: visible !important;
-    text-overflow: initial !important;
-    word-wrap: break-word !important;
-    word-break: normal !important;
-    margin-left: 0 !important;
-    padding-left: 0 !important;
-    left: 0 !important;
-    position: static !important;
-    max-width: 100% !important;
-    width: 100% !important;
-  }
-
   .bearkey-footer.index_en .bearkey-footer__col:nth-child(3) {
     width: 26.458vw !important;
     max-width: none !important;
@@ -639,25 +595,6 @@
 
   .bearkey-footer .widgetheading {
     margin-bottom: 15px;
-  }
-
-  .bearkey-footer .address-line {
-    padding-left: 0 !important;
-    white-space: normal;
-  }
-
-  .bearkey-footer .address-prefix {
-    position: static;
-    width: auto;
-    margin-right: 5px;
-  }
-
-  .bearkey-footer .address-prefix--hidden {
-    display: none;
-  }
-
-  .bearkey-footer .address-content {
-    white-space: normal;
   }
 
   .bearkey-footer #follow_us_container {
