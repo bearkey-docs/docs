@@ -1,5 +1,6 @@
 import React, {useEffect} from 'react';
 import {useLocation} from '@docusaurus/router';
+import {ENGLISH_DOC_PATHS} from '../generated/englishDocPaths';
 
 const DOCS_SECTIONS = new Set([
   'core-board',
@@ -16,6 +17,25 @@ const SHARED_SECTIONS = new Set([
   'openharmony',
   'mineharmony',
 ]);
+
+const ENGLISH_DOC_PATH_SET = new Set(ENGLISH_DOC_PATHS);
+
+function getEnglishDocPath(pathname) {
+  const match = pathname.match(/(?:^|\/)en\/docs\/(.+?)\/?$/);
+
+  if (!match) {
+    return undefined;
+  }
+
+  return decodeURIComponent(match[1]).replace(/\/$/, '');
+}
+
+function isMissingEnglishDocLink(link) {
+  const englishDocPath = getEnglishDocPath(new URL(link.href).pathname);
+
+  return Boolean(englishDocPath && !ENGLISH_DOC_PATH_SET.has(englishDocPath));
+}
+
 
 function getValidSection(section) {
   return section === 'all' || DOCS_SECTIONS.has(section) ? section : undefined;
@@ -153,6 +173,13 @@ export default function Root({children}) {
       }
 
       const link = event.target.closest('a[href*="/docs/"]');
+
+      if (link && isMissingEnglishDocLink(link)) {
+        event.preventDefault();
+        window.location.reload();
+        return;
+      }
+
       const sectionItem = getTopLevelSectionItem(event.target);
       const section = getValidSection(getSectionFromSidebarItem(event.target));
       const linkSection = link
@@ -174,8 +201,8 @@ export default function Root({children}) {
       }
     };
 
-    document.addEventListener('click', handleClick);
-    return () => document.removeEventListener('click', handleClick);
+    document.addEventListener('click', handleClick, true);
+    return () => document.removeEventListener('click', handleClick, true);
   }, []);
 
   return <>{children}</>;
