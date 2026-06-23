@@ -349,6 +349,11 @@
   text-transform: none;
 }
 
+
+.bearkey-footer.index_en .widgetheading {
+  margin-top: 0.521vw;
+}
+
 .bearkey-footer ul.link-list {
   width: 100%;
   height: auto;
@@ -444,6 +449,10 @@
   width: 100%;
   margin: 1.042vw 0;
   flex-wrap: nowrap;
+}
+
+.bearkey-footer.index_en #follow_us_container {
+  margin-top: 1.4vw;
 }
 
 .bearkey-footer .qrcode-item {

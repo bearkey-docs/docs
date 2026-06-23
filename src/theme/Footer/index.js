@@ -95,6 +95,38 @@ function getAddressLabel(currentLocale) {
   return currentLocale === 'en' ? 'Address :' : '地址：';
 }
 
+function getRenderedAddressLines(currentLocale, address, addressLabel) {
+  if (currentLocale === 'en') {
+    return [
+      {
+        content:
+          'Unit 101, East Wing, Building 1, Xingwang Ruijie Haixi Science and Technology Park, No. 9, Gaoxin Avenue,',
+        prefix: addressLabel,
+      },
+      {content: 'Minhou County, Fuzhou', prefix: addressLabel, hiddenPrefix: true},
+      {
+        content:
+          'Unit 209, Xiamen University National Science and Technology Park, No. 39, Wanghai Road, Software Park Phase II,',
+        prefix: addressLabel,
+      },
+      {content: 'Siming District, Xiamen', prefix: addressLabel, hiddenPrefix: true},
+    ];
+  }
+
+  const firstAddress = address.firstAddress
+    .replace(/^Address\s*:\s*/, '')
+    .replace(/^地址：/, '');
+
+  return [
+    {content: firstAddress, prefix: addressLabel},
+    ...address.addressLines.map((line) => ({
+      content: line,
+      prefix: addressLabel,
+      hiddenPrefix: true,
+    })),
+  ];
+}
+
 function FooterLink({href, children}) {
   return (
     <a href={href} target="_blank" rel="noreferrer">
@@ -112,9 +144,11 @@ export default function Footer() {
   const content = footerContent[currentLocale] ?? footerContent['zh-Hans'];
   const address = getAddressItems(content);
   const addressLabel = getAddressLabel(currentLocale);
-  const firstAddress = address.firstAddress
-    .replace(/^Address\s*:\s*/, '')
-    .replace(/^地址：/, '');
+  const renderedAddressLines = getRenderedAddressLines(
+    currentLocale,
+    address,
+    addressLabel,
+  );
 
   return (
     <footer
@@ -157,14 +191,13 @@ export default function Footer() {
                   <li>{address.business}</li>
                 </ul>
                 <div id="office_address_container" className="office-address">
-                  <div className="address-line">
-                    <span className="address-prefix">{addressLabel}</span>
-                    <span className="address-content">{firstAddress}</span>
-                  </div>
-                  {address.addressLines.map((line) => (
+                  {renderedAddressLines.map(({content: line, prefix, hiddenPrefix}) => (
                     <div className="address-line" key={line}>
-                      <span className="address-prefix address-prefix--hidden">
-                        {addressLabel}
+                      <span
+                        className={`address-prefix${
+                          hiddenPrefix ? ' address-prefix--hidden' : ''
+                        }`}>
+                        {prefix}
                       </span>
                       <span className="address-content">{line}</span>
                     </div>
