@@ -8,9 +8,6 @@
   "sidebar.docsSidebar.category.RK3588 核心板": {
     "message": "RK3588 Core Board"
   },
-  "sidebar.docsSidebar.category.设计参考": {
-    "message": "Design Reference"
-  },
   "sidebar.docsSidebar.category.主板": {
     "message": "Motherboard"
   },
@@ -247,15 +244,6 @@
   },
   "sidebar.docsSidebar.category.MineHarmony‍": {
     "message": "MineHarmony"
-  },
-  "sidebar.docsSidebar.category.设计参考​": {
-    "message": "Design Reference"
-  },
-  "sidebar.docsSidebar.category.设计参考‌": {
-    "message": "Design Reference"
-  },
-  "sidebar.docsSidebar.category.设计参考‍": {
-    "message": "Design Reference"
   },
   "sidebar.docsSidebar.category.RK3588 核心板​": {
     "message": "RK3588 Core Board"
@@ -685,5 +673,17 @@
   },
   "sidebar.docsSidebar.category.RK3506 工屏‍": {
     "message": "RK3506 Industrial Panel"
+  },
+  "sidebar.docsSidebar.category.其他": {
+    "message": "Other"
+  },
+  "sidebar.docsSidebar.category.其他​": {
+    "message": "Other"
+  },
+  "sidebar.docsSidebar.category.其他‌": {
+    "message": "Other"
+  },
+  "sidebar.docsSidebar.category.其他‍": {
+    "message": "Other"
   }
 }

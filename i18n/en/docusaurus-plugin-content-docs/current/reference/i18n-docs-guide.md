@@ -1,10 +1,10 @@
 ---
 sidebar_position: 4
-title: Chinese and English Documentation Guide
-description: Where to place Chinese and English docs and how nav/sidebar updates work.
+title: Chinese and English Documentation Maintenance Guide
+description: Where to maintain Chinese and English docs and how nav/sidebar updates work.
 ---
 
-# Chinese and English Documentation Guide
+# Chinese and English Documentation Maintenance Guide
 
 This site uses the standard Docusaurus i18n layout. Chinese is the default language, and English content is stored separately.
 
