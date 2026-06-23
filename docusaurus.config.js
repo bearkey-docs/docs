@@ -180,6 +180,7 @@ const config = {
         logo: {
           alt: 'Docs logo',
           src: 'img/logo.svg',
+          href: '/docs/intro',
         },
         items: [
           {
