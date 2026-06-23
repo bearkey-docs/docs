@@ -92,15 +92,27 @@ const productNavGroups = [
   },
 ];
 
+const productDocLinks = {
+  'RK3588 核心板': '/docs/core-board/rk3588-core-board/product-specification',
+};
+
+const getProductNavbarItem = (label) =>
+  productDocLinks[label]
+    ? {
+        label,
+        to: productDocLinks[label],
+      }
+    : {
+        label,
+        href: '#',
+      };
+
 const productNavbarItems = productNavGroups.map((group) => ({
   type: 'dropdown',
   label: group.label,
   position: 'left',
   className: 'product-nav-dropdown',
-  items: group.items.map((label) => ({
-    label,
-    href: '#',
-  })),
+  items: group.items.map(getProductNavbarItem),
 }));
 
 /** @type {import('@docusaurus/types').Config} */
