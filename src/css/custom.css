@@ -350,10 +350,6 @@
 }
 
 
-.bearkey-footer.index_en .widgetheading {
-  margin-top: 0.521vw;
-}
-
 .bearkey-footer ul.link-list {
   width: 100%;
   height: auto;
@@ -448,11 +444,7 @@
   gap: 1.042vw;
   width: 100%;
   margin: 1.042vw 0;
-  flex-wrap: nowrap;
-}
-
-.bearkey-footer.index_en #follow_us_container {
-  margin-top: 1.4vw;
+  flex-wrap: wrap;
 }
 
 .bearkey-footer .qrcode-item {
@@ -535,13 +527,72 @@
 
 @media (max-width: 1700px) and (min-width: 1059px) {
   .bearkey-footer.index_en {
-    height: auto;
-    min-height: 28.125vw;
+    height: auto !important;
+    min-height: 28.125vw !important;
+    padding: 3.75vw 18.75vw 4.167vw !important;
   }
 
   .bearkey-footer.index_en .bearkey-footer__container {
-    height: auto;
-    min-height: 24.479vw;
+    height: auto !important;
+    min-height: 24.479vw !important;
+  }
+
+  .bearkey-footer.index_en .address-line {
+    display: flex !important;
+    flex-direction: column !important;
+    margin-bottom: 5px !important;
+    padding-left: 0 !important;
+    white-space: normal;
+    line-height: 1.5;
+  }
+
+  .bearkey-footer.index_en .address-line:nth-child(n + 2) {
+    width: calc(100% - 5.104vw);
+    min-width: 0;
+    margin-left: 5.104vw;
+  }
+
+  .bearkey-footer.index_en .address-prefix {
+    display: block !important;
+    float: none !important;
+    width: 100% !important;
+    margin-bottom: 5px !important;
+    position: static !important;
+    letter-spacing: normal !important;
+  }
+
+  .bearkey-footer.index_en .address-content {
+    display: block !important;
+    white-space: normal !important;
+    overflow: visible !important;
+    text-overflow: initial !important;
+    word-wrap: break-word !important;
+    word-break: normal !important;
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+    left: 0 !important;
+    position: static !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  .bearkey-footer.index_en .bearkey-footer__col:nth-child(3) {
+    width: 26.458vw !important;
+    max-width: none !important;
+    margin-left: 5.729vw !important;
+  }
+
+  .bearkey-footer.index_en .office-address,
+  .bearkey-footer.index_en #contact_info_container {
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+    text-align: left !important;
+  }
+
+  .bearkey-footer.index_en #follow_us_container {
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+    justify-content: flex-start !important;
   }
 }
 
