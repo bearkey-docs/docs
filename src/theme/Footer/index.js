@@ -26,10 +26,11 @@ const footerContent = {
       ['开源社区', 'https://www.bearkey.net/'],
       ['维基教程', `${officialBaseUrl}/wiki.html`],
     ],
-    contact: [
-      '企业电话：0592-5232963',
-      '商务联系：18606919996',
-      '地址：福州市闽侯县上街镇高新大道9号星网锐捷海西科技园1号楼东101单元',
+    tel: '企业电话：0592-5232963',
+    business: '商务联系：18606919996',
+    addressLabel: '地址：',
+    addressParagraphs: [
+      '福州市闽侯县上街镇高新大道9号星网锐捷海西科技园1号楼东101单元',
       '厦门市思明区软件园二期望海路39号厦门大学国家科技园209单元',
     ],
     qrcodes: [
@@ -61,15 +62,12 @@ const footerContent = {
       ['Technology Application', `${officialBaseUrl}/support_en.html`],
       ['Open source community', 'https://www.bearkey.net/'],
     ],
-    contact: [
-      'Tel: +86-592-5232963',
-      'Business  : (+86)18606919996',
-      'Address : Unit 101, East Wing, Building 1, Xingwang Ruijie Haixi',
-      'Science and Technology Park, No. 9, Gaoxin Avenue, Shangjie',
-      'Town, Minhou County, Fuzhou City',
-      'Unit 209, Xiamen University National Science and Technology',
-      'Park, No. 39, Wanghai Road, Software Park Phase II, Siming',
-      'District, Xiamen City',
+    tel: 'Tel: +86-592-5232963',
+    business: 'Business  : (+86)18606919996',
+    addressLabel: 'Address :',
+    addressParagraphs: [
+      'Unit 101, East Wing, Building 1, Xingwang Ruijie Haixi Science and Technology Park, No. 9, Gaoxin Avenue, Shangjie Town, Minhou County, Fuzhou City',
+      'Unit 209, Xiamen University National Science and Technology Park, No. 39, Wanghai Road, Software Park Phase II, Siming District, Xiamen City',
     ],
     qrcodes: [
       ['Business', 'business-contact-en.webp'],
@@ -84,44 +82,6 @@ const footerContent = {
 
 function getProductHref(localeContent, filter) {
   return `${officialBaseUrl}/${localeContent.productPage}?filter=${encodeURIComponent(filter)}`;
-}
-
-function getAddressItems(content) {
-  const [tel, business, firstAddress, ...addressLines] = content.contact;
-  return {tel, business, firstAddress, addressLines};
-}
-
-function getAddressLabel(currentLocale) {
-  return currentLocale === 'en' ? 'Address :' : '地址：';
-}
-
-function getRenderedAddressLines(currentLocale, address, addressLabel) {
-  if (currentLocale === 'en') {
-    return [
-      {prefix: addressLabel},
-      {
-        content:
-          'Unit 101, East Wing, Building 1, Xingwang Ruijie Haixi Science and Technology Park, No. 9, Gaoxin Avenue, Shangjie Town, Minhou County, Fuzhou City',
-      },
-      {
-        content:
-          'Unit 209, Xiamen University National Science and Technology Park, No. 39, Wanghai Road, Software Park Phase II, Siming District, Xiamen City',
-      },
-    ];
-  }
-
-  const firstAddress = address.firstAddress
-    .replace(/^Address\s*:\s*/, '')
-    .replace(/^地址：/, '');
-
-  return [
-    {content: firstAddress, prefix: addressLabel},
-    ...address.addressLines.map((line) => ({
-      content: line,
-      prefix: addressLabel,
-      hiddenPrefix: true,
-    })),
-  ];
 }
 
 function FooterLink({href, children}) {
@@ -139,13 +99,6 @@ export default function Footer() {
   const qrBaseUrl = useBaseUrl('/img/bearkey-footer/');
   const year = new Date().getFullYear();
   const content = footerContent[currentLocale] ?? footerContent['zh-Hans'];
-  const address = getAddressItems(content);
-  const addressLabel = getAddressLabel(currentLocale);
-  const renderedAddressLines = getRenderedAddressLines(
-    currentLocale,
-    address,
-    addressLabel,
-  );
 
   return (
     <footer
@@ -184,29 +137,20 @@ export default function Footer() {
               <h5 className="widgetheading">{content.contactTitle}</h5>
               <div className="contact-section">
                 <ul className="link-list" id="contact_info_container">
-                  <li>{address.tel}</li>
-                  <li>{address.business}</li>
+                  <li>{content.tel}</li>
+                  <li>{content.business}</li>
                 </ul>
                 <div id="office_address_container" className="office-address">
-                  {renderedAddressLines.map(
-                    ({content: line, prefix, hiddenPrefix}, index) => (
-                      <div
-                        className="address-line"
-                        key={`${prefix ?? ''}-${line ?? index}`}>
-                        {prefix ? (
-                          <span
-                            className={`address-prefix${
-                              hiddenPrefix ? ' address-prefix--hidden' : ''
-                            }`}>
-                            {prefix}
-                          </span>
-                        ) : null}
-                        {line ? (
-                          <span className="address-content">{line}</span>
-                        ) : null}
-                      </div>
-                    ),
-                  )}
+                  <div className="address-line">
+                    <span className="address-prefix">{content.addressLabel}</span>
+                    <span className="address-content">
+                      {content.addressParagraphs.map((paragraph) => (
+                        <span className="address-paragraph" key={paragraph}>
+                          {paragraph}
+                        </span>
+                      ))}
+                    </span>
+                  </div>
                 </div>
               </div>
               <div id="follow_us_container">
