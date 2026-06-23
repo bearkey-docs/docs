@@ -1,0 +1,14 @@
+{
+  "version.label": {
+    "message": "Next"
+  },
+  "sidebar.docsSidebar.category.核心板": {
+    "message": "Core Board"
+  },
+  "sidebar.docsSidebar.category.RK3588 核心板": {
+    "message": "RK3588 Core Board"
+  },
+  "sidebar.docsSidebar.category.设计参考": {
+    "message": "Design Reference"
+  }
+}
