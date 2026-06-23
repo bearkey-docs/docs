@@ -24,13 +24,13 @@ description: 本项目参考 Radxa Docs 的哪些文档网页设计方式。
 文档文件路径会映射为网页路径。
 
 ```text
-docs/getting-started/write-docs.md
+docs/core-board/rk3588-core-board/product-specification.md
 ```
 
 会生成：
 
 ```text
-/docs/getting-started/write-docs
+/docs/core-board/rk3588-core-board/product-specification
 ```
 
 ## 内容复用
