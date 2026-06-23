@@ -49,6 +49,7 @@ const productNavGroups = [
   {
     label: 'AIOT解决方案',
     items: [
+      'AIOT解决方案产品列表',
       'AI边缘工作站',
       'RK3576 数据采集网关',
       '8英寸平板',
@@ -62,6 +63,7 @@ const productNavGroups = [
   {
     label: 'OpenHarmony',
     items: [
+      'OpenHarmony产品列表',
       'RK3568 主板',
       'RK3576 数据采集网关',
       'RK3568 工业控制主板',
@@ -80,6 +82,7 @@ const productNavGroups = [
   {
     label: 'MineHarmony',
     items: [
+      'MineHarmony产品列表',
       'RK3568 主板',
       'RK3568 工业控制主板',
       'RK3576 工业控制主板',
@@ -121,6 +124,9 @@ const productDocLinks = {
   'RK3568-15.6英寸屏': '/docs/terminal/rk3568-15-6-inch-panel/product-specification',
   'RK3506 工控屏': '/docs/terminal/rk3506-industrial-panel/product-specification',
   'Carrier Board': '/docs/main-board/carrier-board/product-specification',
+  'AIOT解决方案产品列表': '/docs/aiot-solutions/product-list',
+  'OpenHarmony产品列表': '/docs/openharmony/product-list',
+  'MineHarmony产品列表': '/docs/mineharmony/product-list',
 };
 
 const getProductNavbarItem = (label) =>
