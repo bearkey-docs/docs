@@ -641,6 +641,8 @@
 }
 
 
+
+
 html[data-docs-section]:not([data-docs-section='all']) .theme-doc-sidebar-menu .sidebar-section-top {
   display: none;
 }
@@ -652,5 +654,5 @@ html[data-docs-section='aiot-solutions'] .theme-doc-sidebar-menu .sidebar-sectio
 html[data-docs-section='openharmony'] .theme-doc-sidebar-menu .sidebar-section-openharmony,
 html[data-docs-section='mineharmony'] .theme-doc-sidebar-menu .sidebar-section-mineharmony,
 html[data-docs-section='reference'] .theme-doc-sidebar-menu .sidebar-section-reference {
-  display: list-item;
+  display: block;
 }
