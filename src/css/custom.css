@@ -553,6 +553,22 @@
   }
 }
 
+@media (min-width: 1701px) {
+  .bearkey-footer.index_en {
+    height: auto;
+    min-height: 28.125vw;
+  }
+
+  .bearkey-footer.index_en .bearkey-footer__container {
+    height: auto;
+    min-height: 0;
+  }
+
+  .bearkey-footer.index_en #follow_us_container {
+    margin-bottom: 2.5vw;
+  }
+}
+
 @media (max-width: 1246px) and (min-width: 1059px) {
   .bearkey-footer {
     height: auto;
