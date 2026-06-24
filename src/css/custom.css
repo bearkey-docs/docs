@@ -64,15 +64,6 @@
   letter-spacing: -0.035em;
 }
 
-
-.theme-doc-markdown img[src*='/assets/images/page-'] {
-  background: #f8fafc;
-}
-
-[data-theme='dark'] .theme-doc-markdown img[src*='/assets/images/page-'] {
-  background: #0f172a;
-}
-
 .theme-doc-markdown h2 {
   margin-top: 2.5rem;
   padding-top: 0.5rem;

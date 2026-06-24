@@ -2,23 +2,36 @@ import React from 'react';
 import Head from '@docusaurus/Head';
 import OriginalImg from '@theme-original/MDXComponents/Img';
 
-const FIRST_MANUAL_PAGE_IMAGE_RE = /(^|\/)page-0?1(?:-[a-f0-9]+)?\.webp(?:\?.*)?$/i;
+const MANUAL_PAGE_IMAGE_RE = /(^|\/)page-(\d+)(?:-[a-f0-9]+)?\.webp(?:\?.*)?$/i;
+const HIGH_PRIORITY_PAGE_COUNT = 3;
 
-function isFirstManualPageImage(src) {
-  return typeof src === 'string' && FIRST_MANUAL_PAGE_IMAGE_RE.test(src);
+function getManualPageNumber(src) {
+  const match = typeof src === 'string' ? src.match(MANUAL_PAGE_IMAGE_RE) : null;
+
+  return match ? Number(match[2]) : undefined;
 }
 
 export default function MDXImg(props) {
-  if (!isFirstManualPageImage(props.src)) {
+  const manualPageNumber = getManualPageNumber(props.src);
+
+  if (!manualPageNumber) {
     return <OriginalImg {...props} />;
   }
 
+  const isHighPriority = manualPageNumber <= HIGH_PRIORITY_PAGE_COUNT;
+
   return (
     <>
-      <Head>
-        <link rel="preload" as="image" href={props.src} fetchPriority="high" />
-      </Head>
-      <OriginalImg {...props} loading="eager" fetchPriority="high" />
+      {isHighPriority && (
+        <Head>
+          <link rel="preload" as="image" href={props.src} fetchPriority="high" />
+        </Head>
+      )}
+      <OriginalImg
+        {...props}
+        loading="eager"
+        fetchPriority={isHighPriority ? 'high' : undefined}
+      />
     </>
   );
 }
