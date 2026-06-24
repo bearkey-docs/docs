@@ -67,6 +67,10 @@ function getDocsSection(pathname, search) {
   return getValidSection(section) ?? 'all';
 }
 
+function getDocsPathSection(pathname) {
+  const match = pathname.match(/(?:^|\/)docs(?:\/([^/]+))?/);
+  return getValidSection(match?.[1]);
+}
 
 function getTopLevelSectionItem(element) {
   return element.closest('.sidebar-section-top');
@@ -101,14 +105,20 @@ function syncCategoryExpandedState(category, expanded) {
 }
 
 function resetAllDocsSidebarState() {
+  const activeSection = getDocsPathSection(window.location.pathname);
   const categories = document.querySelectorAll(
     '.theme-doc-sidebar-menu .theme-doc-sidebar-item-category',
   );
 
   categories.forEach((category) => {
+    const sectionItem = category.closest('.sidebar-section-top');
+    const isActiveSection =
+      !activeSection ||
+      sectionItem?.classList.contains(`sidebar-section-${activeSection}`);
+
     syncCategoryExpandedState(
       category,
-      Boolean(category.querySelector('.menu__link--active')),
+      isActiveSection && Boolean(category.querySelector('.menu__link--active')),
     );
   });
 }
@@ -123,7 +133,11 @@ function clearAllDocsSidebarResetState() {
 }
 
 function scheduleAllDocsSidebarReset() {
-  window.setTimeout(resetAllDocsSidebarState, 0);
+  const timeouts = [0, 50, 150, 350, 700].map((delay) =>
+    window.setTimeout(resetAllDocsSidebarState, delay),
+  );
+
+  return () => timeouts.forEach((timeout) => window.clearTimeout(timeout));
 }
 
 function clearSectionQueryForCurrentPage(link) {
@@ -160,7 +174,7 @@ export default function Root({children}) {
     document.documentElement.dataset.docsSection = docsSection;
 
     if (docsSection === 'all') {
-      scheduleAllDocsSidebarReset();
+      return scheduleAllDocsSidebarReset();
     } else {
       clearAllDocsSidebarResetState();
     }
