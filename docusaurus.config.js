@@ -165,6 +165,9 @@ const config = {
   baseUrl: '/',
   organizationName: 'CacheBiomancerClash',
   projectName: 'document-web-design',
+  customFields: {
+    manualImageCdnBase: process.env.MANUAL_IMAGE_CDN_BASE || '',
+  },
   trailingSlash: false,
   onBrokenLinks: 'throw',
   markdown: {
