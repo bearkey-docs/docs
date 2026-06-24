@@ -19,6 +19,8 @@ const SHARED_SECTIONS = new Set([
 ]);
 
 const ENGLISH_DOC_PATH_SET = new Set(ENGLISH_DOC_PATHS);
+const SIDEBAR_SYNC_DELAYS = [0, 50, 150, 350, 700, 1200, 2000];
+let sidebarSyncRunId = 0;
 
 function getEnglishDocPath(pathname) {
   const match = pathname.match(/(?:^|\/)en\/docs\/(.+?)\/?$/);
@@ -149,11 +151,60 @@ function clearAllDocsSidebarResetState() {
 }
 
 function scheduleDocsSidebarStateSync(docsSection) {
-  const timeouts = [0, 50, 150, 350, 700].map((delay) =>
-    window.setTimeout(() => syncDocsSidebarState(docsSection), delay),
-  );
+  const runId = ++sidebarSyncRunId;
+  let frame;
+  let syncing = false;
 
-  return () => timeouts.forEach((timeout) => window.clearTimeout(timeout));
+  const sync = () => {
+    if (runId !== sidebarSyncRunId || frame) {
+      return;
+    }
+
+    frame = window.requestAnimationFrame(() => {
+      frame = undefined;
+
+      if (runId !== sidebarSyncRunId) {
+        return;
+      }
+
+      syncing = true;
+      syncDocsSidebarState(docsSection);
+      syncing = false;
+    });
+  };
+
+  const observer = new MutationObserver(() => {
+    if (!syncing) {
+      sync();
+    }
+  });
+  const target =
+    document.querySelector('.theme-doc-sidebar-menu') ?? document.body;
+
+  observer.observe(target, {
+    subtree: true,
+    childList: true,
+    attributes: true,
+    attributeFilter: ['class', 'style', 'aria-expanded'],
+  });
+
+  const timeouts = SIDEBAR_SYNC_DELAYS.map((delay) =>
+    window.setTimeout(sync, delay),
+  );
+  const observerTimeout = window.setTimeout(() => observer.disconnect(), 2500);
+
+  sync();
+
+  return () => {
+    sidebarSyncRunId += 1;
+    observer.disconnect();
+    window.clearTimeout(observerTimeout);
+    timeouts.forEach((timeout) => window.clearTimeout(timeout));
+
+    if (frame) {
+      window.cancelAnimationFrame(frame);
+    }
+  };
 }
 
 function clearSectionQueryForCurrentPage(link) {
