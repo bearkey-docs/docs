@@ -49,6 +49,8 @@ jobs:
           fi
 
       - name: Build site
+        env:
+          MANUAL_IMAGE_CDN_BASE: ${{ vars.MANUAL_IMAGE_CDN_BASE }}
         run: npm run build
 
       - name: Upload Pages artifact
