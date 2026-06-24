@@ -1,5 +1,13 @@
 // @ts-check
 
+const {hasEnglishDoc, isEnglishBuild} = require('./scripts/english-docs');
+
+function shouldIncludeDoc(docId) {
+  return !isEnglishBuild() || hasEnglishDoc(docId);
+}
+
+const existingDocsOnly = (items) => items.filter(Boolean);
+
 const productSpecDoc = (label, id, suffix = '') => ({
   type: 'category',
   label: `${label}${suffix}`,
@@ -12,6 +20,9 @@ const productSpecDoc = (label, id, suffix = '') => ({
   ],
 });
 
+const localizedProductSpecDoc = (label, id, suffix = '') =>
+  shouldIncludeDoc(id) ? productSpecDoc(label, id, suffix) : undefined;
+
 const topCategory = ({ label, section, items }) => ({
   type: 'category',
   label,
@@ -21,41 +32,41 @@ const topCategory = ({ label, section, items }) => ({
 });
 
 const sharedProducts = {
-  aiotSolutions: [
-    productSpecDoc('AI边缘工作站', 'terminal/ai-edge-workstation/product-specification', '\u200B'),
-    productSpecDoc('RK3576 数据采集网关', 'terminal/rk3576-data-acquisition-gateway/product-specification', '\u200B'),
-    productSpecDoc('8英寸平板', 'terminal/eight-inch-tablet/product-specification', '\u200B'),
-    productSpecDoc('10.6英寸平板', 'terminal/ten-six-inch-tablet/product-specification', '\u200B'),
-    productSpecDoc('11英寸平板', 'terminal/eleven-inch-tablet/product-specification', '\u200B'),
-    productSpecDoc('RK3568 数据采集网关', 'terminal/rk3568-data-acquisition-gateway/product-specification', '\u200B'),
-    productSpecDoc('工控屏', 'terminal/industrial-panel/product-specification', '\u200B'),
-    productSpecDoc('拼接屏处理器', 'terminal/video-wall-processor/product-specification', '\u200B'),
-  ],
-  openHarmony: [
-    productSpecDoc('RK3568 主板', 'main-board/rk3568-main-board/product-specification', '\u200C'),
-    productSpecDoc('RK3576 数据采集网关', 'terminal/rk3576-data-acquisition-gateway/product-specification', '\u200C'),
-    productSpecDoc('RK3568 工业控制主板', 'main-board/rk3568-industrial-control-main-board/product-specification', '\u200C'),
-    productSpecDoc('RK3576 工业控制主板', 'main-board/rk3576-industrial-control-main-board/product-specification', '\u200C'),
-    productSpecDoc('8英寸平板', 'terminal/eight-inch-tablet/product-specification', '\u200C'),
-    productSpecDoc('10.6英寸平板', 'terminal/ten-six-inch-tablet/product-specification', '\u200C'),
-    productSpecDoc('11英寸平板', 'terminal/eleven-inch-tablet/product-specification', '\u200C'),
-    productSpecDoc('RK3568 数据采集网关', 'terminal/rk3568-data-acquisition-gateway/product-specification', '\u200C'),
-    productSpecDoc('RK3588 工业主板', 'main-board/rk3588-industrial-main-board/product-specification', '\u200C'),
-    productSpecDoc('RK3576 商业显示主板', 'main-board/rk3576-commercial-display-main-board/product-specification', '\u200C'),
-    productSpecDoc('工控屏', 'terminal/industrial-panel/product-specification', '\u200C'),
-    productSpecDoc('RK3588 主板', 'main-board/rk3588-main-board/product-specification', '\u200C'),
-    productSpecDoc('拼接屏处理器', 'terminal/video-wall-processor/product-specification', '\u200C'),
-  ],
-  mineHarmony: [
-    productSpecDoc('RK3568 主板', 'main-board/rk3568-main-board/product-specification', '\u200D'),
-    productSpecDoc('RK3568 工业控制主板', 'main-board/rk3568-industrial-control-main-board/product-specification', '\u200D'),
-    productSpecDoc('RK3576 工业控制主板', 'main-board/rk3576-industrial-control-main-board/product-specification', '\u200D'),
-    productSpecDoc('8英寸平板', 'terminal/eight-inch-tablet/product-specification', '\u200D'),
-    productSpecDoc('11英寸平板', 'terminal/eleven-inch-tablet/product-specification', '\u200D'),
-    productSpecDoc('RK3568 数据采集网关', 'terminal/rk3568-data-acquisition-gateway/product-specification', '\u200D'),
-    productSpecDoc('RK3588 工业主板', 'main-board/rk3588-industrial-main-board/product-specification', '\u200D'),
-    productSpecDoc('工控屏', 'terminal/industrial-panel/product-specification', '\u200D'),
-  ],
+  aiotSolutions: existingDocsOnly([
+    localizedProductSpecDoc('AI边缘工作站', 'terminal/ai-edge-workstation/product-specification', '\u200B'),
+    localizedProductSpecDoc('RK3576 数据采集网关', 'terminal/rk3576-data-acquisition-gateway/product-specification', '\u200B'),
+    localizedProductSpecDoc('8英寸平板', 'terminal/eight-inch-tablet/product-specification', '\u200B'),
+    localizedProductSpecDoc('10.6英寸平板', 'terminal/ten-six-inch-tablet/product-specification', '\u200B'),
+    localizedProductSpecDoc('11英寸平板', 'terminal/eleven-inch-tablet/product-specification', '\u200B'),
+    localizedProductSpecDoc('RK3568 数据采集网关', 'terminal/rk3568-data-acquisition-gateway/product-specification', '\u200B'),
+    localizedProductSpecDoc('工控屏', 'terminal/industrial-panel/product-specification', '\u200B'),
+    localizedProductSpecDoc('拼接屏处理器', 'terminal/video-wall-processor/product-specification', '\u200B'),
+  ]),
+  openHarmony: existingDocsOnly([
+    localizedProductSpecDoc('RK3568 主板', 'main-board/rk3568-main-board/product-specification', '\u200C'),
+    localizedProductSpecDoc('RK3576 数据采集网关', 'terminal/rk3576-data-acquisition-gateway/product-specification', '\u200C'),
+    localizedProductSpecDoc('RK3568 工业控制主板', 'main-board/rk3568-industrial-control-main-board/product-specification', '\u200C'),
+    localizedProductSpecDoc('RK3576 工业控制主板', 'main-board/rk3576-industrial-control-main-board/product-specification', '\u200C'),
+    localizedProductSpecDoc('8英寸平板', 'terminal/eight-inch-tablet/product-specification', '\u200C'),
+    localizedProductSpecDoc('10.6英寸平板', 'terminal/ten-six-inch-tablet/product-specification', '\u200C'),
+    localizedProductSpecDoc('11英寸平板', 'terminal/eleven-inch-tablet/product-specification', '\u200C'),
+    localizedProductSpecDoc('RK3568 数据采集网关', 'terminal/rk3568-data-acquisition-gateway/product-specification', '\u200C'),
+    localizedProductSpecDoc('RK3588 工业主板', 'main-board/rk3588-industrial-main-board/product-specification', '\u200C'),
+    localizedProductSpecDoc('RK3576 商业显示主板', 'main-board/rk3576-commercial-display-main-board/product-specification', '\u200C'),
+    localizedProductSpecDoc('工控屏', 'terminal/industrial-panel/product-specification', '\u200C'),
+    localizedProductSpecDoc('RK3588 主板', 'main-board/rk3588-main-board/product-specification', '\u200C'),
+    localizedProductSpecDoc('拼接屏处理器', 'terminal/video-wall-processor/product-specification', '\u200C'),
+  ]),
+  mineHarmony: existingDocsOnly([
+    localizedProductSpecDoc('RK3568 主板', 'main-board/rk3568-main-board/product-specification', '\u200D'),
+    localizedProductSpecDoc('RK3568 工业控制主板', 'main-board/rk3568-industrial-control-main-board/product-specification', '\u200D'),
+    localizedProductSpecDoc('RK3576 工业控制主板', 'main-board/rk3576-industrial-control-main-board/product-specification', '\u200D'),
+    localizedProductSpecDoc('8英寸平板', 'terminal/eight-inch-tablet/product-specification', '\u200D'),
+    localizedProductSpecDoc('11英寸平板', 'terminal/eleven-inch-tablet/product-specification', '\u200D'),
+    localizedProductSpecDoc('RK3568 数据采集网关', 'terminal/rk3568-data-acquisition-gateway/product-specification', '\u200D'),
+    localizedProductSpecDoc('RK3588 工业主板', 'main-board/rk3588-industrial-main-board/product-specification', '\u200D'),
+    localizedProductSpecDoc('工控屏', 'terminal/industrial-panel/product-specification', '\u200D'),
+  ]),
 };
 
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */

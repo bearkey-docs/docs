@@ -1,7 +1,40 @@
 // @ts-check
 
+const {hasEnglishDoc, isEnglishBuild} = require('./scripts/english-docs');
 const lightCodeTheme = require('prism-react-renderer').themes.github;
 const darkCodeTheme = require('prism-react-renderer').themes.dracula;
+
+function filterEnglishSidebarItems(items) {
+  return items.flatMap((item) => {
+    if (item.type === 'doc') {
+      return hasEnglishDoc(item.id) ? [item] : [];
+    }
+
+    if (item.type !== 'category') {
+      return [item];
+    }
+
+    const filteredItems = filterEnglishSidebarItems(item.items);
+
+    if (filteredItems.length === 0) {
+      return [];
+    }
+
+    if (item.link?.type === 'doc' && !hasEnglishDoc(item.link.id)) {
+      const itemWithoutLink = {...item};
+      delete itemWithoutLink.link;
+      return [{ ...itemWithoutLink, items: filteredItems }];
+    }
+
+    return [{ ...item, items: filteredItems }];
+  });
+}
+
+async function localizedSidebarItemsGenerator(args) {
+  const items = await args.defaultSidebarItemsGenerator(args);
+
+  return isEnglishBuild() ? filterEnglishSidebarItems(items) : items;
+}
 
 const productNavGroups = [
   {
@@ -217,6 +250,7 @@ const config = {
         docs: {
           routeBasePath: 'docs',
           sidebarPath: require.resolve('./sidebars.js'),
+          sidebarItemsGenerator: localizedSidebarItemsGenerator,
           editUrl:
             'https://github.com/CacheBiomancerClash/document-web-design/tree/devin/initial-readme/',
         },
