@@ -51,10 +51,49 @@ function hasDocContent(dirPath) {
   });
 }
 
+function writeCategoryFile(categoryPath, category) {
+  fs.writeFileSync(categoryPath, `${JSON.stringify(category, null, 2)}\n`);
+}
+
+function readCategoryFile(categoryPath) {
+  return JSON.parse(fs.readFileSync(categoryPath, 'utf8'));
+}
+
+function hasSameNameDoc(dirPath) {
+  const dirName = path.basename(dirPath);
+
+  return ['.md', '.mdx'].some((extension) =>
+    fs.existsSync(path.join(dirPath, `${dirName}${extension}`)),
+  );
+}
+
+function ensureSameNameDocVisible(dirPath) {
+  const categoryPath = path.join(dirPath, '_category_.json');
+
+  if (!fs.existsSync(categoryPath) || !hasSameNameDoc(dirPath)) {
+    return;
+  }
+
+  const category = readCategoryFile(categoryPath);
+
+  if (Object.prototype.hasOwnProperty.call(category, 'link')) {
+    return;
+  }
+
+  category.link = null;
+  writeCategoryFile(categoryPath, category);
+  console.log(`Updated ${path.relative(path.join(__dirname, '..'), categoryPath)}`);
+}
+
 function ensureCategoryFile(dirPath) {
   const categoryPath = path.join(dirPath, '_category_.json');
 
-  if (fs.existsSync(categoryPath) || !hasDocContent(dirPath)) {
+  if (fs.existsSync(categoryPath)) {
+    ensureSameNameDocVisible(dirPath);
+    return;
+  }
+
+  if (!hasDocContent(dirPath)) {
     return;
   }
 
@@ -65,8 +104,9 @@ function ensureCategoryFile(dirPath) {
     collapsed: false,
   };
 
-  fs.writeFileSync(categoryPath, `${JSON.stringify(category, null, 2)}\n`);
+  writeCategoryFile(categoryPath, category);
   console.log(`Created ${path.relative(path.join(__dirname, '..'), categoryPath)}`);
+  ensureSameNameDocVisible(dirPath);
 }
 
 function walk(dirPath) {
