@@ -72,6 +72,10 @@ function getDocsPathSection(pathname) {
   return getValidSection(match?.[1]);
 }
 
+function normalizePathname(pathname) {
+  return decodeURIComponent(pathname).replace(/\/$/, '');
+}
+
 function getTopLevelSectionItem(element) {
   return element.closest('.sidebar-section-top');
 }
@@ -104,25 +108,37 @@ function syncCategoryExpandedState(category, expanded) {
   directToggle?.setAttribute('aria-expanded', String(expanded));
 }
 
-function resetAllDocsSidebarState() {
-  const activeSection = getDocsPathSection(window.location.pathname);
+function categoryContainsCurrentPage(category) {
+  const currentPathname = normalizePathname(window.location.pathname);
+  const links = category.querySelectorAll('a.menu__link[href]');
+
+  return Array.from(links).some((link) => {
+    const linkPathname = normalizePathname(new URL(link.href).pathname);
+    return linkPathname === currentPathname;
+  });
+}
+
+function syncDocsSidebarState(docsSection) {
+  const activePathSection = getDocsPathSection(window.location.pathname);
+  const targetSection = docsSection === 'all' ? activePathSection : docsSection;
   const categories = document.querySelectorAll(
     '.theme-doc-sidebar-menu .theme-doc-sidebar-item-category',
   );
 
   categories.forEach((category) => {
     const sectionItem = category.closest('.sidebar-section-top');
-    const isActiveSection =
-      !activeSection ||
-      sectionItem?.classList.contains(`sidebar-section-${activeSection}`);
+    const isTargetSection =
+      !targetSection ||
+      sectionItem?.classList.contains(`sidebar-section-${targetSection}`);
 
     syncCategoryExpandedState(
       category,
-      isActiveSection && Boolean(category.querySelector('.menu__link--active')),
+      isTargetSection &&
+        (Boolean(category.querySelector('.menu__link--active')) ||
+          categoryContainsCurrentPage(category)),
     );
   });
 }
-
 
 function clearAllDocsSidebarResetState() {
   const lists = document.querySelectorAll(
@@ -132,9 +148,9 @@ function clearAllDocsSidebarResetState() {
   lists.forEach((list) => list.style.removeProperty('display'));
 }
 
-function scheduleAllDocsSidebarReset() {
+function scheduleDocsSidebarStateSync(docsSection) {
   const timeouts = [0, 50, 150, 350, 700].map((delay) =>
-    window.setTimeout(resetAllDocsSidebarState, delay),
+    window.setTimeout(() => syncDocsSidebarState(docsSection), delay),
   );
 
   return () => timeouts.forEach((timeout) => window.clearTimeout(timeout));
@@ -174,9 +190,10 @@ export default function Root({children}) {
     document.documentElement.dataset.docsSection = docsSection;
 
     if (docsSection === 'all') {
-      return scheduleAllDocsSidebarReset();
+      return scheduleDocsSidebarStateSync(docsSection);
     } else {
       clearAllDocsSidebarResetState();
+      return scheduleDocsSidebarStateSync(docsSection);
     }
   }, [location.pathname, location.search]);
 
@@ -200,8 +217,8 @@ export default function Root({children}) {
         ? new URL(link.href).searchParams.get('section')
         : undefined;
 
-      if (linkSection === 'all') {
-        scheduleAllDocsSidebarReset();
+      if (getValidSection(linkSection)) {
+        scheduleDocsSidebarStateSync(linkSection);
       }
 
       if (link && section && isTopLevelSectionLink(event.target, sectionItem)) {
