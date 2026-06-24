@@ -3,6 +3,7 @@ import Head from '@docusaurus/Head';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import OriginalImg from '@theme-original/MDXComponents/Img';
 
+const DOC_IMAGE_ASSET_RE = /^\/assets\/images\//;
 const MANUAL_PAGE_IMAGE_RE = /(^|\/)page-(\d+)(?:-[a-f0-9]+)?\.webp(?:\?.*)?$/i;
 const HIGH_PRIORITY_PAGE_COUNT = 3;
 
@@ -12,8 +13,8 @@ function getManualPageNumber(src) {
   return match ? Number(match[2]) : undefined;
 }
 
-function getManualImageSrc(src, cdnBase) {
-  if (!cdnBase || typeof src !== 'string' || !src.startsWith('/assets/images/')) {
+function getDocImageSrc(src, cdnBase) {
+  if (!cdnBase || typeof src !== 'string' || !DOC_IMAGE_ASSET_RE.test(src)) {
     return src;
   }
 
@@ -24,13 +25,14 @@ export default function MDXImg(props) {
   const {
     siteConfig: {customFields},
   } = useDocusaurusContext();
+  const cdnBase = customFields.docImageCdnBase || customFields.manualImageCdnBase;
+  const src = getDocImageSrc(props.src, cdnBase);
   const manualPageNumber = getManualPageNumber(props.src);
 
   if (!manualPageNumber) {
-    return <OriginalImg {...props} />;
+    return <OriginalImg {...props} src={src} />;
   }
 
-  const src = getManualImageSrc(props.src, customFields.manualImageCdnBase);
   const isHighPriority = manualPageNumber <= HIGH_PRIORITY_PAGE_COUNT;
 
   if (!isHighPriority) {
