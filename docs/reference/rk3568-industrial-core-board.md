@@ -33,7 +33,7 @@ Type-C 数据线
 
 先从网盘下载 driverAssitant_v5.1.1.zip 至电脑上，解压目录运行里面的 DriverInstall.exe 。先选择驱动卸载，然后再选择驱动安装。
 
-![图片](RK3568工业级核心板_assets/picture1.png)
+![图片](RK3568工业级核心板_assets/picture1.webp)
 
 ### 进入loader烧写模式
 
@@ -78,11 +78,11 @@ Type-C 数据线
 
 发现一个MASKROM设备（如图1-6所示）：表示开发板进入maskrom烧写模式。
 
-![图片](RK3568工业级核心板_assets/picture2.png)
+![图片](RK3568工业级核心板_assets/picture2.webp)
 
-![图片](RK3568工业级核心板_assets/picture3.png)
+![图片](RK3568工业级核心板_assets/picture3.webp)
 
-![图片](RK3568工业级核心板_assets/picture4.png)
+![图片](RK3568工业级核心板_assets/picture4.webp)
 
 ## Linux主机烧写镜像
 
@@ -123,11 +123,11 @@ Loader和Parmeter选项建议打勾选择，其他选项根据需要打勾选择
 
 点击“执行”按钮，开始烧写固件
 
-![图片](RK3568工业级核心板_assets/picture5.png)
+![图片](RK3568工业级核心板_assets/picture5.webp)
 
 ## 串口调试
 
-![图片](RK3568工业级核心板_assets/picture6.png)
+![图片](RK3568工业级核心板_assets/picture6.webp)
 
 开发板调试口：开发板的Debug口（microUSB口）
 
@@ -164,21 +164,21 @@ https://gitee.com/openharmony/app_samples/tree/master/Basic/Container
 
 打开工程文件
 
-![图片](RK3568工业级核心板_assets/picture7.png)
+![图片](RK3568工业级核心板_assets/picture7.webp)
 
 1. 点击文件，项目结构对工程进行自动签名：
 
-![图片](RK3568工业级核心板_assets/picture8.png)
+![图片](RK3568工业级核心板_assets/picture8.webp)
 
-![图片](RK3568工业级核心板_assets/picture9.png)
+![图片](RK3568工业级核心板_assets/picture9.webp)
 
 2. 确保设备连接的情况下点击右上角运行程序
 
-![图片](RK3568工业级核心板_assets/picture10.png)
+![图片](RK3568工业级核心板_assets/picture10.webp)
 
 3. 等编译完成后未报错即成功
 
-![图片](RK3568工业级核心板_assets/picture11.png)
+![图片](RK3568工业级核心板_assets/picture11.webp)
 
 ## 三、常见问题
 

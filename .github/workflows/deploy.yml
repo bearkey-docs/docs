@@ -30,28 +30,41 @@ jobs:
           node-version: 22
           cache: npm
 
+      - name: Install image tools
+        run: sudo apt-get update && sudo apt-get install -y webp rsync sshpass
+
       - name: Install dependencies
         run: npm ci
 
-      - name: Generate missing doc categories
-        run: npm run ensure-categories
+      - name: Prepare docs
+        run: npm run prepare-docs
 
-      - name: Commit generated doc categories
+      - name: Commit generated doc updates
         if: github.event_name == 'push'
         run: |
-          if [ -n "$(git status --porcelain -- 'docs/**/_category_.json' 'i18n/**/docusaurus-plugin-content-docs/current/**/_category_.json')" ]; then
+          if [ -n "$(git status --porcelain -- docs i18n src/generated)" ]; then
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add 'docs/**/_category_.json'
-            git add 'i18n/**/docusaurus-plugin-content-docs/current/**/_category_.json'
-            git commit -m "Generate missing doc category metadata"
+            git add docs i18n src/generated
+            git commit -m "Prepare generated doc assets"
             git push
           fi
 
       - name: Build site
         env:
+          DOC_IMAGE_CDN_BASE: ${{ vars.DOC_IMAGE_CDN_BASE }}
           MANUAL_IMAGE_CDN_BASE: ${{ vars.MANUAL_IMAGE_CDN_BASE }}
         run: npm run build
+
+      - name: Sync image assets to Bearkey host
+        if: github.event_name == 'push'
+        env:
+          BEARKEY_DOCS_IMAGE_HOST: ${{ secrets.BEARKEY_DOCS_IMAGE_HOST }}
+          BEARKEY_DOCS_IMAGE_USER: ${{ secrets.BEARKEY_DOCS_IMAGE_USER }}
+          BEARKEY_DOCS_IMAGE_REMOTE_DIR: ${{ vars.BEARKEY_DOCS_IMAGE_REMOTE_DIR }}
+          BEARKEY_DOCS_IMAGE_SSH_PRIVATE_KEY: ${{ secrets.BEARKEY_DOCS_IMAGE_SSH_PRIVATE_KEY }}
+          BEARKEY_DOCS_IMAGE_SSH_PASSWORD: ${{ secrets.BEARKEY_DOCS_IMAGE_SSH_PASSWORD }}
+        run: ./scripts/sync-doc-image-assets.sh
 
       - name: Upload Pages artifact
         if: github.event_name != 'pull_request'

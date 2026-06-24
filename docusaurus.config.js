@@ -166,7 +166,12 @@ const config = {
   organizationName: 'CacheBiomancerClash',
   projectName: 'document-web-design',
   customFields: {
-    manualImageCdnBase: process.env.MANUAL_IMAGE_CDN_BASE || 'https://www.bearkey.com.cn/docs-assets',
+    docImageCdnBase:
+      process.env.DOC_IMAGE_CDN_BASE ||
+      process.env.MANUAL_IMAGE_CDN_BASE ||
+      'https://www.bearkey.com.cn/docs-assets',
+    manualImageCdnBase:
+      process.env.MANUAL_IMAGE_CDN_BASE || 'https://www.bearkey.com.cn/docs-assets',
   },
   trailingSlash: false,
   onBrokenLinks: 'throw',

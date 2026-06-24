@@ -4,13 +4,15 @@
   "private": true,
   "scripts": {
     "ensure-categories": "node scripts/ensure-doc-categories.js",
-    "prestart": "npm run ensure-categories",
+    "prestart": "npm run prepare-docs",
     "start": "docusaurus start --host 0.0.0.0",
-    "prebuild": "npm run ensure-categories",
+    "prebuild": "npm run prepare-docs",
     "build": "docusaurus build",
-    "preserve": "npm run ensure-categories",
+    "preserve": "npm run prepare-docs",
     "serve": "docusaurus serve --host 0.0.0.0",
-    "clear": "docusaurus clear"
+    "clear": "docusaurus clear",
+    "convert-doc-images": "node scripts/convert-doc-images-to-webp.js",
+    "prepare-docs": "npm run convert-doc-images && npm run ensure-categories"
   },
   "dependencies": {
     "@docusaurus/core": "^3.8.1",
