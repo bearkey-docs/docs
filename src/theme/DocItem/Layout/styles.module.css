@@ -1,0 +1,15 @@
+.docItemContainer {
+  margin: 0 auto;
+  max-width: 75ch;
+  padding: 0 0.3rem;
+}
+
+.docItemCol {
+  max-width: 75% !important;
+}
+
+@media (max-width: 996px) {
+  .docItemCol {
+    max-width: 100% !important;
+  }
+}

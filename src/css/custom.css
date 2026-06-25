@@ -113,6 +113,92 @@
   border-top: 1px solid #e2e8f0;
 }
 
+.doc-page-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  margin: 2rem 0 1.5rem;
+}
+
+.doc-page-action-link {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  gap: 0.45rem;
+  color: #1f8f5f;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.doc-page-action-link:hover {
+  color: #166b49;
+  text-decoration: none;
+}
+
+.doc-page-action-icon {
+  display: inline-flex;
+  width: 1rem;
+  justify-content: center;
+  color: currentColor;
+  font-size: 0.95rem;
+  line-height: 1;
+}
+
+.doc-page-action-icon svg {
+  display: block;
+  width: 1rem;
+  height: 1rem;
+}
+
+.doc-page-comments {
+  margin-top: 1.8rem;
+  padding-top: 1.8rem;
+  border-top: 2px solid #525252;
+}
+
+.doc-page-comments-title {
+  margin: 0;
+  text-align: center;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.doc-page-comments-helper {
+  margin: 0.65rem 0 1rem;
+  color: #2f9d59;
+  text-align: center;
+  font-size: 0.86rem;
+}
+
+.doc-page-comments-frame {
+  min-height: 9rem;
+}
+
+.theme-doc-sidebar-container
+  .button.button--secondary.button--outline[aria-label='Collapse sidebar'] {
+  height: 2.5rem;
+  border-right: 0;
+  border-bottom: 0;
+  border-left: 0;
+  border-radius: 0;
+  background: #fff;
+  color: #9ca3af;
+}
+
+.theme-doc-sidebar-container
+  .button.button--secondary.button--outline[aria-label='Collapse sidebar']:hover {
+  background: #f8fafc;
+  color: #64748b;
+}
+
+.theme-doc-sidebar-container
+  .button.button--secondary.button--outline[aria-label='Collapse sidebar']
+  svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
 [data-theme='dark'] .theme-doc-markdown {
   color: #dbeafe;
 }
@@ -123,6 +209,36 @@
 
 [data-theme='dark'] .theme-doc-markdown thead {
   background: #1e293b;
+}
+
+[data-theme='dark'] .doc-page-action-link {
+  color: #5ee2a0;
+}
+
+[data-theme='dark'] .doc-page-action-link:hover {
+  color: #86efac;
+}
+
+[data-theme='dark'] .doc-page-comments {
+  border-top-color: #64748b;
+}
+
+[data-theme='dark'] .doc-page-comments-helper {
+  color: #86efac;
+}
+
+[data-theme='dark']
+  .theme-doc-sidebar-container
+  .button.button--secondary.button--outline[aria-label='Collapse sidebar'] {
+  background: #111827;
+  color: #9ca3af;
+}
+
+[data-theme='dark']
+  .theme-doc-sidebar-container
+  .button.button--secondary.button--outline[aria-label='Collapse sidebar']:hover {
+  background: #1e293b;
+  color: #d1d5db;
 }
 
 .navbar {
