@@ -205,6 +205,19 @@ const config = {
       'https://www.bearkey.com.cn/docs-assets',
     manualImageCdnBase:
       process.env.MANUAL_IMAGE_CDN_BASE || 'https://www.bearkey.com.cn/docs-assets',
+    comments: {
+      giscus: {
+        repo: 'CacheBiomancerClash/document-web-design',
+        repoId: process.env.GISCUS_REPO_ID || 'R_kgDOS9NXKw',
+        category: process.env.GISCUS_CATEGORY || '',
+        categoryId: process.env.GISCUS_CATEGORY_ID || '',
+      },
+      utterances: {
+        repo: 'CacheBiomancerClash/document-web-design',
+        issueTerm: 'pathname',
+        label: 'docs-comment',
+      },
+    },
   },
   trailingSlash: false,
   onBrokenLinks: 'throw',
