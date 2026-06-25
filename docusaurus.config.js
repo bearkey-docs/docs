@@ -212,11 +212,6 @@ const config = {
         category: process.env.GISCUS_CATEGORY || '',
         categoryId: process.env.GISCUS_CATEGORY_ID || '',
       },
-      utterances: {
-        repo: 'CacheBiomancerClash/document-web-design',
-        issueTerm: 'pathname',
-        label: 'docs-comment',
-      },
     },
   },
   trailingSlash: false,

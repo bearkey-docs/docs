@@ -12,11 +12,6 @@ const DEFAULT_COMMENTS_CONFIG = {
     category: '',
     categoryId: '',
   },
-  utterances: {
-    repo: COMMENTS_REPO,
-    issueTerm: 'pathname',
-    label: 'docs-comment',
-  },
 };
 
 function getLocaleConfig(locale) {
@@ -27,6 +22,8 @@ function getLocaleConfig(locale) {
         title: 'Comments',
         helper:
           'Sign in with GitHub to join the discussion or leave documentation feedback.',
+        setup:
+          'Comments are not configured yet. Enable GitHub Discussions and set GISCUS_CATEGORY / GISCUS_CATEGORY_ID to show localized comments.',
       },
     };
   }
@@ -36,6 +33,8 @@ function getLocaleConfig(locale) {
     labels: {
       title: '评论',
       helper: '使用 GitHub 登录后即可参与讨论或反馈文档问题。',
+      setup:
+        '评论功能尚未完成配置。请启用 GitHub Discussions，并设置 GISCUS_CATEGORY / GISCUS_CATEGORY_ID 后显示中文评论框。',
     },
   };
 }
@@ -47,10 +46,6 @@ function getCommentsConfig(customFields) {
     giscus: {
       ...DEFAULT_COMMENTS_CONFIG.giscus,
       ...(commentsConfig.giscus || {}),
-    },
-    utterances: {
-      ...DEFAULT_COMMENTS_CONFIG.utterances,
-      ...(commentsConfig.utterances || {}),
     },
   };
 }
@@ -97,16 +92,6 @@ function appendGiscus(container, giscusConfig, colorMode, lang) {
   });
 }
 
-function appendUtterances(container, utterancesConfig, colorMode, lang) {
-  appendScript(container, 'https://utteranc.es/client.js', {
-    repo: utterancesConfig.repo,
-    'issue-term': utterancesConfig.issueTerm,
-    label: utterancesConfig.label,
-    theme: colorMode === 'dark' ? 'github-dark' : 'github-light',
-    lang,
-  });
-}
-
 export default function DocPageComments() {
   const containerRef = useRef(null);
   const {colorMode} = useColorMode();
@@ -133,18 +118,22 @@ export default function DocPageComments() {
         localeConfig.lang,
       );
     } else {
-      appendUtterances(
-        container,
-        commentsConfig.utterances,
-        colorMode,
-        localeConfig.lang,
-      );
+      const setupMessage = document.createElement('p');
+      setupMessage.className = 'doc-page-comments-setup';
+      setupMessage.textContent = labels.setup;
+      container.appendChild(setupMessage);
     }
 
     return () => {
       container.replaceChildren();
     };
-  }, [colorMode, i18n.currentLocale, localeConfig.lang, siteConfig.customFields]);
+  }, [
+    colorMode,
+    i18n.currentLocale,
+    labels.setup,
+    localeConfig.lang,
+    siteConfig.customFields,
+  ]);
 
   return (
     <section className="doc-page-comments" aria-labelledby="doc-comments-title">
