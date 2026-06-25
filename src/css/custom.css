@@ -35,8 +35,9 @@
 }
 
 .navbar__brand {
-  min-width: 15.75rem;
-  margin-right: 1rem;
+  flex: 0 0 auto;
+  min-width: 0;
+  margin-right: 0.75rem;
 }
 
 .navbar__logo {
@@ -323,8 +324,15 @@
   align-items: center;
 }
 
+.theme-layout-navbar-left.navbar__items,
 .navbar__items--left {
-  gap: 2.05rem;
+  column-gap: 1.35rem;
+  row-gap: 0;
+}
+
+.theme-layout-navbar-left.navbar__items > .navbar__item,
+.navbar__items--left > .navbar__item {
+  flex: 0 0 auto;
 }
 
 .navbar__item {
@@ -344,10 +352,11 @@
   line-height: 1.5;
 }
 
-.navbar__link--has-dropdown::after {
-  margin-left: 0.42rem;
+.navbar__link--has-dropdown::after,
+.navbar__item.dropdown > .navbar__link::after {
+  margin-left: 0.46rem;
   border-width: 0.34rem 0.32rem 0;
-  color: #111;
+  color: currentColor;
 }
 
 .navbar__link:hover,
@@ -395,8 +404,7 @@
   --radxa-navbar-muted: #d1d5db;
 }
 
-[data-theme='dark'] .navbar__title,
-[data-theme='dark'] .navbar__link--has-dropdown::after {
+[data-theme='dark'] .navbar__title {
   color: #e5e7eb;
 }
 
@@ -466,13 +474,67 @@
   box-shadow: 0 0 0 2px rgba(139, 217, 91, 0.55);
 }
 
+
+@media (min-width: 1440px) {
+  .navbar__brand {
+    min-width: 15.75rem;
+    margin-right: 1rem;
+  }
+
+  .theme-layout-navbar-left.navbar__items,
+  .navbar__items--left {
+    column-gap: 2.05rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .theme-layout-navbar-left.navbar__items,
+  .navbar__items--left {
+    column-gap: 0.85rem;
+  }
+
+  .navbar__title {
+    font-size: 1.05rem;
+  }
+
+  .navbar__search-input {
+    width: 6.5rem;
+  }
+}
+
+@media (max-width: 1080px) and (min-width: 997px) {
+  .navbar__inner {
+    padding: 0 0.9rem;
+  }
+
+  .navbar__brand {
+    margin-right: 0.25rem;
+  }
+
+  .navbar__title {
+    display: none;
+  }
+
+  .theme-layout-navbar-left.navbar__items,
+  .navbar__items--left {
+    column-gap: 0.72rem;
+  }
+
+  .navbar__items--right {
+    gap: 0.75rem;
+  }
+
+  .navbar__search-input {
+    width: 5.25rem;
+  }
+}
+
 @media (max-width: 996px) {
   .navbar__inner {
     padding: 0 0.75rem;
   }
 
   .navbar__brand {
-    min-width: 0;
     margin-right: 0;
   }
 
@@ -481,8 +543,9 @@
     height: 2.25rem;
   }
 
+  .theme-layout-navbar-left.navbar__items,
   .navbar__items--left {
-    gap: 1rem;
+    column-gap: 1rem;
   }
 }
 
