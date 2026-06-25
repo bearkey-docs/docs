@@ -6,10 +6,6 @@ title: RK3399 Pro 核心板产品规格书
 
 # RK3399 Pro 核心板产品规格书
 
-![RK3399 Pro 核心板产品规格书第 1](./images/page-01.webp)
-
----
-
 ![RK3399 Pro 核心板产品规格书第 2](./images/page-02.webp)
 
 ---

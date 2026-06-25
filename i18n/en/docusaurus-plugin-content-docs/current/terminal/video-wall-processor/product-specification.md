@@ -6,10 +6,6 @@ title: Video Wall Processor Product Specification
 
 # Video Wall Processor Product Specification
 
-![Video Wall Processor Product Specification page 1](./images/page-01.webp)
-
----
-
 ![Video Wall Processor Product Specification page 2](./images/page-02.webp)
 
 ---

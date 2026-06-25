@@ -6,10 +6,6 @@ title: Industrial Panel Product Specification
 
 # Industrial Panel Product Specification
 
-![Industrial Panel Product Specification page 1](./images/page-01.webp)
-
----
-
 ![Industrial Panel Product Specification page 2](./images/page-02.webp)
 
 ---

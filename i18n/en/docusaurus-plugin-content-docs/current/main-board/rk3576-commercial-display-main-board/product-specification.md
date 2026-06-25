@@ -6,10 +6,6 @@ title: RK3576 Commercial Display Motherboard Product Specification
 
 # RK3576 Commercial Display Motherboard Product Specification
 
-![RK3576 Commercial Display Motherboard Product Specification page 1](./images/page-01.webp)
-
----
-
 ![RK3576 Commercial Display Motherboard Product Specification page 2](./images/page-02.webp)
 
 ---

@@ -6,10 +6,6 @@ title: RK3568 Industrial Core Board Product Specification
 
 # RK3568 Industrial Core Board Product Specification
 
-![RK3568 Industrial Core Board Product Specification page 1](./images/page-01.webp)
-
----
-
 ![RK3568 Industrial Core Board Product Specification page 2](./images/page-02.webp)
 
 ---

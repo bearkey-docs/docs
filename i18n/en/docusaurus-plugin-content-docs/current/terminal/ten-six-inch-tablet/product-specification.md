@@ -6,10 +6,6 @@ title: 10.6-inch Tablet Product Specification
 
 # 10.6-inch Tablet Product Specification
 
-![10.6-inch Tablet Product Specification page 1](./images/page-01.webp)
-
----
-
 ![10.6-inch Tablet Product Specification page 2](./images/page-02.webp)
 
 ---
