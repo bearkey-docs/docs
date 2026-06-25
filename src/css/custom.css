@@ -484,14 +484,6 @@ html[lang='en'][data-theme='dark'] .dropdown__link--active {
   font-weight: 500;
 }
 
-.navbar__link.navbar-locale-dropdown::before {
-  content: "文A";
-  color: var(--docs-navbar-text);
-  font-size: 1rem;
-  font-weight: 700;
-  letter-spacing: -0.12em;
-}
-
 .navbar__search {
   padding-left: 0;
 }
@@ -612,8 +604,8 @@ html[lang='en'][data-theme='dark'] .dropdown__link--active {
 
 @media (max-width: 996px) {
   .navbar__inner {
-    gap: 0.55rem;
-    padding: 0 0.75rem;
+    gap: 0.35rem;
+    padding: 0 0.65rem;
   }
 
   .navbar__items {
@@ -623,13 +615,13 @@ html[lang='en'][data-theme='dark'] .dropdown__link--active {
   .theme-layout-navbar-left.navbar__items,
   .navbar__items--left {
     flex: 1 1 auto;
-    column-gap: 0.75rem;
+    column-gap: 0.45rem;
     overflow: hidden;
   }
 
   .navbar__items--right {
     flex: 0 0 auto;
-    gap: 0.55rem;
+    gap: 0.35rem;
   }
 
   .navbar__brand {
@@ -639,7 +631,7 @@ html[lang='en'][data-theme='dark'] .dropdown__link--active {
   }
 
   .navbar__logo {
-    width: clamp(6.75rem, 33vw, 9rem);
+    width: clamp(5.9rem, 29vw, 8rem);
     height: auto;
   }
 
@@ -648,27 +640,45 @@ html[lang='en'][data-theme='dark'] .dropdown__link--active {
     display: none;
   }
 
+  .bearkey-official-nav.navbar__link {
+    flex: 0 0 auto;
+    height: 2rem;
+    padding: 0 0.1rem;
+    gap: 0.12rem;
+    font-size: 0.76rem;
+    white-space: nowrap;
+  }
+
+  .bearkey-official-nav.navbar__link svg {
+    width: 0.78rem;
+    height: 0.78rem;
+  }
+
   .navbar__items--right > .navbar__item:has(> .navbar-locale-dropdown) {
     display: inline-flex;
+    flex: 0 0 auto;
   }
 
   .navbar__link.navbar-locale-dropdown {
     justify-content: center;
-    width: auto;
-    min-width: 2.35rem;
-    height: 2.25rem;
-    gap: 0.12rem;
-    padding: 0 0.12rem;
-    border-radius: 999px;
+    position: relative;
+    z-index: 1;
+    flex: 0 0 2.25rem;
+    width: 2.25rem;
+    min-width: 2.25rem;
+    height: 2rem;
+    gap: 0;
+    padding: 0;
+    border-radius: 0.55rem;
+    background: #f1f5f9;
     font-size: 0;
     line-height: 1;
+    overflow: hidden;
+    pointer-events: auto;
   }
 
   .navbar__link.navbar-locale-dropdown > svg {
-    display: block;
-    width: 0.95rem;
-    height: 0.95rem;
-    flex: 0 0 auto;
+    display: none;
   }
 
   .navbar__link.navbar-locale-dropdown::before {
@@ -679,7 +689,8 @@ html[lang='en'][data-theme='dark'] .dropdown__link--active {
     margin-left: 0;
     border: 0;
     content: "EN";
-    font-size: 0.72rem;
+    color: currentColor;
+    font-size: 0.78rem;
     font-weight: 700;
     letter-spacing: 0;
     line-height: 1;
@@ -687,13 +698,43 @@ html[lang='en'][data-theme='dark'] .dropdown__link--active {
 
   html[lang='en'] .navbar__link.navbar-locale-dropdown::after {
     content: "中";
-    font-size: 0.82rem;
+    font-size: 0.9rem;
   }
 
   .navbar__link.navbar-locale-dropdown:hover,
   .navbar__link.navbar-locale-dropdown:focus {
+    background: var(--docs-navbar-accent-soft);
     color: var(--docs-navbar-accent);
     text-decoration: none;
+  }
+
+  [data-theme='dark'] .navbar__link.navbar-locale-dropdown {
+    background: #1e293b;
+  }
+
+  .navbar__search,
+  [class^='navbarSearchContainer'] {
+    flex: 0 0 2rem;
+    width: 2rem;
+    min-width: 2rem;
+    padding-left: 0;
+  }
+
+  .navbar__search-input {
+    width: 2rem;
+    height: 2rem;
+    padding: 0;
+    color: transparent;
+    font-size: 0;
+    background-position: center;
+  }
+
+  .navbar__search-input:focus {
+    width: 2rem;
+  }
+
+  .navbar__search-input::placeholder {
+    color: transparent;
   }
 }
 
