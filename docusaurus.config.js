@@ -299,6 +299,14 @@ const config = {
           },
           ...productNavbarItems,
           {
+            href: 'https://www.bearkey.com.cn/index.html',
+            position: 'left',
+            label: '官网',
+            className: 'bearkey-official-nav',
+            target: '_blank',
+            rel: 'noopener noreferrer',
+          },
+          {
             type: 'localeDropdown',
             position: 'right',
             className: 'navbar-locale-dropdown',

@@ -1188,3 +1188,68 @@ html[data-docs-section='mineharmony'] .theme-doc-sidebar-menu .sidebar-section-m
 html[data-docs-section='reference'] .theme-doc-sidebar-menu .sidebar-section-reference {
   display: list-item !important;
 }
+
+.navbar__link.bearkey-official-nav,
+.bearkey-official-nav.navbar__link {
+  padding: 0.42rem 1rem;
+  border: 1px solid var(--ifm-color-primary);
+  border-radius: 999px;
+  background: var(--ifm-color-primary);
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.navbar__link.bearkey-official-nav:hover,
+.bearkey-official-nav.navbar__link:hover,
+.navbar__link.bearkey-official-nav:focus,
+.bearkey-official-nav.navbar__link:focus {
+  border-color: var(--ifm-color-primary-dark);
+  background: var(--ifm-color-primary-dark);
+  color: #fff;
+  text-decoration: none;
+}
+
+[data-theme='dark'] .navbar__link.bearkey-official-nav,
+[data-theme='dark'] .bearkey-official-nav.navbar__link {
+  border-color: var(--ifm-color-primary-lighter);
+  background: var(--ifm-color-primary-lighter);
+  color: #0f172a;
+}
+
+[data-theme='dark'] .navbar__link.bearkey-official-nav:hover,
+[data-theme='dark'] .bearkey-official-nav.navbar__link:hover,
+[data-theme='dark'] .navbar__link.bearkey-official-nav:focus,
+[data-theme='dark'] .bearkey-official-nav.navbar__link:focus {
+  border-color: var(--ifm-color-primary-lightest);
+  background: var(--ifm-color-primary-lightest);
+  color: #0f172a;
+}
+
+@media (max-width: 1200px) {
+  .navbar__link.bearkey-official-nav,
+  .bearkey-official-nav.navbar__link {
+    padding: 0.38rem 0.72rem;
+    font-size: 0.9rem;
+  }
+}
+
+html[lang='en'] .navbar__link.bearkey-official-nav,
+html[lang='en'] .bearkey-official-nav.navbar__link,
+html[lang='en'] .navbar__link.bearkey-official-nav:hover,
+html[lang='en'] .bearkey-official-nav.navbar__link:hover,
+html[lang='en'] .navbar__link.bearkey-official-nav:focus,
+html[lang='en'] .bearkey-official-nav.navbar__link:focus {
+  color: #fff;
+}
+
+html[lang='en'][data-theme='dark'] .navbar__link.bearkey-official-nav,
+html[lang='en'][data-theme='dark'] .bearkey-official-nav.navbar__link,
+html[lang='en'][data-theme='dark'] .navbar__link.bearkey-official-nav:hover,
+html[lang='en'][data-theme='dark'] .bearkey-official-nav.navbar__link:hover,
+html[lang='en'][data-theme='dark'] .navbar__link.bearkey-official-nav:focus,
+html[lang='en'][data-theme='dark'] .bearkey-official-nav.navbar__link:focus {
+  color: #0f172a;
+}
