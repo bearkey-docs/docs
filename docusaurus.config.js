@@ -285,10 +285,9 @@ const config = {
         },
       ],
       navbar: {
-        title: '文档网页设计',
         logo: {
-          alt: 'Docs logo',
-          src: 'img/logo.svg',
+          alt: 'Bearkey DOCS',
+          src: 'img/bearkey-docs-logo.webp',
           href: '/docs/core-board/rk3588-core-board/product-specification?section=all',
         },
         items: [

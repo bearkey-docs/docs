@@ -41,14 +41,19 @@
 }
 
 .navbar__logo {
-  width: 2.5rem;
-  height: 2.5rem;
-  margin-right: 0.55rem;
+  display: flex;
+  align-items: center;
+  width: clamp(8.75rem, 13vw, 13.25rem);
+  height: auto;
+  margin-right: 0;
 }
 
 .navbar__logo img {
   width: 100%;
-  height: 100%;
+  height: auto;
+  max-height: 2.45rem;
+  object-fit: contain;
+  object-position: left center;
 }
 
 [data-theme='dark'] .navbar {
@@ -60,6 +65,7 @@
 }
 
 .navbar__title {
+  display: none;
   color: #111;
   font-size: 1.125rem;
   font-weight: 700;
@@ -518,7 +524,7 @@ html[lang='en'][data-theme='dark'] .dropdown__link--active {
 
 @media (min-width: 1440px) {
   .navbar__brand {
-    min-width: 15.75rem;
+    min-width: 14.5rem;
     margin-right: 1rem;
   }
 
@@ -617,8 +623,8 @@ html[lang='en'][data-theme='dark'] .dropdown__link--active {
   }
 
   .navbar__logo {
-    width: 2.25rem;
-    height: 2.25rem;
+    width: clamp(7.5rem, 45vw, 10rem);
+    height: auto;
   }
 
   .theme-layout-navbar-left.navbar__items,
