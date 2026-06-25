@@ -1198,7 +1198,7 @@ html[data-docs-section='reference'] .theme-doc-sidebar-menu .sidebar-section-ref
   border: 0;
   border-radius: 0;
   background: transparent;
-  color: var(--ifm-color-primary);
+  color: var(--docs-navbar-text);
   font-size: 0.78rem;
   font-weight: 600;
   line-height: 1.2;
@@ -1207,7 +1207,13 @@ html[data-docs-section='reference'] .theme-doc-sidebar-menu .sidebar-section-ref
 
 .navbar__link.bearkey-official-nav svg,
 .bearkey-official-nav.navbar__link svg {
-  display: none;
+  order: -1;
+  width: 0.78rem;
+  height: 0.78rem;
+  margin-right: 0.24rem;
+  margin-left: 0;
+  color: currentColor;
+  flex: 0 0 auto;
 }
 
 .navbar__link.bearkey-official-nav:hover,
@@ -1215,20 +1221,14 @@ html[data-docs-section='reference'] .theme-doc-sidebar-menu .sidebar-section-ref
 .navbar__link.bearkey-official-nav:focus,
 .bearkey-official-nav.navbar__link:focus {
   background: transparent;
-  color: var(--ifm-color-primary-dark);
+  color: var(--docs-navbar-accent);
   text-decoration: none;
 }
 
 [data-theme='dark'] .navbar__link.bearkey-official-nav,
 [data-theme='dark'] .bearkey-official-nav.navbar__link {
   background: transparent;
-  color: var(--ifm-color-primary-lighter);
-}
-
-[data-theme='dark'] .navbar__link.bearkey-official-nav svg,
-[data-theme='dark'] .bearkey-official-nav.navbar__link svg {
-  background: transparent;
-  color: currentColor;
+  color: var(--docs-navbar-text);
 }
 
 [data-theme='dark'] .navbar__link.bearkey-official-nav:hover,
@@ -1236,7 +1236,7 @@ html[data-docs-section='reference'] .theme-doc-sidebar-menu .sidebar-section-ref
 [data-theme='dark'] .navbar__link.bearkey-official-nav:focus,
 [data-theme='dark'] .bearkey-official-nav.navbar__link:focus {
   background: transparent;
-  color: var(--ifm-color-primary-lightest);
+  color: var(--docs-navbar-accent);
 }
 
 @media (max-width: 1200px) {
@@ -1245,6 +1245,13 @@ html[data-docs-section='reference'] .theme-doc-sidebar-menu .sidebar-section-ref
     gap: 0;
     padding: 0.25rem 0.28rem;
     font-size: 0.78rem;
+  }
+
+  .navbar__link.bearkey-official-nav svg,
+  .bearkey-official-nav.navbar__link svg {
+    width: 0.76rem;
+    height: 0.76rem;
+    margin-right: 0.2rem;
   }
 }
 
