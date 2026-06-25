@@ -6,10 +6,6 @@ title: TB-96AIoT-1808CO Product Specification
 
 # TB-96AIoT-1808CO Product Specification
 
-![TB-96AIoT-1808CO Product Specification page 1](./images/page-01.webp)
-
----
-
 ![TB-96AIoT-1808CO Product Specification page 2](./images/page-02.webp)
 
 ---

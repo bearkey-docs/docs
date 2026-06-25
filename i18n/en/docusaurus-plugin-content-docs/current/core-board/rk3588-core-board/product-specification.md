@@ -6,10 +6,6 @@ title: RK3588 Core Board Product Specification
 
 # RK3588 Core Board Product Specification
 
-![RK3588 Core Board Product Specification page 1](./images/page-01.webp)
-
----
-
 ![RK3588 Core Board Product Specification page 2](./images/page-02.webp)
 
 ---

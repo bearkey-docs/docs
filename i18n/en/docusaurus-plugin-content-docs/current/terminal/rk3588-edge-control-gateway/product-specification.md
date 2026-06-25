@@ -6,10 +6,6 @@ title: RK3588 Edge Control Gateway Product Specification
 
 # RK3588 Edge Control Gateway Product Specification
 
-![RK3588 Edge Control Gateway Product Specification page 1](./images/page-01.webp)
-
----
-
 ![RK3588 Edge Control Gateway Product Specification page 2](./images/page-02.webp)
 
 ---

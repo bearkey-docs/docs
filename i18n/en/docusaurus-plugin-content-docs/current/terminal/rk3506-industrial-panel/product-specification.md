@@ -6,10 +6,6 @@ title: RK3506 Industrial Panel Product Specification
 
 # RK3506 Industrial Panel Product Specification
 
-![RK3506 Industrial Panel Product Specification page 1](./images/page-01.webp)
-
----
-
 ![RK3506 Industrial Panel Product Specification page 2](./images/page-02.webp)
 
 ---

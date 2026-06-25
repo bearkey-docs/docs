@@ -6,10 +6,6 @@ title: Robo3588机器人主板产品规格书
 
 # Robo3588机器人主板产品规格书
 
-![Robo3588机器人主板产品规格书第1](./images/page-01.webp)
-
----
-
 ![Robo3588机器人主板产品规格书第2](./images/page-02.webp)
 
 ---

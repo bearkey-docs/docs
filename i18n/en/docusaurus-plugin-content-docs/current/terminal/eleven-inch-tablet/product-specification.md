@@ -6,10 +6,6 @@ title: 11-inch Tablet Product Specification
 
 # 11-inch Tablet Product Specification
 
-![11-inch Tablet Product Specification page 1](./images/page-01.webp)
-
----
-
 ![11-inch Tablet Product Specification page 2](./images/page-02.webp)
 
 ---

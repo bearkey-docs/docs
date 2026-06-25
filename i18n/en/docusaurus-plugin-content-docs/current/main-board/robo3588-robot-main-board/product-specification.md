@@ -6,10 +6,6 @@ title: Robo3588 Robot Motherboard Product Specification
 
 # Robo3588 Robot Motherboard Product Specification
 
-![Robo3588 Robot Motherboard Product Specification page 1](./images/page-01.webp)
-
----
-
 ![Robo3588 Robot Motherboard Product Specification page 2](./images/page-02.webp)
 
 ---

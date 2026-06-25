@@ -6,10 +6,6 @@ title: Video Optimization Box Product Specification
 
 # Video Optimization Box Product Specification
 
-![Video Optimization Box Product Specification page 1](./images/page-01.webp)
-
----
-
 ![Video Optimization Box Product Specification page 2](./images/page-02.webp)
 
 ---

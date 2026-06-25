@@ -6,10 +6,6 @@ title: RK3399 Pro Core Board Product Specification
 
 # RK3399 Pro Core Board Product Specification
 
-![RK3399 Pro Core Board Product Specification page 1](./images/page-01.webp)
-
----
-
 ![RK3399 Pro Core Board Product Specification page 2](./images/page-02.webp)
 
 ---

@@ -6,10 +6,6 @@ title: AI边缘工作站产品规格书
 
 # AI边缘工作站产品规格书
 
-![AI边缘工作站产品规格书第1](./images/page-01.webp)
-
----
-
 ![AI边缘工作站产品规格书第2](./images/page-02.webp)
 
 ---

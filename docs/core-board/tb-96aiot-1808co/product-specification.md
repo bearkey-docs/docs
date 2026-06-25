@@ -6,10 +6,6 @@ title: TB-96AIoT-1808CO 产品规格书
 
 # TB-96AIoT-1808CO 产品规格书
 
-![TB-96AIoT-1808CO 产品规格书第 1](./images/page-01.webp)
-
----
-
 ![TB-96AIoT-1808CO 产品规格书第 2](./images/page-02.webp)
 
 ---
