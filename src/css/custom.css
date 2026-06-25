@@ -1191,15 +1191,32 @@ html[data-docs-section='reference'] .theme-doc-sidebar-menu .sidebar-section-ref
 
 .navbar__link.bearkey-official-nav,
 .bearkey-official-nav.navbar__link {
-  padding: 0.42rem 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.36rem;
+  padding: 0.34rem 0.72rem 0.34rem 0.4rem;
   border: 1px solid var(--ifm-color-primary);
   border-radius: 999px;
   background: var(--ifm-color-primary);
   color: #fff;
-  font-size: 0.95rem;
+  font-size: 0.78rem;
   font-weight: 600;
   line-height: 1.2;
   white-space: nowrap;
+}
+
+.navbar__link.bearkey-official-nav svg,
+.bearkey-official-nav.navbar__link svg {
+  order: -1;
+  box-sizing: content-box;
+  width: 0.8rem;
+  height: 0.8rem;
+  margin-left: 0;
+  padding: 0.18rem;
+  border-radius: 0.28rem;
+  background: #0f172a;
+  color: #fff;
+  flex: 0 0 auto;
 }
 
 .navbar__link.bearkey-official-nav:hover,
@@ -1219,6 +1236,12 @@ html[data-docs-section='reference'] .theme-doc-sidebar-menu .sidebar-section-ref
   color: #0f172a;
 }
 
+[data-theme='dark'] .navbar__link.bearkey-official-nav svg,
+[data-theme='dark'] .bearkey-official-nav.navbar__link svg {
+  background: #0f172a;
+  color: #fff;
+}
+
 [data-theme='dark'] .navbar__link.bearkey-official-nav:hover,
 [data-theme='dark'] .bearkey-official-nav.navbar__link:hover,
 [data-theme='dark'] .navbar__link.bearkey-official-nav:focus,
@@ -1231,9 +1254,23 @@ html[data-docs-section='reference'] .theme-doc-sidebar-menu .sidebar-section-ref
 @media (max-width: 1200px) {
   .navbar__link.bearkey-official-nav,
   .bearkey-official-nav.navbar__link {
-    padding: 0.38rem 0.72rem;
-    font-size: 0.9rem;
+    gap: 0.3rem;
+    padding: 0.3rem 0.56rem 0.3rem 0.34rem;
+    font-size: 0.78rem;
   }
+
+  .navbar__link.bearkey-official-nav svg,
+  .bearkey-official-nav.navbar__link svg {
+    width: 0.8rem;
+    height: 0.8rem;
+    padding: 0.18rem;
+  }
+}
+
+html[lang='en'] .navbar__link.bearkey-official-nav,
+html[lang='en'] .bearkey-official-nav.navbar__link {
+  padding-right: 0.58rem;
+  font-size: 0.72rem;
 }
 
 html[lang='en'] .navbar__link.bearkey-official-nav,
@@ -1252,4 +1289,39 @@ html[lang='en'][data-theme='dark'] .bearkey-official-nav.navbar__link:hover,
 html[lang='en'][data-theme='dark'] .navbar__link.bearkey-official-nav:focus,
 html[lang='en'][data-theme='dark'] .bearkey-official-nav.navbar__link:focus {
   color: #0f172a;
+}
+
+@media (max-width: 1680px) and (min-width: 997px) {
+  html[lang='en'] .navbar__brand {
+    min-width: 0;
+    margin-right: 0.25rem;
+  }
+
+  html[lang='en'] .navbar__title {
+    max-width: 11rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  html[lang='en'] .theme-layout-navbar-left.navbar__items,
+  html[lang='en'] .navbar__items--left {
+    column-gap: 0.8rem;
+  }
+
+  html[lang='en'] .navbar__item,
+  html[lang='en'] .navbar__link,
+  html[lang='en'] .navbar-locale-dropdown > .navbar__link,
+  html[lang='en'] .navbar__item.navbar-locale-dropdown {
+    font-size: 0.92rem;
+  }
+
+  html[lang='en'] .navbar__items--right {
+    gap: 0.65rem;
+  }
+
+  html[lang='en'] .navbar__search-input {
+    width: 5.5rem;
+    font-size: 0.92rem;
+  }
 }
