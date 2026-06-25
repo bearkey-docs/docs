@@ -125,14 +125,14 @@
   align-items: center;
   width: fit-content;
   gap: 0.45rem;
-  color: #1f8f5f;
+  color: var(--ifm-color-primary);
   font-size: 0.95rem;
   font-weight: 600;
   text-decoration: none;
 }
 
 .doc-page-action-link:hover {
-  color: #166b49;
+  color: var(--ifm-color-primary-dark);
   text-decoration: none;
 }
 
@@ -154,7 +154,7 @@
 .doc-page-comments {
   margin-top: 1.8rem;
   padding-top: 1.8rem;
-  border-top: 2px solid #525252;
+  border-top: 2px solid var(--ifm-color-primary);
 }
 
 .doc-page-comments-title {
@@ -166,7 +166,7 @@
 
 .doc-page-comments-helper {
   margin: 0.65rem 0 1rem;
-  color: #2f9d59;
+  color: var(--ifm-color-primary);
   text-align: center;
   font-size: 0.86rem;
 }
@@ -223,19 +223,19 @@
 }
 
 [data-theme='dark'] .doc-page-action-link {
-  color: #5ee2a0;
+  color: var(--ifm-color-primary-lighter);
 }
 
 [data-theme='dark'] .doc-page-action-link:hover {
-  color: #86efac;
+  color: var(--ifm-color-primary-lightest);
 }
 
 [data-theme='dark'] .doc-page-comments {
-  border-top-color: #64748b;
+  border-top-color: var(--ifm-color-primary-light);
 }
 
 [data-theme='dark'] .doc-page-comments-helper {
-  color: #86efac;
+  color: var(--ifm-color-primary-lighter);
 }
 
 [data-theme='dark'] .doc-page-comments-setup {

@@ -74,7 +74,15 @@ function appendScript(container, src, attributes) {
   container.appendChild(script);
 }
 
-function appendGiscus(container, giscusConfig, colorMode, lang) {
+function getGiscusTheme(colorMode, baseUrl) {
+  const themeName = colorMode === 'dark' ? 'dark' : 'light';
+  const normalizedBaseUrl = (baseUrl || '/').replace(/\/$/, '');
+  const themePath = `${normalizedBaseUrl}/giscus-blue-${themeName}.css`;
+
+  return new URL(themePath, window.location.origin).href;
+}
+
+function appendGiscus(container, giscusConfig, colorMode, lang, baseUrl) {
   appendScript(container, 'https://giscus.app/client.js', {
     'data-repo': giscusConfig.repo,
     'data-repo-id': giscusConfig.repoId,
@@ -85,7 +93,7 @@ function appendGiscus(container, giscusConfig, colorMode, lang) {
     'data-reactions-enabled': '1',
     'data-emit-metadata': '0',
     'data-input-position': 'bottom',
-    'data-theme': colorMode === 'dark' ? 'dark' : 'light',
+    'data-theme': getGiscusTheme(colorMode, baseUrl),
     'data-lang': lang,
     'data-loading': 'lazy',
     crossorigin: 'anonymous',
@@ -116,6 +124,7 @@ export default function DocPageComments() {
         commentsConfig.giscus,
         colorMode,
         localeConfig.lang,
+        siteConfig.baseUrl,
       );
     } else {
       const setupMessage = document.createElement('p');
