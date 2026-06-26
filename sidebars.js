@@ -1,10 +1,24 @@
 // @ts-check
 
+const fs = require('fs');
+const path = require('path');
+
 const {hasEnglishDoc, isEnglishBuild} = require('./scripts/english-docs');
+
+const docsDir = path.join(__dirname, 'docs');
 
 function shouldIncludeDoc(docId) {
   return !isEnglishBuild() || hasEnglishDoc(docId);
 }
+
+function hasSourceDoc(docId) {
+  return ['.md', '.mdx'].some((extension) =>
+    fs.existsSync(path.join(docsDir, `${docId}${extension}`)),
+  );
+}
+
+const localizedDoc = (label, id, suffix = '') =>
+  hasSourceDoc(id) && shouldIncludeDoc(id) ? { type: 'doc', label, id } : undefined;
 
 const existingDocsOnly = (items) => items.filter(Boolean);
 
@@ -12,12 +26,16 @@ const productSpecDoc = (label, id, suffix = '') => ({
   type: 'category',
   label: `${label}${suffix}`,
   collapsed: true,
-  items: [
+  items: existingDocsOnly([
     {
       type: 'doc',
       id,
     },
-  ],
+    localizedDoc(
+      `Wiki 教程${suffix}`,
+      id.replace(/\/product-specification$/, '/wiki-tutorial'),
+    ),
+  ]),
 });
 
 const localizedProductSpecDoc = (label, id, suffix = '') =>
