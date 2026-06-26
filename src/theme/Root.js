@@ -99,11 +99,6 @@ function isTopLevelSectionLink(element, sectionItem) {
 function syncCategoryExpandedState(category, expanded) {
   category.classList.toggle('menu__list-item--collapsed', !expanded);
 
-  const directList = category.querySelector(':scope > .menu__list');
-  if (directList) {
-    directList.style.display = expanded ? '' : 'none';
-  }
-
   const directToggle = category.querySelector(
     ':scope > .menu__list-item-collapsible [aria-expanded]',
   );
@@ -143,11 +138,17 @@ function syncDocsSidebarState(docsSection) {
 }
 
 function clearAllDocsSidebarResetState() {
-  const lists = document.querySelectorAll(
-    '.theme-doc-sidebar-menu .theme-doc-sidebar-item-category > .menu__list',
+  const categories = document.querySelectorAll(
+    '.theme-doc-sidebar-menu .theme-doc-sidebar-item-category.menu__list-item--collapsed',
   );
 
-  lists.forEach((list) => list.style.removeProperty('display'));
+  categories.forEach((category) => {
+    category.classList.remove('menu__list-item--collapsed');
+    const directToggle = category.querySelector(
+      ':scope > .menu__list-item-collapsible [aria-expanded]',
+    );
+    directToggle?.setAttribute('aria-expanded', 'true');
+  });
 }
 
 function scheduleDocsSidebarStateSync(docsSection) {
