@@ -718,12 +718,36 @@ html[lang='en'][data-theme='dark'] .dropdown__link--active {
     background-position: center;
   }
 
-  .navbar__search-input:focus {
-    width: 2rem;
+  .navbar__search .navbar__search-input.navbar__search-input:focus,
+  [class^='navbarSearchContainer'] .navbar__search-input.navbar__search-input:focus {
+    position: fixed !important;
+    top: 0.75rem;
+    left: 0.75rem;
+    right: 0.75rem;
+    z-index: 3000;
+    width: auto;
+    max-width: none;
+    height: 2.6rem;
+    padding: 0 1rem 0 2.5rem;
+    color: var(--docs-navbar-text);
+    font-size: 1rem;
+    background-color: #fff;
+    background-position: 0.9rem center;
+    box-shadow: 0 8px 24px rgb(15 23 42 / 18%);
   }
 
   .navbar__search-input::placeholder {
     color: transparent;
+  }
+
+  .navbar__search .navbar__search-input.navbar__search-input:focus::placeholder,
+  [class^='navbarSearchContainer'] .navbar__search-input.navbar__search-input:focus::placeholder {
+    color: #64748b;
+  }
+
+  [data-theme='dark'] .navbar__search .navbar__search-input.navbar__search-input:focus,
+  [data-theme='dark'] [class^='navbarSearchContainer'] .navbar__search-input.navbar__search-input:focus {
+    background-color: #0f172a;
   }
 }
 
