@@ -96,6 +96,14 @@
 }
 
 .theme-doc-sidebar-menu
+  .theme-doc-sidebar-item-category:has(
+    .menu__list-item-collapsible [aria-expanded='false']
+  )
+  > .menu__list {
+  display: none;
+}
+
+.theme-doc-sidebar-menu
   .theme-doc-sidebar-item-category:not(.menu__list-item--collapsed)
   > .menu__list {
   position: relative;
