@@ -42,7 +42,7 @@ Type-C 数据线
 
 先从网盘下载 driverAssitant_v5.1.1.zip 至电脑上，解压目录运行里面的 DriverInstall.exe 。先选择驱动卸载，然后再选择驱动安装。
 
-![图片](wiki-tutorial-assets/picture1.png)
+![图片](wiki-tutorial-assets/picture1.webp)
 
 ### 进入loader烧写模式
 
@@ -87,11 +87,11 @@ Type-C 数据线
 
 发现一个MASKROM设备（如图1-6所示）：表示开发板进入maskrom烧写模式。
 
-![图片](wiki-tutorial-assets/picture2.png)
+![图片](wiki-tutorial-assets/picture2.webp)
 
-![图片](wiki-tutorial-assets/picture3.png)
+![图片](wiki-tutorial-assets/picture3.webp)
 
-![图片](wiki-tutorial-assets/picture4.png)
+![图片](wiki-tutorial-assets/picture4.webp)
 
 ## Linux主机烧写镜像
 
@@ -132,11 +132,11 @@ Loader和Parmeter选项建议打勾选择，其他选项根据需要打勾选择
 
 点击“执行”按钮，开始烧写固件
 
-![图片](wiki-tutorial-assets/picture5.png)
+![图片](wiki-tutorial-assets/picture5.webp)
 
 ## 串口调试
 
-![图片](wiki-tutorial-assets/picture6.png)
+![图片](wiki-tutorial-assets/picture6.webp)
 
 开发板调试口：开发板的Debug口
 
@@ -162,7 +162,7 @@ Qr SDK ←
 〉外观和行为 OpenHarmonySDK快捷键 OpenHarmony SDK位置: D:\devecostudio_410400\openharmonysdk 编辑
 √编辑器 以下是用于OpenHarmony应用开发所需要的SDK。DevEco Studio会自动检测可用更新并通知您。&gt;常规 名称 版本 阶段 状态代码编辑 vAPI Version 11字体 √ ArkTS 4.1.7.5 Release 已安装〉配色方案 4.1.7.5 Release 已安装&gt;代码样式 Nervier 4.7.5 Releasse 已安装检查 回 √Toolchains 4,1.7.5 Release 已安装文件和代码模板 API Version 10文件编码 实时模板 回 ArkTS Nstive 4.0.10.13 4.0.10.13 Release Release 已安装 已安装文件类型 √ Previewer 4.0.10.13 Release 已安装&gt;版权 回 √Toolchains 4.0.10.13 Release 已安装嵌入摄示 回 API Version 9ArkTS 3.2.12.5 Release 已安装Emmet JS 3.2.12.5 Release 已安装TODO Native 3.2.12.5 Release 已安装意图 Previewer 3.2.12.5 Release 已安装拼写 回 Toolchains 3.2.12.5 Release 已安装〉语言注入 回 ]API Version 8 ]ArkTS 3.1.13.6 Release 未安装阅读器模式 回 JS 3.1.13.6 Release 未安装插件 刘回
 
-![图片](wiki-tutorial-assets/picture7.png)
+![图片](wiki-tutorial-assets/picture7.webp)
 
 把解压出来的ts文件拷贝到api目录下
 
@@ -170,7 +170,7 @@ Qr SDK ←
 
 进入api目录,device-define目录下
 
-![图片](wiki-tutorial-assets/picture8.png)
+![图片](wiki-tutorial-assets/picture8.webp)
 
 添加一下SystemCapability.Hcp
 

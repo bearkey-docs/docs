@@ -46,35 +46,35 @@ Onedrive download link：[https://1drv.ms/f/s!AhoFWWcHV7rXdXcEE2rA8xeeNYc](https
 
 2、双击DriverAssitant_v4.8/DriverInstall.exe打开安装程序，点击“驱动安装”按提示安装驱动即可，安装界面如下所示:
 
-![rkdriver_install](wiki-tutorial-assets/picture1.png)
+![rkdriver_install](wiki-tutorial-assets/picture1.webp)
 
 3、双击AndroidTool_Release_v2.61/AndroidTool.exe启动烧写工具注意Buildroot固件烧写工具和Debian固件烧写工具是不同的。
 
 4、Type-C线连接主机端的USB接口和RK1808 TB-96AIoT开发板的Type-C接口，长按RK1808 TB-96AIoT开发板上recovery按键后重启机器，直到系统进入Loader模式，如下所示：
 
-![recovery_reset_key](wiki-tutorial-assets/picture2.png)
+![recovery_reset_key](wiki-tutorial-assets/picture2.webp)
 
-![enter_loader](wiki-tutorial-assets/picture3.png)
+![enter_loader](wiki-tutorial-assets/picture3.webp)
 
 5、双击如下图所示的每一行，选择好固件路径，然后点击“执行”按钮，开始烧写升级。
 
-![select_img_path](wiki-tutorial-assets/picture4.png)
+![select_img_path](wiki-tutorial-assets/picture4.webp)
 
 #### Linux主机烧写固件
 
 1、Type-C线连接主机端的USB接口和RK1808 TB-96AIoT开发板的Type-C接口，长按RK1808 TB-96AIoT开发板上recovery按键后重启机器，直到系统进入Loader模式，如下所示：
 
-![recovery_reset_key](wiki-tutorial-assets/picture5.png)
+![recovery_reset_key](wiki-tutorial-assets/picture5.webp)
 
 2、将固件解压到Linux_Upgrade_Tool_v1.38/images目录下。
 
 3、运行 upgrade_tool 不带任何参数则进入工具模式。 执行后，需要先进行选择设备(图 1),
 
-![upgrade_tool_select_dev](wiki-tutorial-assets/picture6.png)
+![upgrade_tool_select_dev](wiki-tutorial-assets/picture6.webp)
 
 输入DevNo 设备号输入回车完成选择，进入工具模式主界面：
 
-![upgrade_tool_mainui](wiki-tutorial-assets/picture7.png)
+![upgrade_tool_mainui](wiki-tutorial-assets/picture7.webp)
 
 a.download loader
 
@@ -135,15 +135,15 @@ rd
 
 2、双击DriverAssitant_v4.8/DriverInstall.exe打开安装程序，点击“驱动安装”按提示安装驱动即可，安装界面如下所示:
 
-![rkdriver_install](wiki-tutorial-assets/picture8.png)
+![rkdriver_install](wiki-tutorial-assets/picture8.webp)
 
 3、双击AndroidTool_Release_v2.61/AndroidTool.exe启动烧写工具（注意Buildroot固件烧写工具和Debian固件烧写工具是不同的）。
 
 4、Type-C线连接主机端的USB接口和RK1808 TB-96AIoT开发板的Type-C接口，长按RK1808 TB-96AIoT开发板上recovery按键后重启机器，直到系统进入Loader模式，如下所示：
 
-![recovery_reset_key](wiki-tutorial-assets/picture9.png)
+![recovery_reset_key](wiki-tutorial-assets/picture9.webp)
 
-![enter_loader-debian](wiki-tutorial-assets/picture10.png)
+![enter_loader-debian](wiki-tutorial-assets/picture10.webp)
 
 5、点击烧写工具上的“执行”按钮，开始烧写固件
 
@@ -153,7 +153,7 @@ rd
 
 1、Type-C线连接主机端的USB接口和RK1808 TB-96AIoT开发板的Type-C接口，长按RK1808 TB-96AIoT开发板上recovery按键后重启机器，直到系统进入Loader模式，如下所示：
 
-![recovery_reset_key](wiki-tutorial-assets/picture11.png)
+![recovery_reset_key](wiki-tutorial-assets/picture11.webp)
 
 2、下载网盘链接Linux烧写工具linux-flashTool.tar.gz：
 链接：[https://pan.baidu.com/s/1HYKTwkkbdZaiJsuv_EifEw](https://pan.baidu.com/s/1HYKTwkkbdZaiJsuv_EifEw)
@@ -174,17 +174,17 @@ rd
 
 将RK1808 TB-96AIoT开发板的Debug口（microUSB口）连接到主机端的USB口，打开设备管理器获取USB Serial Port的端口号，如下图所示：
 
-![pc_comx](wiki-tutorial-assets/picture12.png)
+![pc_comx](wiki-tutorial-assets/picture12.webp)
 
 注意：如果设备管理器里面显示驱动异常信息，请选择更新驱动信息即可。
 
 打开串口工具“SecureCRT”，点击“快速连接”按钮。
 
-![securecrt_createconnect](wiki-tutorial-assets/picture13.png)
+![securecrt_createconnect](wiki-tutorial-assets/picture13.webp)
 
 配置串口信息，端口选择连接开发板的端口号，设置波特率为1500000，不勾选流控RTS/CTS，如下图所示：
 
-![securecrt_config](wiki-tutorial-assets/picture14.png)
+![securecrt_config](wiki-tutorial-assets/picture14.webp)
 
 点击连接，就可以正常查看系统调试信息和输入用户命令。
 
@@ -220,7 +220,7 @@ RK1808 TB-96AIoT开发板，若有接配套屏幕，购买链接 [https://item.t
 
 开机启动后有个默认的QT界面，如下图所示。
 
-![poweron_ui](wiki-tutorial-assets/picture15.png)
+![poweron_ui](wiki-tutorial-assets/picture15.webp)
 
 ## Linux-Buildroot开发
 
@@ -324,7 +324,7 @@ sudo reboot
 
 TB-96AIoT开发板底板的LAN2口是TB-96AIoT使用的。
 
-![lan2-port](wiki-tutorial-assets/picture16.png)
+![lan2-port](wiki-tutorial-assets/picture16.webp)
 
 1. 配置以太网自动获取IP地址； sudo [toybrick-set.py](http://toybrick-set.py) func none sudo [toybrick-set.py](http://toybrick-set.py) network ethernet dhcp sudo reboot
 2. 配置以太网静态IP; 举例配置静态ip为192.168.179.8，默认网关为192.168.179.1 sudo [toybrick-set.py](http://toybrick-set.py) func none sudo [toybrick-set.py](http://toybrick-set.py) network ethernet static addr 192.168.179.8/24 gateway 192.168.179.1 dns 180.76.76.76,8.8.8.8 sudo reboot

@@ -12,9 +12,9 @@ title: Robo3588机器人主板 Wiki 教程
 
 贝启Robo3588机器人开发板外观图如图1所示：
 
-![贝启Robo3588机器人开发板外观图](wiki-tutorial-assets/picture1.png)
+![贝启Robo3588机器人开发板外观图](wiki-tutorial-assets/picture1.webp)
 
-![贝启Robo3588机器人开发板外观图](wiki-tutorial-assets/picture2.png)
+![贝启Robo3588机器人开发板外观图](wiki-tutorial-assets/picture2.webp)
 
 ​																						图1：   贝启Robo3588机器人开发板外观图
 
@@ -22,18 +22,18 @@ title: Robo3588机器人主板 Wiki 教程
 
 **1、   贝启Robo3588机器人开发板正面接口示意图**
 
-![robo3588接口说明_01](wiki-tutorial-assets/picture3.png)
+![robo3588接口说明_01](wiki-tutorial-assets/picture3.webp)
 
 ​																					图2：   贝启Robo3588机器人开发板正面接口示意图
 
 **2、   贝启Robo3588机器人开发板反面接口示意图**
 
-![robo3588接口说明_02](wiki-tutorial-assets/picture4.png)
+![robo3588接口说明_02](wiki-tutorial-assets/picture4.webp)
 
 ​                                                                           图3：   贝启Robo3588机器人开发板反面接口示意图
 
 **3、 贝启Robo3588机器人拓展板接口示意图**
-![robo3588接口说明_03](wiki-tutorial-assets/picture5.png)
+![robo3588接口说明_03](wiki-tutorial-assets/picture5.webp)
 
 图4：   贝启Robo3588机器人拓展板接口示意图
 
