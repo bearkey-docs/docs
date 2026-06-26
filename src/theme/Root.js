@@ -110,6 +110,12 @@ function categoryContainsCurrentPage(category) {
   const links = category.querySelectorAll('a.menu__link[href]');
 
   return Array.from(links).some((link) => {
+    const href = link.getAttribute('href');
+
+    if (!href || href.startsWith('#')) {
+      return false;
+    }
+
     const linkPathname = normalizePathname(new URL(link.href).pathname);
     return linkPathname === currentPathname;
   });
