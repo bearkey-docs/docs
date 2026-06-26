@@ -31,57 +31,57 @@ RK3588 核心板是一款由贝启科技自主研发的基于瑞芯微 RK3588 AI
 
 ## 芯片架构
 
-![Chip_architecture](bq-3588-c-wiki-tutorial-assets/picture1.png)
+![Chip_architecture](bq-3588-c-wiki-tutorial-assets/picture1.webp)
 
 ## 产品参数
 
 ## 产品参数
 
-![parameter](bq-3588-c-wiki-tutorial-assets/picture2.png)
+![parameter](bq-3588-c-wiki-tutorial-assets/picture2.webp)
 
 ## 引线分配
 
 ## 引线分配
 
-![pin](bq-3588-c-wiki-tutorial-assets/picture3.png)
+![pin](bq-3588-c-wiki-tutorial-assets/picture3.webp)
 
 ## 规格参数
 
 ## 规格参数
 
-![specs1](bq-3588-c-wiki-tutorial-assets/picture4.jpg)
+![specs1](bq-3588-c-wiki-tutorial-assets/picture4.webp)
 
 ## 引脚描述
 
 ## 引脚描述
 
-![pin1](bq-3588-c-wiki-tutorial-assets/picture5.jpg)
+![pin1](bq-3588-c-wiki-tutorial-assets/picture5.webp)
 
-![pin2](bq-3588-c-wiki-tutorial-assets/picture6.jpg)
+![pin2](bq-3588-c-wiki-tutorial-assets/picture6.webp)
 
-![pin3](bq-3588-c-wiki-tutorial-assets/picture7.jpg)
+![pin3](bq-3588-c-wiki-tutorial-assets/picture7.webp)
 
-![pin4](bq-3588-c-wiki-tutorial-assets/picture8.jpg)
-
-## 底板接口信息
+![pin4](bq-3588-c-wiki-tutorial-assets/picture8.webp)
 
 ## 底板接口信息
 
-![port](bq-3588-c-wiki-tutorial-assets/picture9.png)
+## 底板接口信息
+
+![port](bq-3588-c-wiki-tutorial-assets/picture9.webp)
 
 ## 底板产品参数
 
 ## 底板产品参数
 
-![baseboard](bq-3588-c-wiki-tutorial-assets/picture10.png)
+![baseboard](bq-3588-c-wiki-tutorial-assets/picture10.webp)
 
-![map](bq-3588-c-wiki-tutorial-assets/picture11.png)
-
-## 底板规格参数
+![map](bq-3588-c-wiki-tutorial-assets/picture11.webp)
 
 ## 底板规格参数
 
-![specs2](bq-3588-c-wiki-tutorial-assets/picture12.jpg)
+## 底板规格参数
+
+![specs2](bq-3588-c-wiki-tutorial-assets/picture12.webp)
 
 ## 入门指南
 
@@ -106,7 +106,7 @@ RK3588 核心板是一款由贝启科技自主研发的基于瑞芯微 RK3588 AI
 
 先从网盘下载 [driverAssitant_v5.1.1.zip](https://pan.baidu.com/s/1ZPgDx9DucAG_rSReRePOCQ?pwd=1e5z#list/path=%2Fsharelink643277584-132554420893019%2F2.%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97Debian11_Ubuntu20.04%2F%E7%83%A7%E5%86%99%E5%B7%A5%E5%85%B7%E5%8F%8A%E9%A9%B1%E5%8A%A8&parentPath=%2Fsharelink643277584-132554420893019) 至电脑上，解压目录运行里面的 `DriverInstall.exe` 。先选择驱动卸载，然后再选择驱动安装。
 
-![install](bq-3588-c-wiki-tutorial-assets/picture13.png)
+![install](bq-3588-c-wiki-tutorial-assets/picture13.webp)
 
 #### 进入loader烧写模式
 
@@ -118,7 +118,7 @@ RK3588 核心板是一款由贝启科技自主研发的基于瑞芯微 RK3588 AI
 
 4.当开发板进入loader模式后，松开按键。
 
-![loader](bq-3588-c-wiki-tutorial-assets/picture14.png)
+![loader](bq-3588-c-wiki-tutorial-assets/picture14.webp)
 
 #### 进入maskrom烧写模式
 
@@ -130,7 +130,7 @@ RK3588 核心板是一款由贝启科技自主研发的基于瑞芯微 RK3588 AI
 
 4.当开发板进入loader模式后，松开按键。
 
-![maskrom](bq-3588-c-wiki-tutorial-assets/picture15.png)
+![maskrom](bq-3588-c-wiki-tutorial-assets/picture15.webp)
 
 ### 查询烧写状态
 
@@ -157,13 +157,13 @@ RK3588 核心板是一款由贝启科技自主研发的基于瑞芯微 RK3588 AI
 - 发现一个LOADER设备（如图1-5所示）：表示开发板进入loader烧写模式。
 - 发现一个MASKROM设备（如图1-6所示）：表示开发板进入maskrom烧写模式。
 
-![No_find](bq-3588-c-wiki-tutorial-assets/picture16.png)
+![No_find](bq-3588-c-wiki-tutorial-assets/picture16.webp)
 图1-4：没有发现设备
 
-![find_loader](bq-3588-c-wiki-tutorial-assets/picture17.png)
+![find_loader](bq-3588-c-wiki-tutorial-assets/picture17.webp)
 图1-5：发现一个LOADER设备
 
-![find_maskrom](bq-3588-c-wiki-tutorial-assets/picture18.png)
+![find_maskrom](bq-3588-c-wiki-tutorial-assets/picture18.webp)
 图1-6：发现一个MASKROM设备
 
 ### Linux主机烧写镜像
@@ -226,7 +226,7 @@ RK3588 核心板是一款由贝启科技自主研发的基于瑞芯微 RK3588 AI
 
 Loader和Parmeter选项建议打勾选择，其他选项根据需要打勾选择。
 
-- 点击“执行”按钮，开始烧写固件（如图1-7所示）。  ![download](bq-3588-c-wiki-tutorial-assets/picture19.png) 图1-7：烧写固件
+- 点击“执行”按钮，开始烧写固件（如图1-7所示）。  ![download](bq-3588-c-wiki-tutorial-assets/picture19.webp) 图1-7：烧写固件
 
 ## Linux开发
 
@@ -321,7 +321,7 @@ dd if=/mnt/rootfs.img of=/dev/disk/by-partlabel/rootfs
 
 拔出设备OTG口的Type-C的线，长按recovery按键后重启设备，系统将进入紧急模式的命令行，如图所示：
 
-![urgency](bq-3588-c-wiki-tutorial-assets/picture20.png)
+![urgency](bq-3588-c-wiki-tutorial-assets/picture20.webp)
 
 ## 制作客制化Debian11固件
 

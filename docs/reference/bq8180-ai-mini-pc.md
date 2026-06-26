@@ -41,55 +41,55 @@ BQ-8180扩展接口丰富，极大程度的发挥CP8180的性能优势，支持H
 （1）FAT32格式的u盘，拷贝以下两个文件后，插入设备USB口：cix_flash_all2.bin 是作为更新的bios文件
 FlashUpdate.efi 是用作更新bios的工具
 
-![图片](bq8180-ai-mini-pc-assets/picture1.png)
+![图片](bq8180-ai-mini-pc-assets/picture1.webp)
 
 （2）重启设备，显示器出现 Logo 和进度条时，短按键盘的“Esc”按键进入 BIOS 界面。
 
-![图片](bq8180-ai-mini-pc-assets/picture2.png)
+![图片](bq8180-ai-mini-pc-assets/picture2.webp)
 
 （3）在 BIOS 界面依次选择 Boot Manager -&gt; UEFI Shell 选项
 
-![图片](bq8180-ai-mini-pc-assets/picture3.png)
+![图片](bq8180-ai-mini-pc-assets/picture3.webp)
 
 &gt; 更新 BIOS 固件时，需确保整个过程保持电源的稳定，避免电源断电导致更新失败，以至于主板无法启动系统。
 
 （4）进入 UEFI Shell 界面后，按 ESC 键取消自动更新，手动进入指定磁盘更新 BIOS 固件。（此处为FS1）
 
-![图片](bq8180-ai-mini-pc-assets/picture4.png)
+![图片](bq8180-ai-mini-pc-assets/picture4.webp)
 
 （5）选择好磁盘文件后（输入FS1:），按回车键，进入磁盘文件。（可用ls命令查看当前磁盘内容）
 
-![图片](bq8180-ai-mini-pc-assets/picture5.png)
+![图片](bq8180-ai-mini-pc-assets/picture5.webp)
 
 （6）更新bios：Flashupdate.efi -f cix_flash_all2.bin
 
-![图片](bq8180-ai-mini-pc-assets/picture6.png)
+![图片](bq8180-ai-mini-pc-assets/picture6.webp)
 
 （7）更新完成后，系统会自动重启。（如需查看更新是否成功，可以在bios界面查看序列号）
 
-![图片](bq8180-ai-mini-pc-assets/picture7.png)
+![图片](bq8180-ai-mini-pc-assets/picture7.webp)
 
 ### 3、烧录方式1（ssd直接烧录）
 
 &gt; BQ8180 AI Mini PC 拆机后，SSD固态存放位置。（拔插SSD时请先断电）
 
-![图片](bq8180-ai-mini-pc-assets/picture8.png)
+![图片](bq8180-ai-mini-pc-assets/picture8.webp)
 
-![图片](bq8180-ai-mini-pc-assets/picture9.png)
+![图片](bq8180-ai-mini-pc-assets/picture9.webp)
 
 &gt; 下图为需要准备的烧录工具nvme转usb外接盒，以及使用方法。
 
-![图片](bq8180-ai-mini-pc-assets/picture10.png)
+![图片](bq8180-ai-mini-pc-assets/picture10.webp)
 
 #### （1）windows系统
 
 a.在官网下载rufus烧录软件（版本在3.30以上）b.在软件页面中按alt+f，开启磁盘启动
 
-![图片](bq8180-ai-mini-pc-assets/picture11.png)
+![图片](bq8180-ai-mini-pc-assets/picture11.webp)
 
 c.选择对应的磁盘和固件，点击开始
 
-![图片](bq8180-ai-mini-pc-assets/picture12.png)
+![图片](bq8180-ai-mini-pc-assets/picture12.webp)
 
 d.耐心等待至烧录完成，即可插回原位使用
 
@@ -109,7 +109,7 @@ sudo apt install zstd -y
 zstdcat ubuntu2403.zst | sudo dd of=/dev/nvme0n1 bs=64M status=progress
 ```
 
-![图片](bq8180-ai-mini-pc-assets/picture13.png)
+![图片](bq8180-ai-mini-pc-assets/picture13.webp)
 
 c.将烧录完成“M.2 NVME SSD”放入BQ-8180开发板的SSD位置
 
@@ -123,57 +123,57 @@ a.联系获取debian的iso镜像
 
 b.用rufus制作u盘启动工具
 
-![图片](bq8180-ai-mini-pc-assets/picture14.png)
+![图片](bq8180-ai-mini-pc-assets/picture14.webp)
 
 c.进入bios设置界面，选择u盘启动
 
-![图片](bq8180-ai-mini-pc-assets/picture15.png)
+![图片](bq8180-ai-mini-pc-assets/picture15.webp)
 
 d.选择文本或图形化界面进行安装（需要接HDMI，在屏幕中会显示安装向导）
 
-![图片](bq8180-ai-mini-pc-assets/picture16.png)
+![图片](bq8180-ai-mini-pc-assets/picture16.webp)
 
 e.以下演示为第二个安装项Graphical install
 
 选择语言
 
-![图片](bq8180-ai-mini-pc-assets/picture17.jpg)
+![图片](bq8180-ai-mini-pc-assets/picture17.webp)
 
 未找到安装模块仍继续安装
 
-![图片](bq8180-ai-mini-pc-assets/picture18.jpg)
+![图片](bq8180-ai-mini-pc-assets/picture18.webp)
 
 配置网络
 
-![图片](bq8180-ai-mini-pc-assets/picture19.jpg)
+![图片](bq8180-ai-mini-pc-assets/picture19.webp)
 
-![图片](bq8180-ai-mini-pc-assets/picture20.jpg)
+![图片](bq8180-ai-mini-pc-assets/picture20.webp)
 
 磁盘分区和安装
 
-![图片](bq8180-ai-mini-pc-assets/picture21.jpg)
+![图片](bq8180-ai-mini-pc-assets/picture21.webp)
 
-![图片](bq8180-ai-mini-pc-assets/picture22.jpg)
+![图片](bq8180-ai-mini-pc-assets/picture22.webp)
 
-![图片](bq8180-ai-mini-pc-assets/picture23.jpg)
+![图片](bq8180-ai-mini-pc-assets/picture23.webp)
 
-![图片](bq8180-ai-mini-pc-assets/picture24.jpg)
+![图片](bq8180-ai-mini-pc-assets/picture24.webp)
 
 配置软件包管理器（否）
 
-![图片](bq8180-ai-mini-pc-assets/picture25.jpg)
+![图片](bq8180-ai-mini-pc-assets/picture25.webp)
 
 安装debian桌面环境
 
-![图片](bq8180-ai-mini-pc-assets/picture26.jpg)
+![图片](bq8180-ai-mini-pc-assets/picture26.webp)
 
 安装grub引导器
 
-![图片](bq8180-ai-mini-pc-assets/picture27.jpg)
+![图片](bq8180-ai-mini-pc-assets/picture27.webp)
 
 其他预设根据自身要求定义即可，安装完成后会自动重启。
 
-![图片](bq8180-ai-mini-pc-assets/picture28.jpg)
+![图片](bq8180-ai-mini-pc-assets/picture28.webp)
 
 ## 调试方法
 
@@ -181,7 +181,7 @@ e.以下演示为第二个安装项Graphical install
 
 串口调试能最稳定的打印主机的全部调试信息，无需依赖任何驱动，仅需要拆机将串口裸露出来。
 
-![图片](bq8180-ai-mini-pc-assets/picture29.png)
+![图片](bq8180-ai-mini-pc-assets/picture29.webp)
 
 开发板调试口：UART2
 
@@ -192,11 +192,11 @@ e.以下演示为第二个安装项Graphical install
 
 串口软件：一般的终端软件都可以支持串口通讯，这里演示使用Xshell
 
-![图片](bq8180-ai-mini-pc-assets/picture30.png)
+![图片](bq8180-ai-mini-pc-assets/picture30.webp)
 
-![图片](bq8180-ai-mini-pc-assets/picture31.png)
+![图片](bq8180-ai-mini-pc-assets/picture31.webp)
 
-![图片](bq8180-ai-mini-pc-assets/picture32.png)
+![图片](bq8180-ai-mini-pc-assets/picture32.webp)
 
 &gt; 使用USB转TTL，在串口终端中可以浏览开机启动信息，等待30秒左右,出现login即正常进入系统。
 
@@ -206,25 +206,25 @@ e.以下演示为第二个安装项Graphical install
 
 使用ADB/HDC 调试时，无需拆机，打印信息需要通过相应命令查询。
 
-![图片](bq8180-ai-mini-pc-assets/picture33.png)
+![图片](bq8180-ai-mini-pc-assets/picture33.webp)
 
 #### 1.安装ADB/HDC工具
 
 （1）在网上资源包中下载开源的ADB/HDC 工具包（也可通过固件联系方式获取）
 
-![图片](bq8180-ai-mini-pc-assets/picture34.png)
+![图片](bq8180-ai-mini-pc-assets/picture34.webp)
 
 （2）工具解压后，将其工具路径添加至电脑的“系统环境变量”中
 
-![图片](bq8180-ai-mini-pc-assets/picture35.png)
+![图片](bq8180-ai-mini-pc-assets/picture35.webp)
 
 （3）可通过adb --version（hdc --version）确认环境变量是否添加成功，可识别版本表示添加成功
 
-![图片](bq8180-ai-mini-pc-assets/picture36.png)
+![图片](bq8180-ai-mini-pc-assets/picture36.webp)
 
 （4）win+R 运行cmd，在终端中执行adb shell即可进入系统
 
-![图片](bq8180-ai-mini-pc-assets/picture37.png)
+![图片](bq8180-ai-mini-pc-assets/picture37.webp)
 
 ### 3、SSH连接
 
@@ -238,13 +238,13 @@ ssh <user_name> <net_ip>
 ssh cix 192.168.2.30
 ```
 
-![图片](bq8180-ai-mini-pc-assets/picture38.png)
+![图片](bq8180-ai-mini-pc-assets/picture38.webp)
 
 &gt; 系统中，一般都支持OpenSSH，如果无法连接，请检查网络设置并根据以下步骤，确定OpenSSH是否正常
 
 #### 1.执行sudo systemctl status ssh ，查看服务是否出现异常（以下是正常示例）
 
-![图片](bq8180-ai-mini-pc-assets/picture39.png)
+![图片](bq8180-ai-mini-pc-assets/picture39.webp)
 
 #### 2.如果openssh在系统中未安装，请根据以下步骤进行安装
 
@@ -280,7 +280,7 @@ sudo systemctl start gdm
 sudo systemctl set-default graphical.target
 ```
 
-![图片](bq8180-ai-mini-pc-assets/picture40.png)
+![图片](bq8180-ai-mini-pc-assets/picture40.webp)
 
 ## 功能概况
 
@@ -292,7 +292,7 @@ root用户下执行
 gpu_utilization_clock_tracing
 ```
 
-![图片](bq8180-ai-mini-pc-assets/picture41.png)
+![图片](bq8180-ai-mini-pc-assets/picture41.webp)
 
 &gt; 请不要打开 软件与更新应用，关闭自动更新避免对GPU造成影响
 
@@ -306,21 +306,21 @@ sudo systemctl disable unattended-upgrades
 
 (1)可以在屏幕设置界面直接连接
 
-![图片](bq8180-ai-mini-pc-assets/picture42.png)
+![图片](bq8180-ai-mini-pc-assets/picture42.webp)
 
 (2)命令查询 ip a
 
-![图片](bq8180-ai-mini-pc-assets/picture43.png)
+![图片](bq8180-ai-mini-pc-assets/picture43.webp)
 
 ### 3、Bluetooth
 
 (1)可以在屏幕设置界面直接连接
 
-![图片](bq8180-ai-mini-pc-assets/picture44.png)
+![图片](bq8180-ai-mini-pc-assets/picture44.webp)
 
 (2)命令查询 hciconfig
 
-![图片](bq8180-ai-mini-pc-assets/picture45.png)
+![图片](bq8180-ai-mini-pc-assets/picture45.webp)
 
 ### 4、USB接口
 
@@ -340,11 +340,11 @@ sudo mount /dev/sda SD
 
 (1)线缆插入后，屏幕设置界面自动显示
 
-![图片](bq8180-ai-mini-pc-assets/picture46.png)
+![图片](bq8180-ai-mini-pc-assets/picture46.webp)
 
 (2)命令查询 ip a
 
-![图片](bq8180-ai-mini-pc-assets/picture47.png)
+![图片](bq8180-ai-mini-pc-assets/picture47.webp)
 
 ### 6、音频
 
@@ -358,7 +358,7 @@ sudo mount /dev/sda SD
 用户名:    cix密码:        cix
 root密码: cix
 
-![图片](bq8180-ai-mini-pc-assets/picture48.jpg)
+![图片](bq8180-ai-mini-pc-assets/picture48.webp)
 
 ## 功能概况
 
@@ -370,27 +370,27 @@ root用户下执行
 gpu_utilization_clock_tracing
 ```
 
-![图片](bq8180-ai-mini-pc-assets/picture49.png)
+![图片](bq8180-ai-mini-pc-assets/picture49.webp)
 
 ### 2、 WIFI
 
 (1)可以在屏幕设置界面直接连接
 
-![图片](bq8180-ai-mini-pc-assets/picture50.jpg)
+![图片](bq8180-ai-mini-pc-assets/picture50.webp)
 
 (2)命令查询 ip a
 
-![图片](bq8180-ai-mini-pc-assets/picture51.png)
+![图片](bq8180-ai-mini-pc-assets/picture51.webp)
 
 ### 3、Bluetooth
 
 (1)可以在屏幕设置界面直接连接
 
-![图片](bq8180-ai-mini-pc-assets/picture52.jpg)
+![图片](bq8180-ai-mini-pc-assets/picture52.webp)
 
 (2)命令查询 hciconfig
 
-![图片](bq8180-ai-mini-pc-assets/picture53.png)
+![图片](bq8180-ai-mini-pc-assets/picture53.webp)
 
 ### 4、USB接口
 
@@ -410,11 +410,11 @@ sudo mount /dev/sda SD
 
 (1)线缆插入后，屏幕设置界面自动显示
 
-![图片](bq8180-ai-mini-pc-assets/picture54.jpg)
+![图片](bq8180-ai-mini-pc-assets/picture54.webp)
 
 (2)命令查询 ip a
 
-![图片](bq8180-ai-mini-pc-assets/picture55.png)
+![图片](bq8180-ai-mini-pc-assets/picture55.webp)
 
 ### 6、音频
 
@@ -430,7 +430,7 @@ root密码: 无
 
 &gt; HDMI显示，目前仅支持HDMI OUT1
 
-![图片](bq8180-ai-mini-pc-assets/picture56.jpg)
+![图片](bq8180-ai-mini-pc-assets/picture56.webp)
 
 ## 功能概况
 
@@ -438,17 +438,17 @@ root密码: 无
 
 (1)可以在屏幕设置界面直接连接
 
-![图片](bq8180-ai-mini-pc-assets/picture57.jpg)
+![图片](bq8180-ai-mini-pc-assets/picture57.webp)
 
 (2)命令查询 ifconfig
 
-![图片](bq8180-ai-mini-pc-assets/picture58.png)
+![图片](bq8180-ai-mini-pc-assets/picture58.webp)
 
 ### 2、Bluetooth
 
 (1)可以在屏幕设置界面直接连接
 
-![图片](bq8180-ai-mini-pc-assets/picture59.jpg)
+![图片](bq8180-ai-mini-pc-assets/picture59.webp)
 
 ### 3、USB接口
 
@@ -468,7 +468,7 @@ sudo mount /dev/sda SD
 
 (1)命令查询 ip a
 
-![图片](bq8180-ai-mini-pc-assets/picture60.png)
+![图片](bq8180-ai-mini-pc-assets/picture60.webp)
 
 ### 5、音频
 
@@ -482,7 +482,7 @@ sudo mount /dev/sda SD
 用户名:    pi密码:        pi
 root密码: pi
 
-![图片](bq8180-ai-mini-pc-assets/picture61.jpg)
+![图片](bq8180-ai-mini-pc-assets/picture61.webp)
 
 ## 功能概况
 
@@ -494,27 +494,27 @@ root用户下执行
 gpu_utilization_clock_tracing
 ```
 
-![图片](bq8180-ai-mini-pc-assets/picture62.png)
+![图片](bq8180-ai-mini-pc-assets/picture62.webp)
 
 ### 2、 WIFI
 
 (1)可以在屏幕设置界面直接连接
 
-![图片](bq8180-ai-mini-pc-assets/picture63.jpg)
+![图片](bq8180-ai-mini-pc-assets/picture63.webp)
 
 (2)命令查询 ip a
 
-![图片](bq8180-ai-mini-pc-assets/picture64.png)
+![图片](bq8180-ai-mini-pc-assets/picture64.webp)
 
 ### 3、Bluetooth
 
 (1)可以在屏幕设置界面直接连接
 
-![图片](bq8180-ai-mini-pc-assets/picture65.jpg)
+![图片](bq8180-ai-mini-pc-assets/picture65.webp)
 
 (2)命令查询 hciconfig
 
-![图片](bq8180-ai-mini-pc-assets/picture66.png)
+![图片](bq8180-ai-mini-pc-assets/picture66.webp)
 
 ### 4、USB接口
 
@@ -534,11 +534,11 @@ sudo mount /dev/sda SD
 
 (1)线缆插入后，屏幕设置界面自动显示
 
-![图片](bq8180-ai-mini-pc-assets/picture67.jpg)
+![图片](bq8180-ai-mini-pc-assets/picture67.webp)
 
 (2)命令查询 ip a
 
-![图片](bq8180-ai-mini-pc-assets/picture68.png)
+![图片](bq8180-ai-mini-pc-assets/picture68.webp)
 
 ### 6、音频
 
@@ -547,19 +547,19 @@ sudo mount /dev/sda SD
 
 ## 六、硬件资料
 
-![图片](bq8180-ai-mini-pc-assets/picture69.png)
+![图片](bq8180-ai-mini-pc-assets/picture69.webp)
 
 ## 尺寸
 
-![图片](bq8180-ai-mini-pc-assets/picture70.png)
+![图片](bq8180-ai-mini-pc-assets/picture70.webp)
 
 ## 接口示意
 
-![图片](bq8180-ai-mini-pc-assets/picture71.png)
+![图片](bq8180-ai-mini-pc-assets/picture71.webp)
 
 ## 基本参数
 
-![图片](bq8180-ai-mini-pc-assets/picture72.png)
+![图片](bq8180-ai-mini-pc-assets/picture72.webp)
 
 ## 七、常见问题
 
