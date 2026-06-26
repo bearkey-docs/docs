@@ -19,19 +19,19 @@ TB-96AI搭配由Bearkey研发的96Boards CarrierBoard可以组成一套完整的
 
 ### 实物图片
 
-![product_tb-96ai](tb-96ai-wiki-tutorial-assets/picture1.jpg)
+![product_tb-96ai](tb-96ai-wiki-tutorial-assets/picture1.webp)
 
-![tb-96ai-taojian](tb-96ai-wiki-tutorial-assets/picture2.jpg)
+![tb-96ai-taojian](tb-96ai-wiki-tutorial-assets/picture2.webp)
 
 ### 功能列表
 
-![product-functionlist1](tb-96ai-wiki-tutorial-assets/picture3.png)
+![product-functionlist1](tb-96ai-wiki-tutorial-assets/picture3.webp)
 
 ### 接口列表
 
-![tb-96ai-core-interfaces1](tb-96ai-wiki-tutorial-assets/picture4.jpg)
+![tb-96ai-core-interfaces1](tb-96ai-wiki-tutorial-assets/picture4.webp)
 
-![carrierboard_interfaces](tb-96ai-wiki-tutorial-assets/picture5.jpg)
+![carrierboard_interfaces](tb-96ai-wiki-tutorial-assets/picture5.webp)
 
 ## 入门指南
 
@@ -63,7 +63,7 @@ TB-96AI搭配由Bearkey研发的96Boards CarrierBoard可以组成一套完整的
 
 2、双击DriverAssitant_v4.5\ DriverInstall.exe打开安装程序，点击“驱动安装”按提示安装驱动即可，安装界面如下所示:
 
-![rkdriver_install](tb-96ai-wiki-tutorial-assets/picture6.png)
+![rkdriver_install](tb-96ai-wiki-tutorial-assets/picture6.webp)
 
 3、Type-C线连接主机端的USB接口和RK3399Pro TB-96AI开发板的Type-C接口，进入烧写模式。
 
@@ -71,21 +71,21 @@ TB-96AI搭配由Bearkey研发的96Boards CarrierBoard可以组成一套完整的
 
 5、双击AndroidTool_Release_v2.64\AndroidTool.exe启动烧写工具，单击右键，导入config_dual 配置，此配置为双系统配置。（在AndroidTool_Release_v2.64根目录下）。
 
-![load_dualconfig](tb-96ai-wiki-tutorial-assets/picture7.png)
+![load_dualconfig](tb-96ai-wiki-tutorial-assets/picture7.webp)
 
 6、长按RK3399Pro TB-96AI开发板上recovery按键（KEY2键）的过程中重启机器，注意要一直长按KEY2键一直持续按，直到系统进入Loader模式，如下所示：
 
-![recovery_reset_key](tb-96ai-wiki-tutorial-assets/picture8.png)
+![recovery_reset_key](tb-96ai-wiki-tutorial-assets/picture8.webp)
 
-![enter_loader](tb-96ai-wiki-tutorial-assets/picture9.png)
+![enter_loader](tb-96ai-wiki-tutorial-assets/picture9.webp)
 
 7、如果需要单烧linux系统，请在步骤5导入config_linux 配置。
 
-![load_linuxconfig](tb-96ai-wiki-tutorial-assets/picture10.png)
+![load_linuxconfig](tb-96ai-wiki-tutorial-assets/picture10.webp)
 
 8、如果需要单烧android系统，请在步骤5导入config_android 配置。
 
-![load_androidconfig](tb-96ai-wiki-tutorial-assets/picture11.png)
+![load_androidconfig](tb-96ai-wiki-tutorial-assets/picture11.webp)
 
 #### Linux主机烧写固件
 
@@ -195,17 +195,17 @@ sudo python ./flash.py --help
 
 将RK3399Pro TB-96AI开发板的Debug口（microUSB口）连接到主机端的USB口，打开设备管理器获取USB Serial Port的端口号，如下图所示：
 
-![pc_comx](tb-96ai-wiki-tutorial-assets/picture12.png)
+![pc_comx](tb-96ai-wiki-tutorial-assets/picture12.webp)
 
 注意：如果设备管理器里面显示驱动异常信息，请选择更新驱动信息即可。
 
 打开串口工具“SecureCRT”，点击“快速连接”按钮。
 
-![securecrt_createconnect](tb-96ai-wiki-tutorial-assets/picture13.png)
+![securecrt_createconnect](tb-96ai-wiki-tutorial-assets/picture13.webp)
 
 配置串口信息，端口选择连接开发板的端口号，设置波特率为1500000，不勾选流控RTS/CTS，如下图所示：
 
-![securecrt_config](tb-96ai-wiki-tutorial-assets/picture14.png)
+![securecrt_config](tb-96ai-wiki-tutorial-assets/picture14.webp)
 
 点击连接，就可以正常查看系统调试信息和输入用户命令。
 
@@ -342,7 +342,7 @@ MIPI0：使用ISP0和I2C1，还需配置MIPI_MCLK0、MIPI_PDN、MIPI_RST
 
 MIPI1：使用ISP1和I2C2，还需配置MIPI_MCLK_T2、JMIPI_PDN2、JMIPI_RST2
 
-![mipi-isp](tb-96ai-wiki-tutorial-assets/picture15.png)
+![mipi-isp](tb-96ai-wiki-tutorial-assets/picture15.webp)
 
 DTS配置
 
@@ -465,20 +465,20 @@ drivers/media/i2c/soc_camera/rockchip
 
 红外遥控的发射电路是采用红外发光二极管来发出经过调制的红外光波；红外接收电路由红外接收二极管、 三极管或硅光电池组成，它们将红外发射器发射的红外光转换为相应的电信号，再送后置放大器。鉴于家用电器的品种多样化和用户的使用特点，生产厂家对进行了严格的规范编码，这些编码各不相同，从而形成不同的编码方式，统一称为红外遥控器编码传输协议。到目前为止，红外遥控协议已多达十种， 如： RC5、SIRCS、Sy、RECS80、Denon、NEC、Motorola、Japanese、SAMSWNG 和 Daewoo 等。我国家用电器的红外遥控器的生产厂家，其编码方式多数是按上述的各种协议进行编码的，而用得较多的有 NEC 协议。目前 RK 平台也只支持 NEC 编码的红外协议。
 
-![ir_introduction](tb-96ai-wiki-tutorial-assets/picture16.png)
+![ir_introduction](tb-96ai-wiki-tutorial-assets/picture16.webp)
 
 RK 平台上红外实现原理简介
 
 PWM 有三种工作模式， reference mode, one-shot mode 和 continuousmode. 红外遥控器就采用 reference mode，这种模式下 PWM 可以捕获输入高低电平的宽度，并产生中断， CPU接收到中断后去相应的寄存器读取。
 
-![pwm_mode](tb-96ai-wiki-tutorial-assets/picture17.png)
+![pwm_mode](tb-96ai-wiki-tutorial-assets/picture17.webp)
 
 按下遥控的时候，红外接收头会产生一系列的高低电平， PWM 就会产生相应的中断， CPU 读取相应的寄存器就知道这些高低电平的时间，根据协议就可以解码出红外的用户码和键值码出来。
 下图是 NEC 红外编码协议的简单示意图，详细的协议附在最后。
 
-![nec_protocol1](tb-96ai-wiki-tutorial-assets/picture18.png)
+![nec_protocol1](tb-96ai-wiki-tutorial-assets/picture18.webp)
 
-![nec_protocol2](tb-96ai-wiki-tutorial-assets/picture19.png)
+![nec_protocol2](tb-96ai-wiki-tutorial-assets/picture19.webp)
 
 DTS配置
 
@@ -1119,15 +1119,15 @@ EC20的AT端口是/dev/ttyUSB2，使用AT测试，结果如下：
 /etc/ppp/peers/quectel-ppp
 ```
 
-![ppplog1](tb-96ai-wiki-tutorial-assets/picture20.png)
+![ppplog1](tb-96ai-wiki-tutorial-assets/picture20.webp)
 
 /etc/ppp/peers/quectel-chat-connect
 
-![ppplog2](tb-96ai-wiki-tutorial-assets/picture21.png)
+![ppplog2](tb-96ai-wiki-tutorial-assets/picture21.webp)
 
 /etc/ppp/peers/quectel-chat-disconnect
 
-![ppplog3](tb-96ai-wiki-tutorial-assets/picture22.png)
+![ppplog3](tb-96ai-wiki-tutorial-assets/picture22.webp)
 
 通过pppd进行拨号：
 
@@ -1361,15 +1361,15 @@ max-link-speed：支持的速率，1：GEN1，2：GEN2
 
 在menuconfig选择插入PCIE的设备驱动：
 
-![pci_eth_kernel_config](tb-96ai-wiki-tutorial-assets/picture23.png)
+![pci_eth_kernel_config](tb-96ai-wiki-tutorial-assets/picture23.webp)
 
 lspci可以看到系统检测到的pcie设备：
 
-![lspci](tb-96ai-wiki-tutorial-assets/picture24.png)
+![lspci](tb-96ai-wiki-tutorial-assets/picture24.webp)
 
 查看网口设备:
 
-![eth_dev](tb-96ai-wiki-tutorial-assets/picture25.png)
+![eth_dev](tb-96ai-wiki-tutorial-assets/picture25.webp)
 
 ## Linux-Fedora开发
 
@@ -2925,7 +2925,7 @@ pip3 install onnx
 
 API调用流程
 
-![rknn_api_call](tb-96ai-wiki-tutorial-assets/picture26.png)
+![rknn_api_call](tb-96ai-wiki-tutorial-assets/picture26.webp)
 
 示例
 
@@ -2977,7 +2977,7 @@ if __name__ == '__main__':
 
 API调用流程
 
-![tuili_api_call](tb-96ai-wiki-tutorial-assets/picture27.png)
+![tuili_api_call](tb-96ai-wiki-tutorial-assets/picture27.webp)
 
 示例
 
