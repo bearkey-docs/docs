@@ -214,7 +214,7 @@ const config = {
       },
     },
   },
-  trailingSlash: false,
+  trailingSlash: true,
   onBrokenLinks: 'throw',
   markdown: {
     hooks: {
@@ -288,11 +288,11 @@ const config = {
         logo: {
           alt: 'Bearkey DOCS',
           src: 'img/bearkey-docs-logo.webp',
-          href: '/docs/core-board/rk3588-core-board/product-specification?section=all',
+          href: '/docs/',
         },
         items: [
           {
-            to: '/docs/core-board/rk3588-core-board/product-specification?section=all',
+            to: '/docs/',
             position: 'left',
             label: '所有文档',
           },
@@ -324,7 +324,7 @@ const config = {
             items: [
               {
                 label: '开始阅读',
-                to: '/docs/core-board/rk3588-core-board/product-specification?section=all',
+                to: '/docs/',
               },
             ],
           },
