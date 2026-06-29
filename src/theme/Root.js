@@ -103,6 +103,9 @@ function syncCategoryExpandedState(category, expanded) {
     ':scope > .menu__list-item-collapsible [aria-expanded]',
   );
   directToggle?.setAttribute('aria-expanded', String(expanded));
+
+  const directList = category.querySelector(':scope > .menu__list');
+  directList?.removeAttribute('style');
 }
 
 function categoryContainsCurrentPage(category) {
