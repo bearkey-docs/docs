@@ -3,13 +3,13 @@ const path = require('path');
 const {execFileSync, spawnSync} = require('child_process');
 
 const siteDir = path.join(__dirname, '..');
-const docsRoots = [path.join(siteDir, 'docs'), ...getLocalizedDocsRoots()];
+const docsRoots = [path.join(siteDir, 'docs_cn'), ...getLocalizedDocsRoots()];
 const markdownImageRe = /(!\[[^\]]*\]\()([^\s)]+)([^)]*\))/g;
 const convertibleImageRe = /\.(png|jpe?g)$/i;
 const webpQuality = process.env.DOC_IMAGE_WEBP_QUALITY || '82';
 
 function getLocalizedDocsRoots() {
-  const i18nDir = path.join(siteDir, 'i18n');
+  const i18nDir = path.join(siteDir, 'docs_en');
 
   if (!fs.existsSync(i18nDir)) {
     return [];

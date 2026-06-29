@@ -5,7 +5,7 @@ const ENGLISH_LOCALE = 'en';
 const ENGLISH_DOCS_ROOT = path.join(
   __dirname,
   '..',
-  'i18n',
+  'docs_en',
   ENGLISH_LOCALE,
   'docusaurus-plugin-content-docs',
   'current',

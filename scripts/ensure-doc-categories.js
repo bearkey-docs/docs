@@ -3,12 +3,12 @@ const path = require('path');
 
 const siteDir = path.join(__dirname, '..');
 const docsRoots = [
-  path.join(siteDir, 'docs'),
+  path.join(siteDir, 'docs_cn'),
   ...getLocalizedDocsRoots(),
 ];
 
 function getLocalizedDocsRoots() {
-  const i18nDir = path.join(siteDir, 'i18n');
+  const i18nDir = path.join(siteDir, 'docs_en');
 
   if (!fs.existsSync(i18nDir)) {
     return [];
@@ -167,7 +167,7 @@ function collectDocIds(docsRoot) {
 function writeEnglishDocPaths() {
   const englishDocsRoot = path.join(
     siteDir,
-    'i18n',
+    'docs_en',
     'en',
     'docusaurus-plugin-content-docs',
     'current',

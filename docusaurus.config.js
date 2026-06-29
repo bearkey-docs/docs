@@ -227,6 +227,7 @@ const config = {
   },
 
   i18n: {
+    path: 'docs_en',
     defaultLocale: 'zh-Hans',
     locales: ['zh-Hans', 'en'],
     localeConfigs: {
@@ -259,6 +260,7 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
+          path: 'docs_cn',
           routeBasePath: 'docs',
           sidebarPath: require.resolve('./sidebars.js'),
           sidebarItemsGenerator: localizedSidebarItemsGenerator,

@@ -42,10 +42,10 @@ jobs:
       - name: Commit generated doc updates
         if: github.event_name == 'push'
         run: |
-          if [ -n "$(git status --porcelain -- docs i18n src/generated)" ]; then
+          if [ -n "$(git status --porcelain -- docs_cn docs_en src/generated)" ]; then
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add docs i18n src/generated
+            git add docs_cn docs_en src/generated
             git commit -m "Prepare generated doc assets"
             git push
           fi

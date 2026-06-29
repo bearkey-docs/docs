@@ -5,7 +5,7 @@ const path = require('path');
 
 const {hasEnglishDoc, isEnglishBuild} = require('./scripts/english-docs');
 
-const docsDir = path.join(__dirname, 'docs');
+const docsDir = path.join(__dirname, 'docs_cn');
 
 function shouldIncludeDoc(docId) {
   return !isEnglishBuild() || hasEnglishDoc(docId);
