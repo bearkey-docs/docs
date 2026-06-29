@@ -1,5 +1,6 @@
 ---
 sidebar_position: 1
+slug: /
 sidebar_label: Product Specification
 title: RK3588 Core Board Product Specification
 ---

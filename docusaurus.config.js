@@ -126,7 +126,7 @@ const productNavGroups = [
 ];
 
 const productDocLinks = {
-  'RK3588 核心板': '/docs/core-board/rk3588-core-board/product-specification',
+  'RK3588 核心板': '/docs',
   'RK3568 工业级核心板': '/docs/core-board/rk3568-industrial-core-board/product-specification',
   'RK3399 Pro 核心板': '/docs/core-board/rk3399-pro-core-board/product-specification',
   'TB-96AIoT-1808CO': '/docs/core-board/tb-96aiot-1808co/product-specification',
@@ -288,11 +288,11 @@ const config = {
         logo: {
           alt: 'Bearkey DOCS',
           src: 'img/bearkey-docs-logo.webp',
-          href: '/docs/core-board/rk3588-core-board/product-specification?section=all',
+          href: '/docs',
         },
         items: [
           {
-            to: '/docs/core-board/rk3588-core-board/product-specification?section=all',
+            to: '/docs',
             position: 'left',
             label: '所有文档',
           },
@@ -324,7 +324,7 @@ const config = {
             items: [
               {
                 label: '开始阅读',
-                to: '/docs/core-board/rk3588-core-board/product-specification?section=all',
+                to: '/docs',
               },
             ],
           },

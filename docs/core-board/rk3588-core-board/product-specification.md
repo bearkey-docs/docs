@@ -1,5 +1,6 @@
 ---
 sidebar_position: 1
+slug: /
 sidebar_label: 产品规格书
 title: RK3588 核心板产品规格书
 ---
