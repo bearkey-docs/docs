@@ -199,8 +199,8 @@ const config = {
   url: 'https://docs.fengxinglong.top',
   favicon: 'img/favicon.png',
   baseUrl: '/',
-  organizationName: 'CacheBiomancerClash',
-  projectName: 'document-web-design',
+  organizationName: 'bearkey-docs',
+  projectName: 'docs',
   customFields: {
     docImageCdnBase:
       process.env.DOC_IMAGE_CDN_BASE ||
@@ -210,10 +210,10 @@ const config = {
       process.env.MANUAL_IMAGE_CDN_BASE || 'https://www.bearkey.com.cn/docs-assets',
     comments: {
       giscus: {
-        repo: 'CacheBiomancerClash/document-web-design',
-        repoId: process.env.GISCUS_REPO_ID || 'R_kgDOS9NXKw',
+        repo: process.env.GISCUS_REPO || 'bearkey-docs/docs',
+        repoId: process.env.GISCUS_REPO_ID || 'R_kgDOTIbg8g',
         category: process.env.GISCUS_CATEGORY || '',
-        categoryId: process.env.GISCUS_CATEGORY_ID || '',
+        categoryId: process.env.GISCUS_CATEGORY_ID || 'DIC_kwDOTIbg8s4DAIyt',
       },
     },
   },
@@ -265,7 +265,7 @@ const config = {
           sidebarPath: require.resolve('./sidebars.js'),
           sidebarItemsGenerator: localizedSidebarItemsGenerator,
           editUrl:
-            'https://github.com/CacheBiomancerClash/document-web-design/tree/devin/initial-readme/',
+            'https://github.com/bearkey-docs/docs/tree/main/',
         },
         blog: false,
         theme: {
@@ -338,7 +338,7 @@ const config = {
             items: [
               {
                 label: 'GitHub 仓库',
-                href: 'https://github.com/CacheBiomancerClash/document-web-design',
+                href: 'https://github.com/bearkey-docs/docs',
               },
             ],
           },
