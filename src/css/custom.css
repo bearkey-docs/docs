@@ -97,7 +97,7 @@
 
 .theme-doc-sidebar-menu
   .theme-doc-sidebar-item-category:has(
-    .menu__list-item-collapsible [aria-expanded='false']
+    > .menu__list-item-collapsible [aria-expanded='false']
   )
   > .menu__list {
   display: none;
