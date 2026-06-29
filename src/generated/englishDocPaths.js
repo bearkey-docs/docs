@@ -5,7 +5,6 @@ export const ENGLISH_DOC_PATHS = [
   "core-board/rk3568-industrial-core-board/product-specification",
   "core-board/rk3588-core-board/product-specification",
   "core-board/tb-96aiot-1808co/product-specification",
-  "intro",
   "main-board/carrier-board/product-specification",
   "main-board/rk3506-industrial-main-board/product-specification",
   "main-board/rk3568-industrial-control-main-board/product-specification",
