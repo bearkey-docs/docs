@@ -171,6 +171,9 @@ const getProductNavbarItem = (label, section) =>
     ? {
         label,
         to: withSidebarContext(productDocLinks[label], section),
+        ...(label === 'RK3588 核心板'
+          ? {activeBaseRegex: '^/docs/?$'}
+          : {}),
       }
     : {
         label,
