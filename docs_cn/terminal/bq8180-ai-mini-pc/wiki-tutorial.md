@@ -1,5 +1,6 @@
 ---
-sidebar_position: 6
+sidebar_position: 2
+sidebar_label: Wiki 教程
 title: BQ8180 AI Mini PC
 ---
 

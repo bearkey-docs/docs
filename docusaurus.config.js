@@ -77,6 +77,7 @@ const productNavGroups = [
       'RK3588边缘计算工业网关',
       'RK3568-15.6英寸屏',
       'RK3506 工控屏',
+      'BQ8180 AI Mini PC',
     ],
   },
   {
@@ -153,6 +154,7 @@ const productDocLinks = {
   'RK3588边缘计算工业网关': '/docs/terminal/rk3588-edge-computing-industrial-gateway/product-specification',
   'RK3568-15.6英寸屏': '/docs/terminal/rk3568-15-6-inch-panel/product-specification',
   'RK3506 工控屏': '/docs/terminal/rk3506-industrial-panel/product-specification',
+  'BQ8180 AI Mini PC': '/docs/terminal/bq8180-ai-mini-pc/product-specification',
   'Carrier Board': '/docs/main-board/carrier-board/product-specification',
 };
 

@@ -16,6 +16,7 @@ export const ENGLISH_DOC_PATHS = [
   "main-board/robo3588-robot-main-board/product-specification",
   "reference/i18n-docs-guide",
   "terminal/ai-edge-workstation/product-specification",
+  "terminal/bq8180-ai-mini-pc/product-specification",
   "terminal/eight-inch-tablet/product-specification",
   "terminal/eleven-inch-tablet/product-specification",
   "terminal/industrial-panel/product-specification",
