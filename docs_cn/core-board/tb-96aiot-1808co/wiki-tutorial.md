@@ -1,5 +1,8 @@
 ---
 sidebar_position: 2
+split_by_h2: true
+slug: /_split-source/core-board/tb-96aiot-1808co/wiki-tutorial
+unlisted: true
 sidebar_label: Wiki 教程
 title: TB-96AIoT-1808CO Wiki 教程
 ---
@@ -8,15 +11,11 @@ title: TB-96AIoT-1808CO Wiki 教程
 
 ## 产品介绍
 
-## 产品介绍
-
 TB-96AIoT是一款由厦门贝启科技有限公司研发的全球第二款符合96Boards Compute SOM规范的面向人工智能领域的高性能嵌入式核心板（第一款为我司研发的基于RK3399Pro的TB-96AI），并由Linaro 96Boards于2019年4月1日正式对外发布。
 
 TB-96AIoT是一款低功耗高算力的面向物联网+人工智能领域的核心板，它才用采用Rockchip RK1808为主控芯片，内置神经网络处理器（NPU），可兼容Caffe、tensorflow等多种主流推理模型，TB-96AIoT搭配2GB LPDDR3+16GB eMMC（可选1GB LPDDR3+8GB eMMC/4GB LPDDR3+16GB eMMC），内置千兆以太网PHY芯片，采用2个100Pin的松下高速板对板连接器，具有丰富面向AIoT的拓展接口。PCB采用8层板设计，机械尺寸只有50mm×50mm，可灵活部署到各类产品。
 
 更多产品规格信息详见： [http://www.beiqicloud.com/product_detail.html?pid=TB-96AIoT](http://www.beiqicloud.com/product_detail.html?pid=TB-96AIoT)
-
-## 入门指南
 
 ## 入门指南
 
@@ -224,8 +223,6 @@ RK1808 TB-96AIoT开发板，若有接配套屏幕，购买链接 [https://item.t
 
 ## Linux-Buildroot开发
 
-## Linux-Buildroot开发
-
 ### Buildroot编译开发
 
 1. 进入/buildroot目录，通过：make menuconfig查看编译选项；
@@ -282,8 +279,6 @@ BOX_PRIORS_TXT_PATH 对应加载框权重文件。
 **更多**
 
 更多详情，请查阅/docs/SoC platform related/RK1808/Rockchip RKNN_DEMO模块开发指南V0.2.pdf
-
-## Linux-Debian10开发
 
 ## Linux-Debian10开发
 
@@ -812,8 +807,6 @@ LDDFLAGS := -lrockchip_rtsp
 
 示例详见：
 [http://t.rock-chips.com/wiki.php?mod=view&id=71](http://t.rock-chips.com/wiki.php?mod=view&id=71)
-
-## Linux-Debian9开发
 
 ## Linux-Debian9开发
 

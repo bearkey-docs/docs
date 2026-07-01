@@ -2,8 +2,8 @@ import React, {useEffect, useRef} from 'react';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import {useColorMode} from '@docusaurus/theme-common';
 
-const COMMENTS_REPO = 'CacheBiomancerClash/document-web-design';
-const GISCUS_REPO_ID = 'R_kgDOS9NXKw';
+const COMMENTS_REPO = 'bearkey-docs/docs';
+const GISCUS_REPO_ID = 'R_kgDOTIbg8g';
 
 const DEFAULT_COMMENTS_CONFIG = {
   giscus: {

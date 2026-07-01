@@ -1,5 +1,8 @@
 ---
 sidebar_position: 2
+split_by_h2: true
+slug: /_split-source/terminal/bq8180-ai-mini-pc/wiki-tutorial
+unlisted: true
 sidebar_label: Wiki 教程
 title: BQ8180 AI Mini PC
 ---
@@ -8,13 +11,13 @@ title: BQ8180 AI Mini PC
 
 ## 一、快速上手
 
-## 产品优势
+### 产品优势
 
 BQ-8180采用此芯旗舰SOC芯片CP8180，该芯片采用6nm制程工艺，基于12核Arm架构（8个性能核+4个能效核）设计，最高主频3.2GHz，集成CPU、GPU和NPU，提供45TOPS端侧AI算力（NPU算力30TOPS），支持运行百亿参数以内的大模型，运行速度可达30 tokens/s以上。
 
 BQ-8180扩展接口丰富，极大程度的发挥CP8180的性能优势，支持HDMI、DP、USB、以太网、音频、WIFI、Bluetooth、ADB、RTC功能，可直接做为AI工具的PC设备。
 
-## 前期准备
+### 前期准备
 
 主板：BQ8180 AI Mini PC
 电源：bearkey电源适配器
@@ -23,7 +26,7 @@ BQ-8180扩展接口丰富，极大程度的发挥CP8180的性能优势，支持H
 输入设备：键盘和鼠标（用于图形界面操作）
 调试工具（可选）：USB转串口线（用于串行登录）、 USB转TypeC线（用于ADB/HDC登录）
 
-## 系统支持与账户
+### 系统支持与账户
 
 | 系统 | Ubuntu | Debian | Openharmony | Openeuler |
 | --- | --- | --- | --- | --- |
@@ -31,7 +34,7 @@ BQ-8180扩展接口丰富，极大程度的发挥CP8180的性能优势，支持H
 | 密码 | bearkey | cix | 无 | pi |
 | root密码 | bearkey | cix | 无 | pi |
 
-## 固件烧写
+### 固件烧写
 
 ### 1、固件获取
 
@@ -176,7 +179,7 @@ e.以下演示为第二个安装项Graphical install
 
 ![图片](bq8180-ai-mini-pc-assets/picture28.webp)
 
-## 调试方法
+### 调试方法
 
 ### 1、串口调试
 
@@ -262,7 +265,7 @@ sudo systemctl enable ssh
 
 ## 二、Ubuntu系统
 
-## 默认用户
+### 默认用户
 
 用户名:    bearkey密码:        bearkey
 root密码: bearkey
@@ -283,7 +286,7 @@ sudo systemctl set-default graphical.target
 
 ![图片](bq8180-ai-mini-pc-assets/picture40.webp)
 
-## 功能概况
+### 功能概况
 
 ### 1、GPU占用率查询
 
@@ -354,14 +357,14 @@ sudo mount /dev/sda SD
 
 ## 三、Debian12
 
-## 默认用户
+### 默认用户
 
 用户名:    cix密码:        cix
 root密码: cix
 
 ![图片](bq8180-ai-mini-pc-assets/picture48.webp)
 
-## 功能概况
+### 功能概况
 
 ### 1、GPU占用率查询
 
@@ -424,7 +427,7 @@ sudo mount /dev/sda SD
 
 ## 四、Openharmony
 
-## 默认用户
+### 默认用户
 
 用户名:    无密码:        无
 root密码: 无
@@ -433,7 +436,7 @@ root密码: 无
 
 ![图片](bq8180-ai-mini-pc-assets/picture56.webp)
 
-## 功能概况
+### 功能概况
 
 ### 1、 WIFI
 
@@ -478,14 +481,14 @@ sudo mount /dev/sda SD
 
 ## 五、Openeuler
 
-## 默认用户
+### 默认用户
 
 用户名:    pi密码:        pi
 root密码: pi
 
 ![图片](bq8180-ai-mini-pc-assets/picture61.webp)
 
-## 功能概况
+### 功能概况
 
 ### 1、GPU占用率查询
 
@@ -550,21 +553,21 @@ sudo mount /dev/sda SD
 
 ![图片](bq8180-ai-mini-pc-assets/picture69.webp)
 
-## 尺寸
+### 尺寸
 
 ![图片](bq8180-ai-mini-pc-assets/picture70.webp)
 
-## 接口示意
+### 接口示意
 
 ![图片](bq8180-ai-mini-pc-assets/picture71.webp)
 
-## 基本参数
+### 基本参数
 
 ![图片](bq8180-ai-mini-pc-assets/picture72.webp)
 
 ## 七、常见问题
 
-## FAQs
+### FAQs
 
 Todo
 

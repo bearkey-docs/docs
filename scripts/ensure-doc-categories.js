@@ -67,6 +67,12 @@ function hasSameNameDoc(dirPath) {
   );
 }
 
+function hasReadmeDoc(dirPath) {
+  return ['README.md', 'README.mdx'].some((fileName) =>
+    fs.existsSync(path.join(dirPath, fileName)),
+  );
+}
+
 function ensureSameNameDocVisible(dirPath) {
   const categoryPath = path.join(dirPath, '_category_.json');
 
@@ -87,6 +93,10 @@ function ensureSameNameDocVisible(dirPath) {
 
 function ensureCategoryFile(dirPath) {
   const categoryPath = path.join(dirPath, '_category_.json');
+
+  if (hasReadmeDoc(dirPath)) {
+    return;
+  }
 
   if (fs.existsSync(categoryPath)) {
     ensureSameNameDocVisible(dirPath);

@@ -1,5 +1,8 @@
 ---
 sidebar_position: 2
+split_by_h2: true
+slug: /_split-source/core-board/rk3588-core-board/wiki-tutorial
+unlisted: true
 sidebar_label: Wiki 教程
 title: RK3588 核心板 Wiki 教程
 ---
@@ -8,17 +11,17 @@ title: RK3588 核心板 Wiki 教程
 
 ## 一、快速上手
 
-## 产品优势
+### 产品优势
 
 1.搭载 RK3588 高性能 SOC，集成了四核 Cortex-A76 和四核 Cortex-A55，主频高达 2.4G； 2.算力高达 6Tops，支持 INT4/INT8/INT16/FP16 运算，满足大多数人工智能模型的算力需求；
 3.强大的编解码能力，最高支持 8K@60fps；
 4.丰富的接口类型，满足行业应用开发需求。
 
-## 产品规格书
+### 产品规格书
 
 https://www.bearkey.com.cn/product/RK3588%E6%A0%B8%E5%BF%83%E6%9D%BF.html
 
-## 烧录固件
+### 烧录固件
 
 一般采用Loader模式烧写固件，如果无法进入loader烧写模式，仍可以进入 MaskRom 模式来烧写固件。
 
@@ -64,7 +67,7 @@ Type-C 数据线
 
 ![图片](wiki-tutorial-assets/picture3.webp)
 
-## 查询烧写状态
+### 查询烧写状态
 
 #### Linux主机查询
 
@@ -93,7 +96,7 @@ Type-C 数据线
 
 ![图片](wiki-tutorial-assets/picture6.webp)
 
-## Linux主机烧写镜像
+### Linux主机烧写镜像
 
 烧写所有镜像
 烧写所有镜像包括： MiniLoaderAll.bin ， parameter.txt ， uboot.img ， misc.img ， boot_linux.img ， recovery.img ， resource.img 和 rootfs.img
@@ -120,7 +123,7 @@ Type-C 数据线
 
 ./edge flash -h
 
-## Windows主机烧写镜像
+### Windows主机烧写镜像
 
 双击打开RKDevTool_Release_v2.84目录下的RKDevTool.exe。
 
@@ -134,7 +137,7 @@ Loader和Parmeter选项建议打勾选择，其他选项根据需要打勾选择
 
 ![图片](wiki-tutorial-assets/picture7.webp)
 
-## 串口调试
+### 串口调试
 
 ![图片](wiki-tutorial-assets/picture8.webp)
 
@@ -147,11 +150,11 @@ Loader和Parmeter选项建议打勾选择，其他选项根据需要打勾选择
 
 ## 二、Linux开发
 
-## 开机登录账户
+### 开机登录账户
 
 Debian11默认的登录账号是：bearkey，登录密码是：bearkey
 
-## 远程登录调试
+### 远程登录调试
 
 RK3588开发板出厂debian11固件默认支持两种远程登录：adb和ssh
 
@@ -171,7 +174,7 @@ Linux电脑主机通过网络，执行如下命令远程(ip获取方法)登录RK
 
 ssh bearkey@xxx.xxx.xxx.xxx               //xxx.xxx.xxx.xxx是开发板的IP地址
 
-## 常用命令行操作
+### 常用命令行操作
 
 ### 网络连接
 
@@ -189,15 +192,15 @@ ip a
 dhclient eth1
 ```
 
-## 挂载U盘
+### 挂载U盘
 
 mount /dev/sda1 /mnt   //假设U盘为：/dev/sda1
 
-## 远程拷贝
+### 远程拷贝
 
 scp $LOCAL_FILE $USER@$IP:/$REMOTE_PATH
 
-## 重要文件备份
+### 重要文件备份
 
 挂载rootfs分区到/sysroot目录：进入紧急模式后系统自动挂载rootfs分区到/sysroot，用户无需重复操作。
 
@@ -208,7 +211,7 @@ cp $FILE /mnt/
 scp $LOCAL_FILE $USER@$IP:/$REMOTE_PATH
 ```
 
-## 系统还原
+### 系统还原
 
 1、将待还原的镜像rootfs.img拷贝到U盘上，并将U盘挂载到/mnt目录。
 
@@ -224,7 +227,7 @@ umount /sysroot
 dd if=/mnt/rootfs.img of=/dev/disk/by-partlabel/rootfs
 ```
 
-## 紧急模式
+### 紧急模式
 
 该模式在用户异常行为破坏系统文件时，导致系统无法正常启动时使用。非必要使用此模式。
 
@@ -234,11 +237,11 @@ dd if=/mnt/rootfs.img of=/dev/disk/by-partlabel/rootfs
 
 ## 三、Debian11开发
 
-## 制作客制化Debian11固件
+### 制作客制化Debian11固件
 
 当用户在RK3588开发板完成产品化软件部署后，可以按照本章节自主裁剪debian11固件，生产自定义rootfs.img，用于产品批量生产。
 
-## 制作根文件系统
+### 制作根文件系统
 
 以下操作均直接在RK3588开发板执行，如下步骤制作根文件系统：
 
@@ -286,7 +289,7 @@ umount /mnt
 
 至此得到rootfs.img于U盘内。
 
-## 系统软件包
+### 系统软件包
 
 BQ-3588-C预装的debian11内预置了以下常用到的各种软件包
 
@@ -427,7 +430,7 @@ sudo -y install toybrick-prop-dev toybrick-log
 gcc test.c `pkg-config --libs toybrick_prop` `pkg-config --cflags toybrick_prop` -o test
 ```
 
-## Toybrick Usbconfig
+### Toybrick Usbconfig
 
 ### 软件包说明
 
@@ -461,7 +464,7 @@ USB Config配置
 2sudo setprop persist.sys.usb.config adb  //写入磁盘，永久生效。
 ```
 
-## Rockchip ISP
+### Rockchip ISP
 
 ### 软件包说明
 
@@ -507,7 +510,7 @@ sudo systemctl enable rockchip-isp.service
 3make
 ```
 
-## Edge Utils
+### Edge Utils
 
 ### 软件包说明
 
@@ -524,7 +527,7 @@ edge-utils
 sudo apt -y install edge-utils
 ```
 
-## Toybrick Vendor
+### Toybrick Vendor
 
 ### 软件包说明
 
@@ -606,7 +609,7 @@ sudo -y install toybrick-vendor-dev
 gcc test.c `pkg-config --libs toybrick_vendor` `pkg-config --cflags toybrick_vendor` -o test`
 ```
 
-## Vendor Firmware
+### Vendor Firmware
 
 ### 软件包说明
 
@@ -623,7 +626,7 @@ vendor-firmware
 sudo apt -y install vendor-firmware
 ```
 
-## Toybrick Server
+### Toybrick Server
 
 ### 软件包说明
 
@@ -648,7 +651,7 @@ sudo apt -y install toybrick-server
 
 sudo systemctl enable toybrick.service
 
-## Rockchip MPP
+### Rockchip MPP
 
 ### 软件包说明
 
@@ -695,7 +698,7 @@ sudo -y install rockchip-mpp-dev
 1LDDFLAG=`pkg-config --libs rockchip_mpp`
 2CFLAG=`pkg-config --cflags rockchip_mpp`
 
-## Rockchip RGA
+### Rockchip RGA
 
 ### 软件包说明
 
@@ -750,7 +753,7 @@ Todo
 
 ## 五、RKNN开发
 
-## rknn-toolkit2
+### rknn-toolkit2
 
 RKNN-Toolkit2是为用户提供在PC平台上进行Rockchip芯片NPU模型转换、推理和性能评估的开发套件。
 
@@ -780,7 +783,7 @@ edge/external/rknn/rknn-toolkit2/doc$ tree -L 1
 └── RRKNNToolKit2_API_Difference_With_Toolkit1-1.2.0.md
 注意 请务必优先请阅读doc目录下文档！相关例程参考目录下的examples源代码
 
-## rknn-toolkit-lite2
+### rknn-toolkit-lite2
 
 RKNN Toolkit Lite2为带有Rockchip NPU平台提供 Python 编程接口，帮助用户部署使用RKNN-Toolkit2导出的RKNN模型。
 
@@ -799,7 +802,7 @@ edge/external/rknn/rknn-toolkit2/rknn-toolkit-lite2/doc$ tree -L 1
 
 pip3 install --user --upgrade rknn-toolkit-lite2
 
-## rknpu2
+### rknpu2
 
 rknpu2为带有Rockchip NPU的芯片平台提供C语言编程接口，帮助用户部署使用 RKNN-Toolkit2 导出的 RKNN 模型。
 
@@ -834,7 +837,7 @@ sudo apt -y upgrade
 
 ## 六、常见问题
 
-## FAQs
+### FAQs
 
 Todo
 

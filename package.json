@@ -12,7 +12,8 @@
     "serve": "docusaurus serve --host 0.0.0.0",
     "clear": "docusaurus clear",
     "convert-doc-images": "node scripts/convert-doc-images-to-webp.js",
-    "prepare-docs": "npm run convert-doc-images && npm run ensure-categories"
+    "split-docs": "node scripts/split-doc-card-pages.js",
+    "prepare-docs": "npm run convert-doc-images && npm run split-docs && npm run ensure-categories"
   },
   "dependencies": {
     "@docusaurus/core": "^3.8.1",

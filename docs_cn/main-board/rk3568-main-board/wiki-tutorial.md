@@ -1,5 +1,8 @@
 ---
 sidebar_position: 2
+split_by_h2: true
+slug: /_split-source/main-board/rk3568-main-board/wiki-tutorial
+unlisted: true
 sidebar_label: Wiki 教程
 title: RK3568 主板 Wiki 教程
 ---
@@ -8,7 +11,7 @@ title: RK3568 主板 Wiki 教程
 
 ## 一、快速上手
 
-## 产品优势
+### 产品优势
 
 1.OpenHarmony 主线上的软件下载后可以直接运行，跟随主线软件更新；
 2.完善的专业技术支持，可提供配套教程、技术资料；
@@ -18,11 +21,11 @@ title: RK3568 主板 Wiki 教程
 6.一体化低成本；
 7.主线产品的外围设备，屏幕，摄像头等可以直接使用。
 
-## 产品规格书
+### 产品规格书
 
 https://www.bearkey.com.cn/product/RK3568%E4%B8%BB%E6%9D%BF.html
 
-## 固件烧写
+### 固件烧写
 
 一般采用Loader模式烧写固件，如果无法进入loader烧写模式，仍可以进入 MaskRom 模式来烧写固件。
 
@@ -64,7 +67,7 @@ Type-C 数据线
 
 4.当开发板进入loader模式后，松开按键。
 
-## 查询烧写状态
+### 查询烧写状态
 
 #### Linux主机查询
 
@@ -93,7 +96,7 @@ Type-C 数据线
 
 ![图片](wiki-tutorial-assets/picture4.webp)
 
-## Linux主机烧写镜像
+### Linux主机烧写镜像
 
 烧写所有镜像
 烧写所有镜像包括： MiniLoaderAll.bin ， parameter.txt ， uboot.img ， misc.img ， boot_linux.img ， recovery.img ， resource.img 和 rootfs.img
@@ -120,7 +123,7 @@ Type-C 数据线
 
 ./edge flash -h
 
-## Windows主机烧写镜像
+### Windows主机烧写镜像
 
 双击打开RKDevTool_Release_v2.84目录下的RKDevTool.exe。
 
@@ -134,7 +137,7 @@ Loader和Parmeter选项建议打勾选择，其他选项根据需要打勾选择
 
 ![图片](wiki-tutorial-assets/picture5.webp)
 
-## 串口调试
+### 串口调试
 
 ![图片](wiki-tutorial-assets/picture6.webp)
 
@@ -145,7 +148,7 @@ Loader和Parmeter选项建议打勾选择，其他选项根据需要打勾选择
 奇偶校验(A) :无
 流控制(F) :无
 
-## 在线文档
+### 在线文档
 
 https://www.bearkey.net/thread-84-1-1.html
 
@@ -153,7 +156,7 @@ https://www.bearkey.net/thread-84-1-1.html
 
 ## 三、Mineharmony
 
-## 矿鸿api添加步骤
+### 矿鸿api添加步骤
 
 - 确认openharmonySDK存放路径,打开DevEco Studio4.1--&gt;设置-&gt;
 
@@ -180,7 +183,7 @@ D:&gt; devecostudio_410400 &gt;openharmonysdk &gt; 11 &gt; ets &gt; api &gt;devi
 
 ## 四、第三方应用及环境搭建
 
-## 第三方应用功能介绍
+### 第三方应用功能介绍
 
 ### 第三方应用
 
@@ -223,7 +226,7 @@ D:&gt; devecostudio_410400 &gt;openharmonysdk &gt; 11 &gt; ets &gt; api &gt;devi
 
 具体环境搭建参考测试环境目录下的介绍
 
-## RTSP推流环境搭建步骤
+### RTSP推流环境搭建步骤
 
 ###### RTSP推流环境搭建步骤
 
@@ -257,7 +260,7 @@ ffmpeg：这是命令行工具的名称，用于处理视频和音频文件。
 ##### 6、在板子上安装并打开application_rtspcamera.hap应用，点击加号在弹出框中将IP改成电脑的IP：
 
 
-## 实时音视频通话搭建
+### 实时音视频通话搭建
 
 #### 实时音视频通话环境搭建步骤
 
@@ -292,7 +295,7 @@ ffmpeg：这是命令行工具的名称，用于处理视频和音频文件。
 
 ## 五、常见问题
 
-## FAQs
+### FAQs
 
 Todo
 

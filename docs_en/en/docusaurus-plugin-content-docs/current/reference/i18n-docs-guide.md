@@ -12,8 +12,8 @@ This site uses the standard Docusaurus i18n layout. Chinese is the default langu
 
 | Language | Directory | Example |
 | --- | --- | --- |
-| Chinese | `docs/` | `docs/core-board/rk3588-core-board/product-specification.md` |
-| English | `i18n/en/docusaurus-plugin-content-docs/current/` | `i18n/en/docusaurus-plugin-content-docs/current/core-board/rk3588-core-board/product-specification.md` |
+| Chinese | `docs/` | `docs/core-board/rk3588-core-board/README.md` |
+| English | `i18n/en/docusaurus-plugin-content-docs/current/` | `i18n/en/docusaurus-plugin-content-docs/current/core-board/rk3588-core-board/README.md` |
 
 English documents should use the same relative path and filename as the Chinese document. When users switch to English, Docusaurus can open the matching English page automatically.
 

@@ -4,7 +4,7 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import {useDoc} from '@docusaurus/plugin-content-docs/client';
 
 const ISSUE_URL =
-  'https://github.com/CacheBiomancerClash/document-web-design/issues/new';
+  'https://github.com/bearkey-docs/docs/issues/new';
 
 function ReportIcon() {
   return (

@@ -18,7 +18,11 @@ const SHARED_SECTIONS = new Set([
   'mineharmony',
 ]);
 
-const ENGLISH_DOC_PATH_SET = new Set(ENGLISH_DOC_PATHS);
+function toEnglishUrlPath(docPath) {
+  return docPath.replace(/(?:^|\/)README$/, '').replace(/^\/+/, '');
+}
+
+const ENGLISH_DOC_PATH_SET = new Set(ENGLISH_DOC_PATHS.map(toEnglishUrlPath));
 const SIDEBAR_SYNC_DELAYS = [0, 50, 150, 350, 700, 1200, 2000];
 let sidebarSyncRunId = 0;
 
