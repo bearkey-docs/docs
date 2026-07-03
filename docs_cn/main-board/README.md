@@ -5,7 +5,6 @@ title: 主板
 slug: /main-board
 ---
 
-import DocCardList from '@theme/DocCardList';
 
 # 主板
 

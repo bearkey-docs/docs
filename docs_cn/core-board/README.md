@@ -5,7 +5,6 @@ title: 核心板
 slug: /core-board
 ---
 
-import DocCardList from '@theme/DocCardList';
 
 # 核心板
 

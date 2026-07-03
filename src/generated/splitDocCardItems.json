@@ -1,0 +1,201 @@
+{
+  "core-board/rk3399-pro-core-board/wiki-tutorial": [
+    {
+      "type": "link",
+      "label": "一、快速上手",
+      "href": "wiki-tutorial/01"
+    },
+    {
+      "type": "link",
+      "label": "二、Linux开发",
+      "href": "wiki-tutorial/02"
+    },
+    {
+      "type": "link",
+      "label": "三、Debian10开发",
+      "href": "wiki-tutorial/03"
+    },
+    {
+      "type": "link",
+      "label": "四、Android开发",
+      "href": "wiki-tutorial/04"
+    },
+    {
+      "type": "link",
+      "label": "五、人工智能",
+      "href": "wiki-tutorial/05"
+    },
+    {
+      "type": "link",
+      "label": "六、常见问题",
+      "href": "wiki-tutorial/06"
+    }
+  ],
+  "core-board/rk3568-industrial-core-board/wiki-tutorial": [
+    {
+      "type": "link",
+      "label": "一、快速上手",
+      "href": "wiki-tutorial/01"
+    },
+    {
+      "type": "link",
+      "label": "二、OpenHarmony开发",
+      "href": "wiki-tutorial/02"
+    },
+    {
+      "type": "link",
+      "label": "三、常见问题",
+      "href": "wiki-tutorial/03"
+    }
+  ],
+  "core-board/rk3588-core-board/wiki-tutorial": [
+    {
+      "type": "link",
+      "label": "一、快速上手",
+      "href": "wiki-tutorial/01"
+    },
+    {
+      "type": "link",
+      "label": "二、Linux开发",
+      "href": "wiki-tutorial/02"
+    },
+    {
+      "type": "link",
+      "label": "三、Debian11开发",
+      "href": "wiki-tutorial/03"
+    },
+    {
+      "type": "link",
+      "label": "四、Android开发",
+      "href": "wiki-tutorial/04"
+    },
+    {
+      "type": "link",
+      "label": "五、RKNN开发",
+      "href": "wiki-tutorial/05"
+    },
+    {
+      "type": "link",
+      "label": "六、常见问题",
+      "href": "wiki-tutorial/06"
+    }
+  ],
+  "core-board/tb-96aiot-1808co/wiki-tutorial": [
+    {
+      "type": "link",
+      "label": "产品介绍",
+      "href": "wiki-tutorial/01"
+    },
+    {
+      "type": "link",
+      "label": "入门指南",
+      "href": "wiki-tutorial/02"
+    },
+    {
+      "type": "link",
+      "label": "Linux-Buildroot开发",
+      "href": "wiki-tutorial/03"
+    },
+    {
+      "type": "link",
+      "label": "Linux-Debian10开发",
+      "href": "wiki-tutorial/04"
+    },
+    {
+      "type": "link",
+      "label": "Linux-Debian9开发",
+      "href": "wiki-tutorial/05"
+    }
+  ],
+  "main-board/rk3568-main-board/wiki-tutorial": [
+    {
+      "type": "link",
+      "label": "一、快速上手",
+      "href": "wiki-tutorial/01"
+    },
+    {
+      "type": "link",
+      "label": "二、Openharmony开发",
+      "href": "wiki-tutorial/02"
+    },
+    {
+      "type": "link",
+      "label": "三、Mineharmony",
+      "href": "wiki-tutorial/03"
+    },
+    {
+      "type": "link",
+      "label": "四、第三方应用及环境搭建",
+      "href": "wiki-tutorial/04"
+    },
+    {
+      "type": "link",
+      "label": "五、常见问题",
+      "href": "wiki-tutorial/05"
+    }
+  ],
+  "main-board/robo3588-robot-main-board/wiki-tutorial": [
+    {
+      "type": "link",
+      "label": "一、开发板详情",
+      "href": "wiki-tutorial/01"
+    },
+    {
+      "type": "link",
+      "label": "二、开发板规格",
+      "href": "wiki-tutorial/02"
+    },
+    {
+      "type": "link",
+      "label": "三、开发板应用场景",
+      "href": "wiki-tutorial/03"
+    },
+    {
+      "type": "link",
+      "label": "四、搭建开发环境",
+      "href": "wiki-tutorial/04"
+    },
+    {
+      "type": "link",
+      "label": "五、编译调试",
+      "href": "wiki-tutorial/05"
+    }
+  ],
+  "terminal/bq8180-ai-mini-pc/wiki-tutorial": [
+    {
+      "type": "link",
+      "label": "一、快速上手",
+      "href": "wiki-tutorial/01"
+    },
+    {
+      "type": "link",
+      "label": "二、Ubuntu系统",
+      "href": "wiki-tutorial/02"
+    },
+    {
+      "type": "link",
+      "label": "三、Debian12",
+      "href": "wiki-tutorial/03"
+    },
+    {
+      "type": "link",
+      "label": "四、Openharmony",
+      "href": "wiki-tutorial/04"
+    },
+    {
+      "type": "link",
+      "label": "五、Openeuler",
+      "href": "wiki-tutorial/05"
+    },
+    {
+      "type": "link",
+      "label": "六、硬件资料",
+      "href": "wiki-tutorial/06"
+    },
+    {
+      "type": "link",
+      "label": "七、常见问题",
+      "href": "wiki-tutorial/07"
+    }
+  ]
+}

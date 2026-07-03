@@ -5,7 +5,6 @@ title: Motherboard
 slug: /main-board
 ---
 
-import DocCardList from '@theme/DocCardList';
 
 # Motherboard
 

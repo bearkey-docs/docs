@@ -5,7 +5,6 @@ title: Other
 slug: /reference
 ---
 
-import DocCardList from '@theme/DocCardList';
 
 # Other
 

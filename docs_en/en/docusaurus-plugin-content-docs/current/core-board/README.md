@@ -5,7 +5,6 @@ title: Core Board
 slug: /core-board
 ---
 
-import DocCardList from '@theme/DocCardList';
 
 # Core Board
 

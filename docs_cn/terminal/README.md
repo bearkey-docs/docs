@@ -5,7 +5,6 @@ title: 终端
 slug: /terminal
 ---
 
-import DocCardList from '@theme/DocCardList';
 
 # 终端
 

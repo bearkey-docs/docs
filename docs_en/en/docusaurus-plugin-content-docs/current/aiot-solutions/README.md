@@ -5,7 +5,6 @@ title: AIOT Solutions
 slug: /aiot-solutions
 ---
 
-import DocCardList from '@theme/DocCardList';
 
 # AIOT Solutions
 

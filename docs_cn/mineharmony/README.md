@@ -5,7 +5,6 @@ title: MineHarmony
 slug: /mineharmony
 ---
 
-import DocCardList from '@theme/DocCardList';
 
 # MineHarmony
 

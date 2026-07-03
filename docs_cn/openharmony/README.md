@@ -5,7 +5,6 @@ title: OpenHarmony
 slug: /openharmony
 ---
 
-import DocCardList from '@theme/DocCardList';
 
 # OpenHarmony
 

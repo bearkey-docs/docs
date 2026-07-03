@@ -8,6 +8,7 @@ const docsRoots = [
 ];
 const generatedDir = path.join(siteDir, 'src', 'generated');
 const generatedSplitSourcesPath = path.join(generatedDir, 'splitDocSourceIds.json');
+const generatedSplitCardItemsPath = path.join(generatedDir, 'splitDocCardItems.json');
 
 function getLocalizedDocsRoots() {
   const i18nDir = path.join(siteDir, 'docs_en');
@@ -238,13 +239,9 @@ function writeSplitDoc(docsRoot, splitSource) {
   }));
   const parentSource = [
     stringifyFrontMatter(parentFrontMatter),
-    "import DocCardList from '@theme/DocCardList';",
-    '',
     `# ${parentLabel}`,
     '',
-    '<DocCardList',
-    `  items={${JSON.stringify(cardItems, null, 4)}}`,
-    '/>',
+    '<DocCardList />',
     '',
   ].join('\n');
 
@@ -270,7 +267,7 @@ function writeSplitDoc(docsRoot, splitSource) {
     fs.writeFileSync(path.join(outputDir, fileName), sectionSource);
   });
 
-  return sourceDocId;
+  return { sourceDocId, cardItems };
 }
 
 function writeGeneratedSplitSources(sourceIds) {
@@ -281,12 +278,30 @@ function writeGeneratedSplitSources(sourceIds) {
   );
 }
 
+function writeGeneratedSplitCardItems(cardItemsBySourceId) {
+  fs.mkdirSync(generatedDir, { recursive: true });
+  const sortedEntries = Object.fromEntries(
+    [...cardItemsBySourceId.entries()].sort(([left], [right]) =>
+      left.localeCompare(right),
+    ),
+  );
+
+  fs.writeFileSync(
+    generatedSplitCardItemsPath,
+    `${JSON.stringify(sortedEntries, null, 2)}\n`,
+  );
+}
+
 const splitSourceIds = new Set();
+const splitCardItemsBySourceId = new Map();
 
 for (const docsRoot of docsRoots) {
   for (const splitSource of collectSplitSources(docsRoot)) {
-    splitSourceIds.add(writeSplitDoc(docsRoot, splitSource));
+    const { sourceDocId, cardItems } = writeSplitDoc(docsRoot, splitSource);
+    splitSourceIds.add(sourceDocId);
+    splitCardItemsBySourceId.set(sourceDocId, cardItems);
   }
 }
 
 writeGeneratedSplitSources(splitSourceIds);
+writeGeneratedSplitCardItems(splitCardItemsBySourceId);

@@ -5,7 +5,6 @@ title: Terminal
 slug: /terminal
 ---
 
-import DocCardList from '@theme/DocCardList';
 
 # Terminal
 
