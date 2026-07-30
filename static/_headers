@@ -3,3 +3,19 @@
   Link: <https://giscus.app>; rel=preconnect
   Link: <https://www.bearkey.com.cn>; rel=dns-prefetch
   Link: <https://giscus.app>; rel=dns-prefetch
+
+# 静态资源（含 hash 文件名）缓存 1 年 + immutable
+/assets/js/*
+  Cache-Control: public, max-age=31536000, immutable
+/assets/css/*.css
+  Cache-Control: public, max-age=31536000, immutable
+/assets/images/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# 图片资源缓存 1 年
+/img/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# 字体（如有）
+/assets/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
