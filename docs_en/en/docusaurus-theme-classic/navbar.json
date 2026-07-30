@@ -44,6 +44,9 @@
   "item.label.RK3568 主板": {
     "message": "RK3568 Motherboard"
   },
+  "item.label.RK3568鸿蒙主线开发板": {
+    "message": "RK3568 OpenHarmony Mainline Development Board"
+  },
   "item.label.RK3568 工业控制主板": {
     "message": "RK3568 Industrial Control Board"
   },
@@ -59,8 +62,17 @@
   "item.label.RK3588 主板": {
     "message": "RK3588 Motherboard"
   },
+  "item.label.RK3588核心板+底板": {
+    "message": "RK3588 Core Board + Carrier Board"
+  },
   "item.label.Robo3588机器人主板": {
     "message": "Robo3588 Robot Motherboard"
+  },
+  "item.label.Robo3588 机器人主板": {
+    "message": "Robo3588 Robot Motherboard"
+  },
+  "item.label.Robo3588 机器人中枢": {
+    "message": "Robo3588 Robot Hub"
   },
   "item.label.RK3506 工业主板": {
     "message": "RK3506 Industrial Motherboard"
@@ -89,6 +101,9 @@
   "item.label.RK3568工控屏": {
     "message": "RK3568 Industrial Panel"
   },
+  "item.label.RK3568工控屏（10.1寸）": {
+    "message": "RK3568 Industrial Panel (10.1-inch)"
+  },
   "item.label.RK3588 边缘控制网关": {
     "message": "RK3588 Edge Control Gateway"
   },
@@ -107,8 +122,14 @@
   "item.label.RK3568-15.6英寸屏": {
     "message": "RK3568 15.6-inch Panel"
   },
+  "item.label.RK3568工控屏（15.6寸）": {
+    "message": "RK3568 Industrial Panel (15.6-inch)"
+  },
   "item.label.RK3506 工控屏": {
     "message": "RK3506 Industrial Panel"
+  },
+  "item.label.RK3506 工控屏（10.1寸）": {
+    "message": "RK3506 Industrial Panel (10.1-inch)"
   },
   "item.label.RK3588工业主板": {
     "message": "RK3588 Industrial Motherboard"

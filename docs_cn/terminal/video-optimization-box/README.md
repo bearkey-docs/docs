@@ -1,5 +1,6 @@
 ---
 sidebar_position: 1
+hide_from_sidebar: true
 sidebar_label: 视频优化盒子
 title: 视频优化盒子产品规格书
 ---

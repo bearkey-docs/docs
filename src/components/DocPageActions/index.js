@@ -61,12 +61,28 @@ function getIssueUrl(title, pageUrl) {
   return issueUrl.toString();
 }
 
+function getEditUrl(metadataEditUrl, generatedSourceId, docsEditBaseUrl) {
+  if (!generatedSourceId || !docsEditBaseUrl) {
+    return metadataEditUrl;
+  }
+
+  return new URL(
+    `docs_cn/${generatedSourceId}.md`,
+    docsEditBaseUrl,
+  ).toString();
+}
+
 export default function DocPageActions() {
-  const {metadata} = useDoc();
+  const {metadata, frontMatter} = useDoc();
   const {siteConfig, i18n} = useDocusaurusContext();
   const location = useLocation();
   const labels = getLabels(i18n.currentLocale);
   const pageUrl = getCurrentPageUrl(siteConfig, location);
+  const editUrl = getEditUrl(
+    metadata.editUrl,
+    frontMatter.generated_from_split_doc,
+    siteConfig.customFields.docsEditBaseUrl,
+  );
 
   return (
     <div className="doc-page-actions">
@@ -80,10 +96,10 @@ export default function DocPageActions() {
         </span>
         {labels.report}
       </a>
-      {metadata.editUrl && (
+      {editUrl && (
         <a
           className="doc-page-action-link"
-          href={metadata.editUrl}
+          href={editUrl}
           target="_blank"
           rel="noreferrer">
           <span className="doc-page-action-icon" aria-hidden="true">

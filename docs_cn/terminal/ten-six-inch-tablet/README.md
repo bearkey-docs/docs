@@ -1,5 +1,6 @@
 ---
 sidebar_position: 1
+hide_from_sidebar: true
 sidebar_label: 10.6英寸平板
 title: 10.6英寸平板产品规格书
 ---

@@ -1,5 +1,6 @@
 ---
 sidebar_position: 1
+hide_from_sidebar: true
 sidebar_label: 工控屏
 title: 工控屏产品规格书
 ---
