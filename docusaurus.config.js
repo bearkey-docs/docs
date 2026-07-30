@@ -428,7 +428,7 @@ const productNavbarItems = productNavGroups.flatMap((group) => {
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: '文档网页设计',
+  title: 'BearKey Docs',
   tagline: '用 Markdown 驱动的产品文档网站',
   url: 'https://docs.bearkey.com.cn',
   favicon: 'img/favicon.png',
