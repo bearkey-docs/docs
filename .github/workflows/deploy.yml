@@ -70,6 +70,15 @@ jobs:
           BEARKEY_DOCS_IMAGE_SSH_PASSWORD: ${{ secrets.BEARKEY_DOCS_IMAGE_SSH_PASSWORD }}
         run: ./scripts/sync-doc-image-assets.sh
 
+      - name: Deploy full site to self-hosted server
+        if: github.event_name == 'push'
+        env:
+          DOCS_DEPLOY_HOST: ${{ secrets.BEARKEY_DOCS_IMAGE_HOST || '119.23.152.163' }}
+          DOCS_DEPLOY_USER: ${{ secrets.BEARKEY_DOCS_IMAGE_USER || 'root' }}
+          DOCS_DEPLOY_BASE: /vdc/bearkey-docs
+          BEARKEY_DOCS_IMAGE_SSH_PASSWORD: ${{ secrets.BEARKEY_DOCS_IMAGE_SSH_PASSWORD }}
+        run: ./scripts/deploy-docs-to-server.sh build
+
       - name: Upload Pages artifact
         if: github.event_name != 'pull_request'
         uses: actions/upload-pages-artifact@v5
