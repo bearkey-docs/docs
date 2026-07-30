@@ -30,13 +30,13 @@ export default function MDXImg(props) {
   const manualPageNumber = getManualPageNumber(props.src);
 
   if (!manualPageNumber) {
-    return <OriginalImg {...props} src={src} />;
+    return <OriginalImg {...props} src={src} loading="lazy" />;
   }
 
   const isHighPriority = manualPageNumber <= HIGH_PRIORITY_PAGE_COUNT;
 
   if (!isHighPriority) {
-    return <OriginalImg {...props} src={src} />;
+    return <OriginalImg {...props} src={src} loading="lazy" />;
   }
 
   return (

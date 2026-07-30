@@ -1,4 +1,5 @@
 import React, {useEffect} from 'react';
+import Head from '@docusaurus/Head';
 import {useLocation} from '@docusaurus/router';
 import {ENGLISH_DOC_PATHS} from '../generated/englishDocPaths';
 
@@ -301,5 +302,15 @@ export default function Root({children}) {
     return () => document.removeEventListener('click', handleClick, true);
   }, []);
 
-  return <>{children}</>;
+  return (
+    <>
+      <Head>
+        <link rel="preconnect" href="https://www.bearkey.com.cn" />
+        <link rel="preconnect" href="https://giscus.app" />
+        <link rel="dns-prefetch" href="//www.bearkey.com.cn" />
+        <link rel="dns-prefetch" href="//giscus.app" />
+      </Head>
+      {children}
+    </>
+  );
 }
