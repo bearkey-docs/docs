@@ -107,6 +107,55 @@
       "href": "wiki-tutorial/05"
     }
   ],
+  "main-board/rk3506-industrial-main-board/OpenHarmony": [
+    {
+      "type": "link",
+      "label": "1. 硬件清单",
+      "href": "OpenHarmony/01"
+    },
+    {
+      "type": "link",
+      "label": "2. PC环境配置",
+      "href": "OpenHarmony/02"
+    },
+    {
+      "type": "link",
+      "label": "3. 固件烧录",
+      "href": "OpenHarmony/03"
+    },
+    {
+      "type": "link",
+      "label": "4. 基础功能验证",
+      "href": "OpenHarmony/04"
+    },
+    {
+      "type": "link",
+      "label": "5. OpenHarmony",
+      "href": "OpenHarmony/05"
+    }
+  ],
+  "main-board/rk3506-industrial-main-board/Quick-Start-Manual-CN": [
+    {
+      "type": "link",
+      "label": "1. 硬件清单",
+      "href": "Quick-Start-Manual-CN/01"
+    },
+    {
+      "type": "link",
+      "label": "2. PC环境配置",
+      "href": "Quick-Start-Manual-CN/02"
+    },
+    {
+      "type": "link",
+      "label": "3. 固件烧录",
+      "href": "Quick-Start-Manual-CN/03"
+    },
+    {
+      "type": "link",
+      "label": "4. 基础功能验证",
+      "href": "Quick-Start-Manual-CN/04"
+    }
+  ],
   "main-board/rk3568-main-board/wiki-tutorial": [
     {
       "type": "link",
@@ -134,30 +183,422 @@
       "href": "wiki-tutorial/05"
     }
   ],
-  "main-board/robo3588-robot-main-board/wiki-tutorial": [
+  "main-board/rk3576-industrial-control-main-board/wiki-tutorial-linux": [
+    {
+      "type": "link",
+      "label": "一、 设备详情",
+      "href": "wiki-tutorial-linux/01"
+    },
+    {
+      "type": "link",
+      "label": "二、固件烧写",
+      "href": "wiki-tutorial-linux/02"
+    },
+    {
+      "type": "link",
+      "label": "三、设备接口使用说明",
+      "href": "wiki-tutorial-linux/03"
+    },
+    {
+      "type": "link",
+      "label": "四、设备例程",
+      "href": "wiki-tutorial-linux/04"
+    }
+  ],
+  "main-board/rk3588-industrial-main-board/wiki-tutorial-openeuler": [
+    {
+      "type": "link",
+      "label": "一、快速上手",
+      "href": "wiki-tutorial-openeuler/01"
+    },
+    {
+      "type": "link",
+      "label": "二、用户与密码",
+      "href": "wiki-tutorial-openeuler/02"
+    },
+    {
+      "type": "link",
+      "label": "三、硬件接口使用",
+      "href": "wiki-tutorial-openeuler/03"
+    },
+    {
+      "type": "link",
+      "label": "四、常见问题",
+      "href": "wiki-tutorial-openeuler/04"
+    }
+  ],
+  "main-board/rk3588-industrial-main-board/wiki-tutorial-ubuntu": [
+    {
+      "type": "link",
+      "label": "一、快速上手",
+      "href": "wiki-tutorial-ubuntu/01"
+    },
+    {
+      "type": "link",
+      "label": "二、用户与密码",
+      "href": "wiki-tutorial-ubuntu/02"
+    },
+    {
+      "type": "link",
+      "label": "三、硬件接口使用",
+      "href": "wiki-tutorial-ubuntu/03"
+    },
+    {
+      "type": "link",
+      "label": "四、常见问题",
+      "href": "wiki-tutorial-ubuntu/04"
+    }
+  ],
+  "main-board/robo3588-robot-main-board/wiki-tutorial-linux": [
+    {
+      "type": "link",
+      "label": "一、贝启Robo3588机器人开发板主板拓展RK1828计算卡",
+      "href": "wiki-tutorial-linux/01"
+    },
+    {
+      "type": "link",
+      "label": "二、设备接口使用说明",
+      "href": "wiki-tutorial-linux/02"
+    },
+    {
+      "type": "link",
+      "label": "三、设备相关例程",
+      "href": "wiki-tutorial-linux/03"
+    }
+  ],
+  "main-board/robo3588-robot-main-board/wiki-tutorial-openharmony": [
     {
       "type": "link",
       "label": "一、开发板详情",
-      "href": "wiki-tutorial/01"
+      "href": "wiki-tutorial-openharmony/01"
     },
     {
       "type": "link",
       "label": "二、开发板规格",
-      "href": "wiki-tutorial/02"
+      "href": "wiki-tutorial-openharmony/02"
     },
     {
       "type": "link",
       "label": "三、开发板应用场景",
-      "href": "wiki-tutorial/03"
+      "href": "wiki-tutorial-openharmony/03"
     },
     {
       "type": "link",
       "label": "四、搭建开发环境",
-      "href": "wiki-tutorial/04"
+      "href": "wiki-tutorial-openharmony/04"
     },
     {
       "type": "link",
       "label": "五、编译调试",
+      "href": "wiki-tutorial-openharmony/05"
+    },
+    {
+      "type": "link",
+      "label": "六、基础功能验证",
+      "href": "wiki-tutorial-openharmony/06"
+    }
+  ],
+  "openharmony/rk3568-15-6-inch-panel/RK3568_Industrial_board_15.6_inch": [
+    {
+      "type": "link",
+      "label": "一、RK3568工业控制主板介绍",
+      "href": "RK3568_Industrial_board_15.6_inch/01"
+    },
+    {
+      "type": "link",
+      "label": "二、 烧录系统",
+      "href": "RK3568_Industrial_board_15.6_inch/02"
+    },
+    {
+      "type": "link",
+      "label": "三、RK3568 平台界面功能使用及测试",
+      "href": "RK3568_Industrial_board_15.6_inch/03"
+    }
+  ],
+  "openharmony/rk3568-data-acquisition-gateway/RK3568_Data_Acqusition_GateWay": [
+    {
+      "type": "link",
+      "label": "第一章 RK3568数据采集网关",
+      "href": "RK3568_Data_Acqusition_GateWay/01"
+    },
+    {
+      "type": "link",
+      "label": "第二章 烧写系统",
+      "href": "RK3568_Data_Acqusition_GateWay/02"
+    },
+    {
+      "type": "link",
+      "label": "第三章 RK3576 平台界面功能使用及测试",
+      "href": "RK3568_Data_Acqusition_GateWay/03"
+    }
+  ],
+  "openharmony/rk3568-industrial-control-main-board/RK3568_Industrial_board": [
+    {
+      "type": "link",
+      "label": "一、RK3568工业控制主板介绍",
+      "href": "RK3568_Industrial_board/01"
+    },
+    {
+      "type": "link",
+      "label": "二、 烧录系统",
+      "href": "RK3568_Industrial_board/02"
+    },
+    {
+      "type": "link",
+      "label": "三、RK3568 平台界面功能使用及测试",
+      "href": "RK3568_Industrial_board/03"
+    }
+  ],
+  "openharmony/rk3568-main-board/RK3568_Lite_board": [
+    {
+      "type": "link",
+      "label": "一、RK3568鸿蒙简化板介绍",
+      "href": "RK3568_Lite_board/01"
+    },
+    {
+      "type": "link",
+      "label": "二、 烧录系统",
+      "href": "RK3568_Lite_board/02"
+    },
+    {
+      "type": "link",
+      "label": "三、RK3568 平台界面功能使用及测试",
+      "href": "RK3568_Lite_board/03"
+    }
+  ],
+  "openharmony/rk3576-data-acquisition-gateway/RK3576_Data_Acquisition_Gateway": [
+    {
+      "type": "link",
+      "label": "一、RK3576 数据采集网关介绍",
+      "href": "RK3576_Data_Acquisition_Gateway/01"
+    },
+    {
+      "type": "link",
+      "label": "二、 烧录系统",
+      "href": "RK3576_Data_Acquisition_Gateway/02"
+    },
+    {
+      "type": "link",
+      "label": "三、RK3576 平台界面功能使用及测试",
+      "href": "RK3576_Data_Acquisition_Gateway/03"
+    }
+  ],
+  "openharmony/rk3576-industrial-control-main-board/RK3576_Industrial_board": [
+    {
+      "type": "link",
+      "label": "第一章 RK3576开发板介绍",
+      "href": "RK3576_Industrial_board/01"
+    },
+    {
+      "type": "link",
+      "label": "第二章 烧写系统",
+      "href": "RK3576_Industrial_board/02"
+    },
+    {
+      "type": "link",
+      "label": "第三章 RK3576 平台界面功能使用及测试",
+      "href": "RK3576_Industrial_board/03"
+    }
+  ],
+  "openharmony/rk3588-edge-control-gateway/RK3588_Data_Acqusition_GateWay": [
+    {
+      "type": "link",
+      "label": "一、RK3588开发板介绍",
+      "href": "RK3588_Data_Acqusition_GateWay/01"
+    },
+    {
+      "type": "link",
+      "label": "二、 烧录系统",
+      "href": "RK3588_Data_Acqusition_GateWay/02"
+    },
+    {
+      "type": "link",
+      "label": "三、RK3588 平台界面功能使用及测试",
+      "href": "RK3588_Data_Acqusition_GateWay/03"
+    }
+  ],
+  "openharmony/rk3588-industrial-main-board/RK3588_Industrial_Panel_V03": [
+    {
+      "type": "link",
+      "label": "一、RK3588开发板介绍",
+      "href": "RK3588_Industrial_Panel_V03/01"
+    },
+    {
+      "type": "link",
+      "label": "二、 烧录系统",
+      "href": "RK3588_Industrial_Panel_V03/02"
+    },
+    {
+      "type": "link",
+      "label": "三、RK3588 平台界面功能使用及测试",
+      "href": "RK3588_Industrial_Panel_V03/03"
+    }
+  ],
+  "openharmony/rk3588-main-board/RK3588_Carrier_board": [
+    {
+      "type": "link",
+      "label": "一、RK3588 核心板介绍",
+      "href": "RK3588_Carrier_board/01"
+    },
+    {
+      "type": "link",
+      "label": "二、 烧录系统",
+      "href": "RK3588_Carrier_board/02"
+    },
+    {
+      "type": "link",
+      "label": "三、RK3588 平台界面功能使用及测试",
+      "href": "RK3588_Carrier_board/03"
+    }
+  ],
+  "reference/bq-3588-c-wiki-tutorial": [
+    {
+      "type": "link",
+      "label": "产品概况",
+      "href": "bq-3588-c-wiki-tutorial/01"
+    },
+    {
+      "type": "link",
+      "label": "产品优势",
+      "href": "bq-3588-c-wiki-tutorial/02"
+    },
+    {
+      "type": "link",
+      "label": "芯片架构",
+      "href": "bq-3588-c-wiki-tutorial/03"
+    },
+    {
+      "type": "link",
+      "label": "产品参数",
+      "href": "bq-3588-c-wiki-tutorial/04"
+    },
+    {
+      "type": "link",
+      "label": "引线分配",
+      "href": "bq-3588-c-wiki-tutorial/05"
+    },
+    {
+      "type": "link",
+      "label": "规格参数",
+      "href": "bq-3588-c-wiki-tutorial/06"
+    },
+    {
+      "type": "link",
+      "label": "引脚描述",
+      "href": "bq-3588-c-wiki-tutorial/07"
+    },
+    {
+      "type": "link",
+      "label": "底板接口信息",
+      "href": "bq-3588-c-wiki-tutorial/08"
+    },
+    {
+      "type": "link",
+      "label": "底板产品参数",
+      "href": "bq-3588-c-wiki-tutorial/09"
+    },
+    {
+      "type": "link",
+      "label": "底板规格参数",
+      "href": "bq-3588-c-wiki-tutorial/10"
+    },
+    {
+      "type": "link",
+      "label": "入门指南",
+      "href": "bq-3588-c-wiki-tutorial/11"
+    },
+    {
+      "type": "link",
+      "label": "Linux开发",
+      "href": "bq-3588-c-wiki-tutorial/12"
+    },
+    {
+      "type": "link",
+      "label": "系统软件包",
+      "href": "bq-3588-c-wiki-tutorial/13"
+    },
+    {
+      "type": "link",
+      "label": "特色软件包",
+      "href": "bq-3588-c-wiki-tutorial/14"
+    },
+    {
+      "type": "link",
+      "label": "安卓开发",
+      "href": "bq-3588-c-wiki-tutorial/15"
+    },
+    {
+      "type": "link",
+      "label": "RKNN开发",
+      "href": "bq-3588-c-wiki-tutorial/16"
+    }
+  ],
+  "reference/tb-96ai-wiki-tutorial": [
+    {
+      "type": "link",
+      "label": "产品规格",
+      "href": "tb-96ai-wiki-tutorial/01"
+    },
+    {
+      "type": "link",
+      "label": "入门指南",
+      "href": "tb-96ai-wiki-tutorial/02"
+    },
+    {
+      "type": "link",
+      "label": "内核驱动",
+      "href": "tb-96ai-wiki-tutorial/03"
+    },
+    {
+      "type": "link",
+      "label": "Linux-Fedora开发",
+      "href": "tb-96ai-wiki-tutorial/04"
+    },
+    {
+      "type": "link",
+      "label": "Linux-Debian10开发",
+      "href": "tb-96ai-wiki-tutorial/05"
+    },
+    {
+      "type": "link",
+      "label": "Android开发",
+      "href": "tb-96ai-wiki-tutorial/06"
+    },
+    {
+      "type": "link",
+      "label": "安装 JDK",
+      "href": "tb-96ai-wiki-tutorial/07"
+    },
+    {
+      "type": "link",
+      "label": "人工智能",
+      "href": "tb-96ai-wiki-tutorial/08"
+    }
+  ],
+  "terminal/ai-edge-workstation/wiki-tutorial": [
+    {
+      "type": "link",
+      "label": "一、 设备详情",
+      "href": "wiki-tutorial/01"
+    },
+    {
+      "type": "link",
+      "label": "二、设备基本参数",
+      "href": "wiki-tutorial/02"
+    },
+    {
+      "type": "link",
+      "label": "三、设备接口使用说明",
+      "href": "wiki-tutorial/03"
+    },
+    {
+      "type": "link",
+      "label": "四、设备管理",
+      "href": "wiki-tutorial/04"
+    },
+    {
+      "type": "link",
+      "label": "五、设备相关例程",
       "href": "wiki-tutorial/05"
     }
   ],
@@ -189,13 +630,189 @@
     },
     {
       "type": "link",
-      "label": "六、硬件资料",
+      "label": "六、Windows",
       "href": "wiki-tutorial/06"
     },
     {
       "type": "link",
-      "label": "七、常见问题",
+      "label": "七、硬件资料",
       "href": "wiki-tutorial/07"
+    },
+    {
+      "type": "link",
+      "label": "八、常见问题",
+      "href": "wiki-tutorial/08"
+    }
+  ],
+  "terminal/rk3506-industrial-panel/buildroot": [
+    {
+      "type": "link",
+      "label": "1. 硬件清单",
+      "href": "buildroot/01"
+    },
+    {
+      "type": "link",
+      "label": "2. PC环境配置",
+      "href": "buildroot/02"
+    },
+    {
+      "type": "link",
+      "label": "3. 固件烧录",
+      "href": "buildroot/03"
+    },
+    {
+      "type": "link",
+      "label": "4. 基础功能验证",
+      "href": "buildroot/04"
+    }
+  ],
+  "terminal/rk3506-industrial-panel/OpenHarmony": [
+    {
+      "type": "link",
+      "label": "1. 硬件清单",
+      "href": "OpenHarmony/01"
+    },
+    {
+      "type": "link",
+      "label": "2. PC环境配置",
+      "href": "OpenHarmony/02"
+    },
+    {
+      "type": "link",
+      "label": "3. 固件烧录",
+      "href": "OpenHarmony/03"
+    },
+    {
+      "type": "link",
+      "label": "4. 基础功能验证",
+      "href": "OpenHarmony/04"
+    },
+    {
+      "type": "link",
+      "label": "5. OpenHarmony",
+      "href": "OpenHarmony/05"
+    }
+  ],
+  "terminal/rk3506-industrial-panel/wiki-tutorial": [
+    {
+      "type": "link",
+      "label": "1. 硬件清单",
+      "href": "wiki-tutorial/01"
+    },
+    {
+      "type": "link",
+      "label": "2. PC环境配置",
+      "href": "wiki-tutorial/02"
+    },
+    {
+      "type": "link",
+      "label": "3. 固件烧录",
+      "href": "wiki-tutorial/03"
+    },
+    {
+      "type": "link",
+      "label": "4. 基础功能验证",
+      "href": "wiki-tutorial/04"
+    }
+  ],
+  "terminal/rk3576-data-acquisition-gateway/wiki-tutorial-linux": [
+    {
+      "type": "link",
+      "label": "一、 设备详情",
+      "href": "wiki-tutorial-linux/01"
+    },
+    {
+      "type": "link",
+      "label": "二、固件烧写",
+      "href": "wiki-tutorial-linux/02"
+    },
+    {
+      "type": "link",
+      "label": "三、设备接口使用说明",
+      "href": "wiki-tutorial-linux/03"
+    },
+    {
+      "type": "link",
+      "label": "四、设备例程",
+      "href": "wiki-tutorial-linux/04"
+    }
+  ],
+  "terminal/rk3588-edge-computing-industrial-gateway/wiki-tutorial-openeuler": [
+    {
+      "type": "link",
+      "label": "一、快速上手",
+      "href": "wiki-tutorial-openeuler/01"
+    },
+    {
+      "type": "link",
+      "label": "二、用户与密码",
+      "href": "wiki-tutorial-openeuler/02"
+    },
+    {
+      "type": "link",
+      "label": "三、硬件接口使用",
+      "href": "wiki-tutorial-openeuler/03"
+    },
+    {
+      "type": "link",
+      "label": "四、常见问题",
+      "href": "wiki-tutorial-openeuler/04"
+    }
+  ],
+  "terminal/ten-six-inch-tablet/wiki-tutorial": [
+    {
+      "type": "link",
+      "label": "一、快速上手",
+      "href": "wiki-tutorial/01"
+    },
+    {
+      "type": "link",
+      "label": "二、OpenHarmony开发",
+      "href": "wiki-tutorial/02"
+    },
+    {
+      "type": "link",
+      "label": "三、Android开发",
+      "href": "wiki-tutorial/03"
+    },
+    {
+      "type": "link",
+      "label": "四、常见问题",
+      "href": "wiki-tutorial/04"
+    }
+  ],
+  "terminal/ten-six-inch-tablet/wiki-tutorial-Android": [
+    {
+      "type": "link",
+      "label": "一、快速上手",
+      "href": "wiki-tutorial-Android/01"
+    },
+    {
+      "type": "link",
+      "label": "二、Android开发",
+      "href": "wiki-tutorial-Android/02"
+    },
+    {
+      "type": "link",
+      "label": "三、常见问题",
+      "href": "wiki-tutorial-Android/03"
+    }
+  ],
+  "terminal/ten-six-inch-tablet/wiki-tutorial-Android-OpenHarmony": [
+    {
+      "type": "link",
+      "label": "一、快速上手",
+      "href": "wiki-tutorial-Android-OpenHarmony/01"
+    },
+    {
+      "type": "link",
+      "label": "二、OpenHarmony开发",
+      "href": "wiki-tutorial-Android-OpenHarmony/02"
+    },
+    {
+      "type": "link",
+      "label": "三、常见问题",
+      "href": "wiki-tutorial-Android-OpenHarmony/03"
     }
   ]
 }

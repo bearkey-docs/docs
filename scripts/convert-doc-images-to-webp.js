@@ -81,9 +81,15 @@ function processMarkdownFile(markdownPath) {
 
       const sourceImagePath = path.resolve(markdownDir, decodeURI(imagePath));
       const webpImagePath = sourceImagePath.replace(convertibleImageRe, '.webp');
+      const webpImageUrl = imagePath.replace(convertibleImageRe, '.webp');
 
       if (!fs.existsSync(sourceImagePath)) {
-        return fullMatch;
+        if (!fs.existsSync(webpImagePath)) {
+          return fullMatch;
+        }
+
+        changed = true;
+        return `${prefix}${webpImageUrl}${urlSuffix}${suffix}`;
       }
 
       if (!fs.existsSync(webpImagePath)) {
@@ -93,7 +99,7 @@ function processMarkdownFile(markdownPath) {
       fs.unlinkSync(sourceImagePath);
       changed = true;
 
-      return `${prefix}${imagePath.replace(convertibleImageRe, '.webp')}${urlSuffix}${suffix}`;
+      return `${prefix}${webpImageUrl}${urlSuffix}${suffix}`;
     },
   );
 

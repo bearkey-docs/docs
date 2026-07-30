@@ -1,5 +1,6 @@
 ---
 sidebar_position: 1
+hide_from_sidebar: true
 sidebar_label: Carrier Board
 title: Carrier Board 产品规格书
 ---

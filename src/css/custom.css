@@ -1362,6 +1362,10 @@ html[data-docs-section='reference'] .theme-doc-sidebar-menu .sidebar-section-ref
   display: list-item !important;
 }
 
+.theme-doc-sidebar-menu .sidebar-section-hidden {
+  display: none !important;
+}
+
 .navbar__link.bearkey-official-nav,
 .bearkey-official-nav.navbar__link {
   display: inline-flex;

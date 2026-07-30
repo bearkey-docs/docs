@@ -60,6 +60,10 @@ function CardLink({item}) {
 }
 
 export default function DocCard({item}) {
+  if (item.className?.split(/\s+/).includes('sidebar-section-hidden')) {
+    return null;
+  }
+
   switch (item.type) {
     case 'link':
       return <CardLink item={item} />;

@@ -1,5 +1,6 @@
 ---
 sidebar_position: 1
+hide_from_sidebar: true
 sidebar_label: 拼接屏处理器
 title: 拼接屏处理器产品规格书
 ---

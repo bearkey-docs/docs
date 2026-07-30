@@ -1,0 +1,22 @@
+---
+sidebar_position: 1
+hide_from_sidebar: true
+sidebar_label: 工控屏
+title: 工控屏产品规格书
+---
+
+# 工控屏产品规格书
+
+![工控屏产品规格书第2](../../terminal/industrial-panel/images/page-02.webp)
+
+---
+
+![工控屏产品规格书第3](../../terminal/industrial-panel/images/page-03.webp)
+
+---
+
+![工控屏产品规格书第4](../../terminal/industrial-panel/images/page-04.webp)
+
+---
+
+![工控屏产品规格书第5](../../terminal/industrial-panel/images/page-05.webp)

@@ -5,6 +5,7 @@
 > 重要更新：
 > 1. **分类/产品现在用 `README.md` 管理，不再使用 `_category_.json`。** 分类首页、产品首页的名称、排序、路径都由 `README.md` 的 front matter 决定（仓库里已经没有 `_category_.json` 了）。
 > 2. **源 md 加 `split_by_h2: true` 就能自动把一篇长文按二级标题拆成多个卡片子页面。** 详见第 4 节。
+> 3. **普通文章加 `hide_from_sidebar: true` 可以只隐藏自动侧边栏入口，同时保留页面和直接访问地址。** 详见 5.1。
 
 ## 1. 先看仓库目录
 
@@ -233,6 +234,36 @@ docs_cn/core-board/rk3588-core-board/user-guide-assets/
 - Markdown 里用相对路径引用图片，例如 `./user-guide-assets/wiring.webp`。
 - 图片文件名尽量用英文、数字、短横线，例如 `power-wiring.webp`。
 
+### 5.1 只从自动侧边栏隐藏文章（`hide_from_sidebar`）
+
+如果页面需要继续发布并允许通过直接 URL 访问，但不希望它出现在自动生成的侧边栏中，在文章 front matter 中添加：
+
+```md
+---
+sidebar_position: 3
+hide_from_sidebar: true
+sidebar_label: 示例文章
+title: 示例文章
+---
+```
+
+`hide_from_sidebar` 是本项目在 `docusaurus.config.js` 中实现的自定义字段，不是 Docusaurus 官方通用字段。必须写成不带引号的 YAML 布尔值 `true`。
+
+启用后的行为：
+
+- 文章不会出现在自动生成的侧边栏中；
+- HTML 页面仍会正常构建；
+- 页面仍可通过直接 URL 访问；
+- 中文和英文自动侧边栏均支持该字段；
+- 如果标签用于分类索引文章（通常是目录内的 `README.md`），会隐藏该索引链接，但保留分类及其子文章；
+- 如果分类只有这个被隐藏的索引文章、没有其他可显示子项，则空分类会自动从侧边栏移除。
+
+注意：
+
+- 该字段只控制自动侧边栏，不会删除页面，也不等同于 `draft: true`；
+- 手写导航链接、正文链接或其他自定义卡片不会被该字段自动删除；
+- 带 `split_by_h2: true` 的源文章已经由拆分机制隐藏，通常不需要再添加 `hide_from_sidebar: true`。
+
 ## 6. 新增一个顶级分类
 
 例如要新增一个顶级分类“开发工具”。
@@ -374,6 +405,7 @@ npm run build
 - [ ] 新文章放在正确分类目录下（中文在 `docs_cn/`）。
 - [ ] 分类首页 / 产品首页用 `README.md` 管理（有 `sidebar_label`、`slug`、`title`），不再用 `_category_.json`。
 - [ ] 普通文章有 frontmatter：`sidebar_position`、`sidebar_label`、`title`。
+- [ ] 需要保留直接访问但不显示在自动侧边栏的文章，添加了布尔值 `hide_from_sidebar: true`。
 - [ ] 需要拆分的长文加了 `split_by_h2: true`，且拆分点（`##`）符合预期。
 - [ ] 拆分生成的子目录没有手改（内容改在源 md）。
 - [ ] 图片放在文章旁边的资源目录，引用路径是相对路径。

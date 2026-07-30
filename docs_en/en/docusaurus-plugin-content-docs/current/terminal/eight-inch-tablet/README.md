@@ -1,5 +1,6 @@
 ---
 sidebar_position: 1
+hide_from_sidebar: true
 sidebar_label: 8-inch Tablet
 title: 8-inch Tablet Product Specification
 ---

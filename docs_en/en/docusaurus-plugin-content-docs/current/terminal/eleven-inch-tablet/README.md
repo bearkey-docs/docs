@@ -1,5 +1,6 @@
 ---
 sidebar_position: 1
+hide_from_sidebar: true
 sidebar_label: 11-inch Tablet
 title: 11-inch Tablet Product Specification
 ---

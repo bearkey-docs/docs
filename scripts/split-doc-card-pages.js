@@ -143,6 +143,10 @@ function collectSplitSources(docsRoot) {
   return sources;
 }
 
+function normalizeHeadingText(value) {
+  return value.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
+}
+
 function splitBodyByH2(body) {
   const lines = body.split(/\r?\n/);
   const firstH1 = lines.find((line) => /^#\s+/.test(line));
@@ -158,7 +162,7 @@ function splitBodyByH2(body) {
       }
 
       current = {
-        title: heading[1].trim(),
+        title: normalizeHeadingText(heading[1]),
         lines: [],
       };
       continue;
@@ -174,22 +178,26 @@ function splitBodyByH2(body) {
   }
 
   return {
-    parentTitle: firstH1 ? firstH1.replace(/^#\s+/, '').trim() : undefined,
+    parentTitle: firstH1
+      ? normalizeHeadingText(firstH1.replace(/^#\s+/, ''))
+      : undefined,
     sections,
   };
 }
 
 function rewriteRelativeLinks(content) {
-  return content.replace(/(!?\[[^\]]*]\()([^)\s]+)([^)]*\))/g, (match, open, url, close) => {
-    if (
-      /^(?:[a-z][a-z0-9+.-]*:|#|\/)/i.test(url) ||
-      url.startsWith('../')
-    ) {
-      return match;
-    }
+  const shiftRelativeUrl = (url) =>
+    /^(?:[a-z][a-z0-9+.-]*:|#|\/)/i.test(url) ? url : `../${url}`;
 
-    return `${open}../${url}${close}`;
-  });
+  return content
+    .replace(
+      /(!?\[[^\]]*]\()([^)\s]+)([^)]*\))/g,
+      (match, open, url, close) => `${open}${shiftRelativeUrl(url)}${close}`,
+    )
+    .replace(
+      /(<[^>]+\s(?:src|href)=["'])([^"']+)(["'])/gi,
+      (match, open, url, close) => `${open}${shiftRelativeUrl(url)}${close}`,
+    );
 }
 
 function removeGeneratedOutput(outputDir) {
@@ -231,17 +239,16 @@ function writeSplitDoc(docsRoot, splitSource) {
     sidebar_label: parentLabel,
     title: splitSource.frontMatter.title || parentLabel,
     generated_from_split_doc: sourceDocId,
+    editUrl: false,
   };
-  const cardItems = sections.map((section, index) => ({
-    type: 'link',
-    label: section.title,
-    href: `${path.basename(outputDir)}/${String(index + 1).padStart(2, '0')}`,
-  }));
   const parentSource = [
     stringifyFrontMatter(parentFrontMatter),
+    '',
+    'import AutoDocCardList from \'@site/src/components/AutoDocCardList\';',
+    '',
     `# ${parentLabel}`,
     '',
-    '<DocCardList />',
+    '<AutoDocCardList />',
     '',
   ].join('\n');
 
@@ -254,6 +261,7 @@ function writeSplitDoc(docsRoot, splitSource) {
       sidebar_label: section.title,
       title: parentTitle ? `${parentTitle} - ${section.title}` : section.title,
       generated_from_split_doc: sourceDocId,
+      editUrl: false,
     };
     const sectionBody = rewriteRelativeLinks(section.lines.join('\n').trim());
     const sectionSource = [
@@ -267,7 +275,6 @@ function writeSplitDoc(docsRoot, splitSource) {
     fs.writeFileSync(path.join(outputDir, fileName), sectionSource);
   });
 
-  return { sourceDocId, cardItems };
 }
 
 function writeGeneratedSplitSources(sourceIds) {
@@ -292,16 +299,100 @@ function writeGeneratedSplitCardItems(cardItemsBySourceId) {
   );
 }
 
-const splitSourceIds = new Set();
-const splitCardItemsBySourceId = new Map();
+function collectGeneratedSplitMetadata() {
+  const sourceIds = new Set();
+  const cardItemsBySourceId = new Map();
+
+  function walk(dirPath) {
+    const markerPath = path.join(dirPath, '.split-doc-generated');
+
+    if (fs.existsSync(markerPath)) {
+      const sourceDocId = fs.readFileSync(markerPath, 'utf8').trim();
+
+      if (!sourceDocId) {
+        throw new Error(`Empty split-doc marker: ${markerPath}`);
+      }
+
+      const pages = fs
+        .readdirSync(dirPath, { withFileTypes: true })
+        .filter((entry) => {
+          if (!entry.isFile() || !isMarkdownFile(entry.name)) {
+            return false;
+          }
+
+          const pageName = path.parse(entry.name).name.toLowerCase();
+          return pageName !== 'readme' && pageName !== 'index';
+        })
+        .map((entry) => {
+          const filePath = path.join(dirPath, entry.name);
+          const source = fs.readFileSync(filePath, 'utf8');
+          const { frontMatter, body } = parseFrontMatter(source);
+          const firstH1 = body.split(/\r?\n/).find((line) => /^#\s+/.test(line));
+          const label =
+            frontMatter.sidebar_label ||
+            frontMatter.title ||
+            (firstH1
+              ? normalizeHeadingText(firstH1.replace(/^#\s+/, ''))
+              : path.parse(entry.name).name);
+          const parsedPosition = Number(frontMatter.sidebar_position);
+
+          return {
+            fileName: entry.name,
+            sidebarPosition: Number.isFinite(parsedPosition)
+              ? parsedPosition
+              : Number.POSITIVE_INFINITY,
+            cardItem: {
+              type: 'link',
+              label: String(label),
+              href: `${path.basename(dirPath)}/${path.parse(entry.name).name}`,
+            },
+          };
+        })
+        .sort((left, right) => {
+          if (left.sidebarPosition !== right.sidebarPosition) {
+            return left.sidebarPosition - right.sidebarPosition;
+          }
+
+          return left.fileName.localeCompare(right.fileName, undefined, {
+            numeric: true,
+          });
+        });
+
+      sourceIds.add(sourceDocId);
+      cardItemsBySourceId.set(
+        sourceDocId,
+        pages.map((page) => page.cardItem),
+      );
+      return;
+    }
+
+    for (const entry of fs.readdirSync(dirPath, { withFileTypes: true })) {
+      if (!entry.isDirectory() || entry.name.startsWith('.')) {
+        continue;
+      }
+
+      walk(path.join(dirPath, entry.name));
+    }
+  }
+
+  for (const docsRoot of docsRoots) {
+    walk(docsRoot);
+  }
+
+  return { sourceIds, cardItemsBySourceId };
+}
 
 for (const docsRoot of docsRoots) {
   for (const splitSource of collectSplitSources(docsRoot)) {
-    const { sourceDocId, cardItems } = writeSplitDoc(docsRoot, splitSource);
-    splitSourceIds.add(sourceDocId);
-    splitCardItemsBySourceId.set(sourceDocId, cardItems);
+    writeSplitDoc(docsRoot, splitSource);
+
+    // 拆分完成后删除源码 md，生成的子页面就是最终文档
+    fs.unlinkSync(splitSource.filePath);
   }
 }
 
-writeGeneratedSplitSources(splitSourceIds);
-writeGeneratedSplitCardItems(splitCardItemsBySourceId);
+// 每次都以带标记的拆分页目录为准重建元数据。
+// 因此直接新增、删除或修改 01.md、02.md 等页面时无需手工维护 JSON。
+const { sourceIds, cardItemsBySourceId } = collectGeneratedSplitMetadata();
+writeGeneratedSplitSources(sourceIds);
+writeGeneratedSplitCardItems(cardItemsBySourceId);
