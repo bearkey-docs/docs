@@ -156,6 +156,28 @@
       "href": "Quick-Start-Manual-CN/04"
     }
   ],
+  "main-board/rk3568-industrial-control-main-board/wiki-tutorial-ubuntu": [
+    {
+      "type": "link",
+      "label": "一、快速上手",
+      "href": "wiki-tutorial-ubuntu/01"
+    },
+    {
+      "type": "link",
+      "label": "二、用户与密码",
+      "href": "wiki-tutorial-ubuntu/02"
+    },
+    {
+      "type": "link",
+      "label": "三、硬件接口使用",
+      "href": "wiki-tutorial-ubuntu/03"
+    },
+    {
+      "type": "link",
+      "label": "四、常见问题",
+      "href": "wiki-tutorial-ubuntu/04"
+    }
+  ],
   "main-board/rk3568-main-board/wiki-tutorial": [
     {
       "type": "link",
@@ -713,6 +735,72 @@
       "type": "link",
       "label": "4. 基础功能验证",
       "href": "wiki-tutorial/04"
+    }
+  ],
+  "terminal/rk3568-15-6-inch-panel/wiki-tutorial-ubuntu": [
+    {
+      "type": "link",
+      "label": "一、快速上手",
+      "href": "wiki-tutorial-ubuntu/01"
+    },
+    {
+      "type": "link",
+      "label": "二、用户与密码",
+      "href": "wiki-tutorial-ubuntu/02"
+    },
+    {
+      "type": "link",
+      "label": "三、硬件接口使用",
+      "href": "wiki-tutorial-ubuntu/03"
+    },
+    {
+      "type": "link",
+      "label": "四、常见问题",
+      "href": "wiki-tutorial-ubuntu/04"
+    }
+  ],
+  "terminal/rk3568-data-acquisition-gateway/wiki-tutorial-ubuntu": [
+    {
+      "type": "link",
+      "label": "一、快速上手",
+      "href": "wiki-tutorial-ubuntu/01"
+    },
+    {
+      "type": "link",
+      "label": "二、用户与密码",
+      "href": "wiki-tutorial-ubuntu/02"
+    },
+    {
+      "type": "link",
+      "label": "三、硬件接口使用",
+      "href": "wiki-tutorial-ubuntu/03"
+    },
+    {
+      "type": "link",
+      "label": "四、常见问题",
+      "href": "wiki-tutorial-ubuntu/04"
+    }
+  ],
+  "terminal/rk3568-industrial-panel/wiki-tutorial-ubuntu": [
+    {
+      "type": "link",
+      "label": "一、快速上手",
+      "href": "wiki-tutorial-ubuntu/01"
+    },
+    {
+      "type": "link",
+      "label": "二、用户与密码",
+      "href": "wiki-tutorial-ubuntu/02"
+    },
+    {
+      "type": "link",
+      "label": "三、硬件接口使用",
+      "href": "wiki-tutorial-ubuntu/03"
+    },
+    {
+      "type": "link",
+      "label": "四、常见问题",
+      "href": "wiki-tutorial-ubuntu/04"
     }
   ],
   "terminal/rk3576-data-acquisition-gateway/wiki-tutorial-linux": [
