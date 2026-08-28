@@ -249,6 +249,23 @@
       "href": "wiki-tutorial-openeuler/04"
     }
   ],
+  "main-board/rk3588-industrial-main-board/wiki-tutorial-OpenHarmony": [
+    {
+      "type": "link",
+      "label": "一、RK3588开发板介绍",
+      "href": "wiki-tutorial-OpenHarmony/01"
+    },
+    {
+      "type": "link",
+      "label": "二、 烧录系统",
+      "href": "wiki-tutorial-OpenHarmony/02"
+    },
+    {
+      "type": "link",
+      "label": "三、RK3588 平台界面功能使用及测试",
+      "href": "wiki-tutorial-OpenHarmony/03"
+    }
+  ],
   "main-board/rk3588-industrial-main-board/wiki-tutorial-ubuntu": [
     {
       "type": "link",
