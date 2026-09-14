@@ -776,6 +776,23 @@
       "href": "wiki-tutorial-ubuntu/04"
     }
   ],
+  "terminal/rk3568-data-acquisition-gateway/wiki-tutorial-openharmony": [
+    {
+      "type": "link",
+      "label": "第一章 RK3568数据采集网关",
+      "href": "wiki-tutorial-openharmony/01"
+    },
+    {
+      "type": "link",
+      "label": "第二章 烧写系统",
+      "href": "wiki-tutorial-openharmony/02"
+    },
+    {
+      "type": "link",
+      "label": "第三章 RK3576 平台界面功能使用及测试",
+      "href": "wiki-tutorial-openharmony/03"
+    }
+  ],
   "terminal/rk3568-data-acquisition-gateway/wiki-tutorial-ubuntu": [
     {
       "type": "link",

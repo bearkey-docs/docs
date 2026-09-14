@@ -30,6 +30,7 @@
   "terminal/rk3506-industrial-panel/buildroot",
   "terminal/rk3506-industrial-panel/wiki-tutorial",
   "terminal/rk3568-15-6-inch-panel/wiki-tutorial-ubuntu",
+  "terminal/rk3568-data-acquisition-gateway/wiki-tutorial-openharmony",
   "terminal/rk3568-data-acquisition-gateway/wiki-tutorial-ubuntu",
   "terminal/rk3568-industrial-panel/wiki-tutorial-ubuntu",
   "terminal/rk3576-data-acquisition-gateway/wiki-tutorial-linux",
