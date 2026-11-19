@@ -264,6 +264,11 @@
       "type": "link",
       "label": "三、RK3588 平台界面功能使用及测试",
       "href": "wiki-tutorial-OpenHarmony/03"
+    },
+    {
+      "type": "link",
+      "label": "四、硬件相关信息",
+      "href": "wiki-tutorial-OpenHarmony/04"
     }
   ],
   "main-board/rk3588-industrial-main-board/wiki-tutorial-ubuntu": [
